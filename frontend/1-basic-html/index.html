@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find your new dog companion and give a loving dog a home. Dogs of Europe - adoption platform.">
+  <title>Dogs of Europe | Find Your New Companion</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Dogs of Europe",
+    "url": "https://www.dogsofeurope.com",
+    "logo": "https://www.dogsofeurope.com/images/logo.png",
+    "description": "Find your new dog companion and give a loving dog a home.",
+    "sameAs": [
+      "https://www.dogsofeurope.com",
+      "https://www.dogsofeurope.org",
+      "https://www.dogsofeurope.eu"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Header and Navigation -->
+  <header>
+    <nav aria-label="Main Navigation">
+      <img src="images/logo.png" alt="Dogs of Europe Logo" width="150" height="auto">
+
+      <!-- Mobile Nav Toggle Button (For future CSS/JS) -->
+      <!-- <button aria-label="Toggle Navigation Menu" aria-expanded="false" id="mobileNavButton">Menu</button> -->
+
+      <ul id="main-menu">
+        <!-- Home -->
+        <li><a href="index.html">Home</a></li>
+
+        <!-- Our Mission -->
+        <li aria-haspopup="true" aria-expanded="false">
+          <a href="#">Our Mission</a>
+          <ul aria-label="Our Mission Submenu">
+            <li><a href="#">Motivation Behind</a></li>
+            <li><a href="#">Why This is Needed</a></li>
+            <li><a href="#">Our Goals</a></li>
+          </ul>
+        </li>
+
+        <!-- Donate -->
+        <li aria-haspopup="true" aria-expanded="false">
+          <a href="#">Donate</a>
+          <ul aria-label="Donate Submenu">
+            <li><a href="#">Donate to Our Mission</a></li>
+          </ul>
+        </li>
+
+        <!-- Useful Info & Links -->
+        <li aria-haspopup="true" aria-expanded="false">
+          <a href="#">Useful Info & Links</a>
+          <ul aria-label="Useful Info Submenu">
+            <li><a href="#">Transport within EU</a></li>
+            <li><a href="#">Paperwork Guide</a></li>
+            <li><a href="#">Adoption Tips</a></li>
+            <li><a href="#">Why a Shelter Dog?</a></li>
+            <li><a href="#">Dog Training & Health Tips</a></li>
+            <li><a href="#">Health Benefits of Having a Dog</a></li>
+          </ul>
+        </li>
+
+        <!-- Happy Stories -->
+        <li aria-haspopup="true" aria-expanded="false">
+          <a href="#">Happy Stories & Blog</a>
+          <ul aria-label="Stories & Blog Submenu">
+            <li><a href="#">Inspiring Stories</a></li>
+            <li><a href="#">Blog: Share Stories & Photos</a></li>
+          </ul>
+        </li>
+
+        <!-- Language Dropdown -->
+        <li>
+          <button id="dropdownButton" aria-haspopup="true" aria-expanded="false" aria-label="Change Language">
+            <img src="images/uk-flag.png" alt="English" width="30" height="20">
+          </button>
+          <ul aria-label="Language Options">
+            <li><a href="#" lang="en"><img src="images/uk-flag.png" alt="English" width="30" height="20"> English</a></li>
+            <li><a href="#" lang="sv"><img src="images/sweden-flag.png" alt="Svenska" width="30" height="20"> Svenska</a></li>
+            <li><a href="#" lang="no"><img src="images/norway-flag.png" alt="Norsk" width="30" height="20"> Norsk</a></li>
+            <li><a href="#" lang="da"><img src="images/denmark-flag.png" alt="Dansk" width="30" height="20"> Dansk</a></li>
+            <li><a href="#" lang="fi"><img src="images/finland-flag.png" alt="Suomalainen" width="30" height="20"> Suomalainen</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Hero Section -->
+    <section aria-labelledby="main-heading">
+      <h1 id="main-heading">Find Your New Companion!</h1>
+      <p>Give a loving dog a home ❤️</p>
+    </section>
+
+    <!-- ✅ Correct Search Form Section -->
+    <section aria-labelledby="search-heading">
+      <h2 id="search-heading" style="display: flex; align-items: center; gap: 8px; margin: 0;">
+        Dog Search
+        <img src="images/mascot.png" alt="Mascot Dog" width="40" height="40">
+      </h2>
+    </section>
+
+    <form action="#" method="GET">
+      <fieldset>
+        <legend>Search Filters</legend>
+
+        <p>Sex:</p>
+        <label><input type="radio" name="sex" value="all" checked> All</label>
+        <label><input type="radio" name="sex" value="female"> Female</label>
+        <label><input type="radio" name="sex" value="male"> Male</label>
+
+        <p>Age:</p>
+        <label><input type="radio" name="age" value="0-1 year"> 0-1 year</label>
+        <label><input type="radio" name="age" value="1-5 years"> 1-5 years</label>
+        <label><input type="radio" name="age" value="6+ years"> 6+ years</label>
+
+        <p>Size:</p>
+        <label><input type="checkbox" name="size" value="small"> Small</label>
+        <label><input type="checkbox" name="size" value="medium"> Medium</label>
+        <label><input type="checkbox" name="size" value="large"> Large</label>
+        <label><input type="checkbox" name="size" value="xlarge"> X-Large</label>
+
+        <p>Country:</p>
+        <select name="country" aria-label="Select country">
+          <option value="">-- Select Country --</option>
+          <option value="estonia">Estonia</option>
+          <option value="latvia">Latvia</option>
+          <option value="lithuania">Lithuania</option>
+        </select>
+
+        <p>ID Number:</p>
+        <input type="text" name="id" placeholder="ID Search" aria-label="Search by ID number">
+
+        <p><button type="submit">Search</button></p>
+      </fieldset>
+    </form>
+
+    <!-- Dog Gallery Section -->
+    <section aria-labelledby="gallery-heading">
+      <h2 id="gallery-heading">Bringing love, company & joy into your life!</h2>
+      <ul class="gallery-list">
+        <li class="gallery-item"><img src="images/image1.jpg" alt="Loving dog" width="150" height="150"></li>
+        <li class="gallery-item"><img src="images/image2.jpg" alt="Grateful dog" width="150" height="150"></li>
+        <li class="gallery-item"><img src="images/image3.jpg" alt="Your companion" width="150" height="150"></li>
+        <li class="gallery-item"><img src="images/image4.jpg" alt="Your best friend" width="150" height="150"></li>
+        <li class="gallery-item"><img src="images/image5.jpg" alt="Your guardian" width="150" height="150"></li>
+        <li class="gallery-item"><img src="images/image6.jpg" alt="Bringing joy" width="150" height="150"></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Dogs of Europe | <a href="#">Contact</a> | <a href="#">Links</a></p>
+  </footer>
+
+</body>
+</html>
+
+
+
