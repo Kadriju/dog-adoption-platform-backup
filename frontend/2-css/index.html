@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Find your new dog companion and give a loving dog a home. Dogs of Europe - adoption platform." />
-  <title>Dogs of Europe | Find Your New Companion</title>
+
+  <!-- SEO Metadata -->
+  <title>Adopt a Dog in Europe | Find your new best friend</title>
+  <meta name="description" content="Browse and adopt dogs from shelters across Europe. Find your new best friend and give a dog a loving home today with Dogs of Europe." />
+  <meta name="keywords" content="dog adoption, adopt a dog, shelter dogs Europe, dogs for adoption, rescue dogs, European dog shelters" />
+  <meta name="author" content="Dogs of Europe Team" />
+
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="styles.css" />
 
@@ -16,7 +21,7 @@
       "name": "Dogs of Europe",
       "url": "https://www.dogsofeurope.com",
       "logo": "https://www.dogsofeurope.com/images/logo.png",
-      "description": "Find your new dog companion and give a loving dog a home.",
+      "description": "Browse and adopt dogs from shelters across Europe.",
       "sameAs": [
         "https://www.dogsofeurope.com",
         "https://www.dogsofeurope.org",
@@ -28,61 +33,89 @@
 
 <body>
 
-  <!-- Header and Navigation -->
-  <header>
-    <div class="header-layout">
-      <div class="logo">
-        <img src="images/logo.png" alt="Dogs of Europe Logo" />
-      </div>
-  
-      <nav class="main-nav">
-        <ul class="nav-list">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Our Mission</a></li>
-          <li><a href="#">Donate</a></li>
-          <li><a href="#">Useful Info & Links</a></li>
-          <li><a href="#">Happy Stories</a></li>
-        </ul>
-      </nav>
-  
-      <div class="language-menu">
-        <img src="images/uk-flag.png" alt="UK Flag" />
-      </div>
-    </div>
-  </header>
-  
-  
+<!-- Header -->
+<header role="banner" class="header__layout">
+  <!-- Logo at far left -->
+  <div class="header__logo">
+    <a href="/" aria-label="Dogs of Europe Home">
+      <img src="images/logo.png" alt="Dogs of Europe logo with human and dog" />
+    </a>
+  </div>
+
+  <!-- Navigation in the middle -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <ul class="nav__list">
+      <li class="nav__item"><a href="#">Home</a></li>
+      <li class="nav__item"><a href="#">Our Mission</a></li>
+      <li class="nav__item"><a href="#">Donate</a></li>
+      <li class="nav__item"><a href="#">Useful Info &amp; Links</a></li>
+      <li class="nav__item"><a href="#">Happy Stories</a></li>
+    </ul>
+  </nav>
+
+  <!-- Flag at far right -->
+  <div class="language-menu" aria-label="Language selector">
+    <button class="language-menu__button" aria-haspopup="true" aria-expanded="false">
+      <img src="images/uk-flag.png" alt="English" />
+    </button>
+    <ul class="language-menu__list" role="menu">
+      <li role="menuitem">
+        <a href="#"><img src="images/uk-flag.png" alt="English" /></a>
+      </li>
+      <li role="menuitem">
+        <a href="#"><img src="images/sweden-flag.png" alt="Svenska" /></a>
+      </li>
+      <li role="menuitem">
+        <a href="#"><img src="images/norway-flag.png" alt="Norsk" /></a>
+      </li>
+      <li role="menuitem">
+        <a href="#"><img src="images/finland-flag.png" alt="Suomi" /></a>
+      </li>
+      <li role="menuitem">
+        <a href="#"><img src="images/denmark-flag.png" alt="Dansk" /></a>
+      </li>
+    </ul>
+  </div>
+</header>
+
   <!-- Main Content -->
-  <main>
+  <main id="main-content" role="main">
 
     <!-- Hero Section -->
-    <section aria-labelledby="main-heading">
-      <h1 id="main-heading" class="main-heading">Find Your New Companion!</h1>
-      <p class="sub-heading">Give a loving dog a home ❤️</p>
+    <section class="container" aria-labelledby="main-heading">
+      <h1 id="main-heading" class="hero__title">Find Your New Best Friend</h1>
+      <p class="hero__subtitle">
+        <span class="heart">♥</span> 
+        Give a loving home to a grateful dog 
+        <span class="heart">♥</span>
+      </p>
+      
     </section>
 
-    <!-- Search Form Section -->
-    <section class="search-container">
-      <div class="search-sidebar">
-        <h2>Dog Search <img src="images/mascot.png" alt="Mascot Dog" width="40" height="40" /></h2>
+    <!-- Search Section -->
+    <section class="search container" aria-labelledby="search-heading">
+      <div class="search__sidebar">
+        <h2 id="search-heading">Dog search: 
+          <img src="images/mascot.png" alt="Cartoon dog mascot" width="40" height="40" />
+        </h2>
       </div>
 
-      <form class="search-form" action="#" method="GET">
-        <div class="filter-group">
+      <form class="search__form" action="#" method="GET" aria-label="Dog search form">
+        <div class="search__form-group">
           <label>Sex:</label>
           <label><input type="radio" name="sex" value="all" checked /> All</label>
           <label><input type="radio" name="sex" value="female" /> Female</label>
           <label><input type="radio" name="sex" value="male" /> Male</label>
         </div>
 
-        <div class="filter-group">
+        <div class="search__form-group">
           <label>Age:</label>
           <label><input type="radio" name="age" value="0-1" /> 0-1 year</label>
           <label><input type="radio" name="age" value="1-5" /> 1-5 years</label>
           <label><input type="radio" name="age" value="6+" /> 6+ years</label>
         </div>
 
-        <div class="filter-group">
+        <div class="search__form-group">
           <label>Size:</label>
           <label><input type="checkbox" name="size" value="small" /> Small</label>
           <label><input type="checkbox" name="size" value="medium" /> Medium</label>
@@ -90,9 +123,9 @@
           <label><input type="checkbox" name="size" value="xlarge" /> X-Large</label>
         </div>
 
-        <div class="filter-group">
-          <label>Country:</label>
-          <select name="country">
+        <div class="search__form-group">
+          <label for="country">Country:</label>
+          <select name="country" id="country">
             <option value="">-- Select Country --</option>
             <option value="estonia">Estonia</option>
             <option value="latvia">Latvia</option>
@@ -100,33 +133,38 @@
           </select>
         </div>
 
-        <div class="filter-group">
-          <label>ID Number:</label>
-          <input type="text" name="id" placeholder="ID Search" />
+        <div class="search__form-group">
+          <label for="id">ID Number:</label>
+          <input type="text" name="id" id="id" placeholder="Enter dog ID" />
         </div>
 
-        <button class="submit-button" type="submit">Search</button>
+        <button class="search__submit" type="submit">Search</button>
       </form>
     </section>
 
- <!-- Gallery Section -->
-<section aria-labelledby="gallery-heading">
-  <h2 id="gallery-heading" class="gallery-heading">Bringing love, company &amp; joy into your life!</h2>
-  <ul class="image-gallery">
-    <li><img src="images/image1.jpg" alt="Loving dog" /></li>
-    <li><img src="images/image2.jpg" alt="Grateful dog" /></li>
-    <li><img src="images/image3.jpg" alt="Your companion" /></li>
-    <li><img src="images/image4.jpg" alt="Your best friend" /></li>
-    <li><img src="images/image5.jpg" alt="Your guardian" /></li>
-    <li><img src="images/image6.jpg" alt="Bringing joy" /></li>
-  </ul>
-</section>
+    <!-- Gallery Section -->
+    <section class="container" aria-labelledby="gallery-heading">
+      <h2 id="gallery-heading" class="gallery__heading">Bringing love, companionship & joy into your life</h2>
+      <ul class="gallery__grid">
+        <li><img src="images/image1.jpg" alt="Loving dog" /></li>
+        <li><img src="images/image2.jpg" alt="Grateful dog" /></li>
+        <li><img src="images/image3.jpg" alt="Best companion" /></li>
+        <li><img src="images/image4.jpg" alt="Best friend" /></li>
+        <li><img src="images/image5.jpg" alt="Perfect guard dog" /></li>
+        <li><img src="images/image6.jpg" alt="Puppy who needs a home and family" /></li>
+      </ul>
+    </section>
 
-</main>
+  </main>
 
-<footer>
-  <p>&copy; 2025 Dogs of Europe | <a href="#">Contact</a> | <a href="#">Links</a></p>
-</footer>
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <p>&copy; 2025 Dogs of Europe | 
+      <a href="#" title="Contact Dogs of Europe">Contact</a> | 
+      <a href="#" title="Useful Links for Dog Adoption">Helpful Links</a>
+    </p>
+  </footer>
 
 </body>
 </html>
+
