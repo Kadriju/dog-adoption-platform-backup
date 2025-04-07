@@ -33,73 +33,62 @@
 
 <body>
 
-<!-- Header -->
-<header role="banner" class="header__layout">
-  <!-- Logo at far left -->
-  <div class="header__logo">
-    <a href="/" aria-label="Dogs of Europe Home">
-      <img src="images/logo.png" alt="Dogs of Europe logo with human and dog" />
-    </a>
-  </div>
-
-  <!-- Navigation in the middle -->
-  <nav class="nav" role="navigation" aria-label="Main navigation">
-    <ul class="nav__list">
-      <li class="nav__item"><a href="#">Home</a></li>
-      <li class="nav__item"><a href="#">Our Mission</a></li>
-      <li class="nav__item"><a href="#">Donate</a></li>
-      <li class="nav__item"><a href="#">Useful Info &amp; Links</a></li>
-      <li class="nav__item"><a href="#">Happy Stories</a></li>
-    </ul>
-  </nav>
-
-  <!-- Flag at far right -->
-  <div class="language-menu" aria-label="Language selector">
-    <button class="language-menu__button" aria-haspopup="true" aria-expanded="false">
-      <img src="images/uk-flag.png" alt="English" />
-    </button>
-    <ul class="language-menu__list" role="menu">
-      <li role="menuitem">
-        <a href="#"><img src="images/uk-flag.png" alt="English" /></a>
-      </li>
-      <li role="menuitem">
-        <a href="#"><img src="images/sweden-flag.png" alt="Svenska" /></a>
-      </li>
-      <li role="menuitem">
-        <a href="#"><img src="images/norway-flag.png" alt="Norsk" /></a>
-      </li>
-      <li role="menuitem">
-        <a href="#"><img src="images/finland-flag.png" alt="Suomi" /></a>
-      </li>
-      <li role="menuitem">
-        <a href="#"><img src="images/denmark-flag.png" alt="Dansk" /></a>
-      </li>
-    </ul>
-  </div>
-</header>
+  <header class="header__layout" role="banner">
+    <div class="header__logo">
+      <a href="/" aria-label="Dogs of Europe Home">
+        <img src="images/logo.png" alt="Dogs of Europe logo" />
+      </a>
+    </div>
+  
+    <nav class="nav-container" role="navigation" aria-label="Main navigation">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#">Home</a></li>
+        <li class="nav__item"><a href="#">Our Mission</a></li>
+        <li class="nav__item"><a href="#">Donate</a></li>
+        <li class="nav__item"><a href="#">Info &amp; Links</a></li>
+        <li class="nav__item"><a href="#">Happy Stories</a></li>
+      </ul>
+    </nav>
+  
+    <div class="language-menu">
+      <button class="language-menu__button" aria-haspopup="true" aria-expanded="false">
+        <img src="images/uk-flag.png" alt="English" />
+      </button>
+      <ul class="language-menu__list">
+        <li><a href="#"><img src="images/uk-flag.png" alt="English" /></a></li>
+        <li><a href="#"><img src="images/sweden-flag.png" alt="Svenska" /></a></li>
+        <li><a href="#"><img src="images/norway-flag.png" alt="Norsk" /></a></li>
+        <li><a href="#"><img src="images/finland-flag.png" alt="Suomi" /></a></li>
+        <li><a href="#"><img src="images/denmark-flag.png" alt="Dansk" /></a></li>
+      </ul>
+    </div>
+    
+  </header>
+  
 
   <!-- Main Content -->
   <main id="main-content" role="main">
 
-    <!-- Hero Section -->
-    <section class="container" aria-labelledby="main-heading">
-      <h1 id="main-heading" class="hero__title">Find Your New Best Friend</h1>
-      <p class="hero__subtitle">
-        <span class="heart">♥</span> 
-        Give a loving home to a grateful dog 
-        <span class="heart">♥</span>
-      </p>
-      
-    </section>
+<!-- Hero Section -->
+<section class="hero" aria-labelledby="main-heading">
+  <div class="container">
+    <h1 id="main-heading" class="hero__title">Find Your New Best Friend</h1>
+    <p class="hero__subtitle">
+      <span class="heart">♥</span>
+      Give a loving home to a grateful dog
+      <span class="heart">♥</span>
+    </p>
+  </div>
+</section>
+
 
     <!-- Search Section -->
     <section class="search container" aria-labelledby="search-heading">
       <div class="search__sidebar">
-        <h2 id="search-heading">Dog search: 
-          <img src="images/mascot.png" alt="Cartoon dog mascot" width="40" height="40" />
-        </h2>
+        <h2>DOG SEARCH</h2>
+        <img src="images/mascot.png" alt="Mascot dog" />
       </div>
-
+      
       <form class="search__form" action="#" method="GET" aria-label="Dog search form">
         <div class="search__form-group">
           <label>Sex:</label>

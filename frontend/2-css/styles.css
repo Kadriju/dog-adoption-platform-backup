@@ -14,7 +14,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 16px; /* base font size for rem units */
+  font-size: 16px;
   line-height: 1.5;
 }
 
@@ -43,7 +43,7 @@ body {
   --color-dark-brown: #5C4326;
   --color-medium-salmon: #E56767; 
   --color-black:#000;
-  
+  --color-logo-frame: #7E3E20;
 }
 
 
@@ -52,93 +52,128 @@ body {
 ===================== */
 
 .container {
-  max-width: 75rem; /* 1200px */
+  max-width: 75rem;
   margin: 0 auto;
-  padding: 0 1.25rem; /* 20px */
+  padding: 0 1.25rem;
 }
 
+/* =====================
+   Layout Utilities
+===================== */
 
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
 /* =====================
    Header
 ===================== */
 
 header {
   background-color: var(--color-warm-white);
-  border-bottom: 2px solid var(--color-muted-teal);
-  padding: 0.3125rem 0; /* 5px top/bottom */
+  border-top: 2px solid var(--color-dark-brown);     /* TOP frame line */
+  border-bottom: 2px solid var(--color-dark-brown);  /* BOTTOM frame line */
+  height: 9.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0; /* ❗ remove side padding to let logo touch the edge */
 }
-/* Header Layout */
+
 .header__layout {
   display: flex;
-  justify-content: space-between; /* Logo left, nav in center, flag right */
   align-items: center;
+  justify-content: space-between;
   width: 100%;
-  margin: 0;
-  padding: 0 1rem; 
-  background-color: var(--color-warm-white);
-  border-bottom: 2px solid var(--color-muted-teal);
+  height: 100%;
 }
 
-/* Logo */
-.header__logo img {
-  height: 9.5rem; /* Adjust as you like */
-  max-height: 9.5rem;
-  display: block; /* removes extra whitespace around image */
-}
-
-/* Navigation */
-.nav__list {
-  display: flex;
-  flex-wrap: nowrap; /* force items on one line */
-  gap: 2rem;         /* adjust spacing between menu items */
-  list-style: none;
+.header__logo {
+  height: 100%;
   margin: 0;
   padding: 0;
 }
 
+.header__logo img {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+/* Navigation section */
+.nav-container {
+  height: 100%; /* Make sure nav fills header height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  height: 100%;
+}
+
 .nav__item a {
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 900;
   text-transform: uppercase;
   color: var(--color-dark-brown);
-  font-size: 1.875rem; /* 30px; reduce if items wrap */
-  letter-spacing: 0.0625rem;
-  padding: 0.625rem 0;
+  font-size: 1.4rem;
+  line-height: 2.4; 
+  letter-spacing: 0.08rem;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transition: all 0.3s ease;
+  border-radius: 0.25rem;
 }
 
-/* Optional: Hover/focus styles */
 .nav__item a:hover,
 .nav__item a:focus {
-  color: var(--color-muted-teal);
-  text-decoration: underline;
+  background-color: var(--color-muted-teal);
+  color: white;
 }
 
-/* Language Dropdown (flag on the far right) */
+
+/* =====================
+   Language Flag
+===================== */
+
 .language-menu {
-  position: relative; /* needed for dropdown positioning */
-  display: inline-block;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .language-menu__button {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: 0 1rem 0 0; /* Add right padding here */
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
+/* Flag image inside the header */
 .language-menu__button img {
-  height: 5rem; 
+  max-height: 3.5rem;
   width: auto;
-}
-
-.language-menu__button img,
-
-.language-menu__list li img {
   border: 0.125rem solid #3D2A19;
-  border-radius: 0.25rem; /* optional for slightly rounded corners */
+  border-radius: 0.25rem;
+  display: block; /* Ensures the image isn't treated like inline text */
 }
 
-/* The dropdown list is hidden by default; shows on hover */
+
 .language-menu__list {
   display: none;
   position: absolute;
@@ -158,13 +193,8 @@ header {
   padding: 0.25rem 1rem;
 }
 
-.language-menu__list li a {
-  display: block;
-}
-
 .language-menu__list li img {
   height: 2rem;
-  width: auto;
   transition: transform 0.2s ease;
 }
 
@@ -172,30 +202,35 @@ header {
   transform: scale(1.1);
 }
 
-/* Reveal the dropdown on hover */
 .language-menu:hover .language-menu__list {
   display: block;
 }
+
 
 
 /* =====================
    Hero Section
 ===================== */
 
-.hero__title {
-  margin-top: 2rem; 
+.hero {
+  background-color: var(--color-sage-green);
+  padding: 2rem 0 0.5rem 0; /* top | right | bottom | left */
   text-align: center;
-  font-size: 2rem;
+}
+
+.hero__title {
+  font-size: 2.5rem;
   font-weight: 600;
-  color: #3D2A19;
+  color: var(--color-dark-brown);
+  margin-bottom: 1rem;
 }
 
 .hero__subtitle {
-  text-align: center;
   font-size: 1.25rem;
-  margin-bottom: 2rem;
   color: var(--color-warm-white);
+  margin: 0;
 }
+
 .heart {
   color: #E56767;
   font-size: 2.2rem;
@@ -210,57 +245,59 @@ header {
 
 .search {
   display: flex;
-  /* Centers the search box horizontally in the page */
-  margin: 2rem auto;
-  max-width: 75rem; /* same as .container if you prefer */
-
+  flex-wrap: wrap;
+  margin: 4rem auto; /* more spacing from top and bottom */
+  max-width: 75rem;
   background-color: var(--color-warm-white);
-  border-radius: 0.625rem; /* 10px */
+  border: 3px solid var(--color-dark-brown); /* added frame */
+  border-radius: 0.625rem;
   box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.05);
-  padding: 1rem;
-
-  /* Change flex-start to center to align items vertically */
-  align-items: center;
+  padding: 2rem;
   gap: 1.5rem;
+  justify-content: center;
 }
 
-/* Left column: "DOG SEARCH" text & mascot */
 .search__sidebar {
-  flex: 0 0 220px;
-  text-align: center;
-  font-weight: 600;
-  font-size: 1.25rem;
-  color: var(--color-muted-teal);
+  flex: 1 1 220px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: center;     /* Center horizontally */
+  justify-content: flex-start; 
+  text-align: center;
+  padding: 0;
 }
 
 .search__sidebar h2 {
+  font-size: 3rem;            /* Bigger size */
+  font-weight: 500;
+  color: var(--color-dark-brown); /* Dark brown color */
   margin-bottom: 1rem;
 }
 
 .search__sidebar img {
-  margin-top: 0.5rem;
-  width: 80px;
-  height: auto;
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 50%; /* Makes it a circle */
+  border: 2px solid var(--color-dark-brown); /* Optional frame */
+  background-color: var(--color-warm-white); /* Optional for contrast */
+  padding: 0.25rem;
 }
 
-/* Right column: form fields & button */
+
 .search__form {
-  display: flex;
-  flex-wrap: wrap;
+  flex: 2 1 500px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 1rem;
-  flex: 1;
-  justify-content: flex-start;
+  min-width: 0;
+  align-items: start; /* ensure items stack at the top */
+  position: relative; /* for precise button placement if needed */
 }
 
-/* Each group is a small column or block */
 .search__form-group {
   display: flex;
   flex-direction: column;
-  min-width: 120px;
   font-size: 0.875rem;
 }
 
@@ -277,23 +314,22 @@ header {
   font-family: inherit;
   font-size: 1rem;
   margin-bottom: 0.5rem;
+  width: 100%;
 }
 
-/* Spacing for checkboxes & radios */
 .search__form-group label input {
   margin-right: 0.5rem;
 }
 
-/* Submit button */
 .search__submit {
-
-  margin-left: auto;
-
+  grid-column: -2 / -1;           /* place in the last column */
+  justify-self: end;              /* align to the right */
+  align-self: end;                /* align to the bottom */
   padding: 0.5rem 1.8rem;
   font-size: 1.5rem;
   background-color: var(--color-soft-mustard);
   color: white;
-  border: none;
+  border: 2px solid var(--color-dark-brown); /* dark brown frame */
   border-radius: 0.3125rem;
   cursor: pointer;
   font-weight: bold;
@@ -374,42 +410,32 @@ footer a:focus {
 
 @media (max-width: 768px) {
   .header__logo img {
-    height: 7.5rem; /* smaller logo on mobile */
+    max-height: 6rem;
   }
 
   .language-menu img {
-    height: 3.75rem;
+    height: 3rem;
+  }
+
+  .nav__item a {
+    font-size: 1.25rem;
   }
 
   .nav__list {
-    gap: 2.5rem;
+    gap: 1rem;
+    justify-content: center;
   }
 
-  /* Stack the search sidebar and form vertically */
   .search {
     flex-direction: column;
-    align-items: center;
   }
-  
+
   .search__sidebar,
   .search__form {
     width: 100%;
-    flex: initial;
   }
-  
-  .search__sidebar img {
-    margin-bottom: 1rem;
-  }
-  
-  .search__form {
-    justify-content: center;
-  }
-  
+
   .search__submit {
-    align-self: center;
-    margin-top: 1rem;
+    width: auto;
   }
 }
-
-
-
