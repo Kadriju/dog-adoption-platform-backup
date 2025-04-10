@@ -81,55 +81,59 @@
   </div>
 </section>
 
+<!-- Search Section -->
+<div class="search">
+  <!-- Sidebar with mascot -->
+  <div class="search__sidebar">
+    <h2>DOG SEARCH</h2>
+    <img src="images/mascot.png" alt="Mascot Dog" />
+  </div>
 
-    <!-- Search Section -->
-    <section class="search container" aria-labelledby="search-heading">
-      <div class="search__sidebar">
-        <h2>DOG SEARCH</h2>
-        <img src="images/mascot.png" alt="Mascot dog" />
+  <!-- Wrapper for form + button -->
+  <div class="search__form-wrapper">
+    <!-- ✅ Form only contains fields -->
+    <form class="search__form" action="#" method="GET">
+      <div class="search__form-group">
+        <label>Sex:</label>
+        <label><input type="radio" name="sex" value="all" checked /> All</label>
+        <label><input type="radio" name="sex" value="female" /> Female</label>
+        <label><input type="radio" name="sex" value="male" /> Male</label>
       </div>
-      
-      <form class="search__form" action="#" method="GET" aria-label="Dog search form">
-        <div class="search__form-group">
-          <label>Sex:</label>
-          <label><input type="radio" name="sex" value="all" checked /> All</label>
-          <label><input type="radio" name="sex" value="female" /> Female</label>
-          <label><input type="radio" name="sex" value="male" /> Male</label>
-        </div>
 
-        <div class="search__form-group">
-          <label>Age:</label>
-          <label><input type="radio" name="age" value="0-1" /> 0-1 year</label>
-          <label><input type="radio" name="age" value="1-5" /> 1-5 years</label>
-          <label><input type="radio" name="age" value="6+" /> 6+ years</label>
-        </div>
+      <div class="search__form-group">
+        <label>Age:</label>
+        <label><input type="radio" name="age" value="0-1" /> 0–1 year</label>
+        <label><input type="radio" name="age" value="1-5" /> 1–5 years</label>
+        <label><input type="radio" name="age" value="6+" /> 6+ years</label>
+      </div>
 
-        <div class="search__form-group">
-          <label>Size:</label>
-          <label><input type="checkbox" name="size" value="small" /> Small</label>
-          <label><input type="checkbox" name="size" value="medium" /> Medium</label>
-          <label><input type="checkbox" name="size" value="large" /> Large</label>
-          <label><input type="checkbox" name="size" value="xlarge" /> X-Large</label>
-        </div>
+      <div class="search__form-group">
+        <label>Size:</label>
+        <label><input type="checkbox" name="size" value="small" /> Small</label>
+        <label><input type="checkbox" name="size" value="medium" /> Medium</label>
+        <label><input type="checkbox" name="size" value="large" /> Large</label>
+        <label><input type="checkbox" name="size" value="xlarge" /> X-Large</label>
+      </div>
 
-        <div class="search__form-group">
-          <label for="country">Country:</label>
-          <select name="country" id="country">
-            <option value="">-- Select Country --</option>
-            <option value="estonia">Estonia</option>
-            <option value="latvia">Latvia</option>
-            <option value="lithuania">Lithuania</option>
-          </select>
-        </div>
+      <div class="search__form-group country">
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+          <option value="">-- Select Country --</option>
+          <!-- Add country options here -->
+        </select>
+      </div>
 
-        <div class="search__form-group">
-          <label for="id">ID Number:</label>
-          <input type="text" name="id" id="id" placeholder="Enter dog ID" />
-        </div>
+      <div class="search__form-group id">
+        <label for="dog-id">ID Number:</label>
+        <input type="text" id="dog-id" name="dog-id" placeholder="Enter dog ID" />
+      </div>
+    </form>
 
-        <button class="search__submit" type="submit">Search</button>
-      </form>
-    </section>
+    <!-- ✅ Button now outside form but inside wrapper -->
+    <button class="search__submit" type="submit">SEARCH</button>
+  </div>
+</div>
+
 
     <!-- Gallery Section -->
     <section class="container" aria-labelledby="gallery-heading">

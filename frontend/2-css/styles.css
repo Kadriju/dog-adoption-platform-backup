@@ -15,7 +15,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.3;
 }
 
 body {
@@ -66,19 +66,22 @@ body {
   margin: 0 auto;
   padding: 0 1.25rem;
 }
+
 /* =====================
    Header
 ===================== */
-
 header {
   background-color: var(--color-warm-white);
-  border-top: 2px solid var(--color-dark-brown);     /* TOP frame line */
-  border-bottom: 2px solid var(--color-dark-brown);  /* BOTTOM frame line */
-  height: 9.5rem;
+  border-top: 2px solid var(--color-dark-brown);
+  border-bottom: 2px solid var(--color-dark-brown);
+  height: 4.5rem; 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0; /* ❗ remove side padding to let logo touch the edge */
+  padding: 0;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
 }
 
 .header__layout {
@@ -86,20 +89,34 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 100%;
+}
+.header__layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
 }
 
 .header__logo {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+  display: flex;
+  align-items: flex-start;
+  height: 100%;  
 }
 
 .header__logo img {
-  height: 100%;
+  height: 7.5rem; 
   width: auto;
   display: block;
+  transform: none; 
+  margin: 0;      
+  padding: 0;
 }
+
+
 
 /* Navigation section */
 .nav-container {
@@ -125,9 +142,9 @@ header {
   text-transform: uppercase;
   color: var(--color-dark-brown);
   font-size: 1.4rem;
-  line-height: 2.4; 
+  line-height: 1.2; 
   letter-spacing: 0.08rem;
-  padding: 0.5rem 0.75rem;
+  padding: 0.1rem 0.25rem;
   display: flex;
   align-items: center;
   height: 100%;
@@ -166,7 +183,7 @@ header {
 
 /* Flag image inside the header */
 .language-menu__button img {
-  max-height: 3.5rem;
+  max-height: 3rem;
   width: auto;
   border: 0.125rem solid #3D2A19;
   border-radius: 0.25rem;
@@ -214,19 +231,20 @@ header {
 
 .hero {
   background-color: var(--color-sage-green);
-  padding: 2rem 0 0.5rem 0; /* top | right | bottom | left */
+  padding: 0.8rem 0 0.5rem 0; /* top | right | bottom | left */
   text-align: center;
 }
 
 .hero__title {
-  font-size: 2.5rem;
+  font-size: 1.7rem;
   font-weight: 600;
   color: var(--color-dark-brown);
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem;
 }
 
 .hero__subtitle {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
+  font-weight: 600;
   color: var(--color-warm-white);
   margin: 0;
 }
@@ -238,67 +256,90 @@ header {
   margin: 0 0.5rem;
 }
 
-
 /* =====================
-   Search Section
+   Search Container
 ===================== */
-
 .search {
   display: flex;
-  flex-wrap: wrap;
-  margin: 4rem auto; /* more spacing from top and bottom */
-  max-width: 75rem;
-  background-color: var(--color-warm-white);
-  border: 3px solid var(--color-dark-brown); /* added frame */
-  border-radius: 0.625rem;
-  box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.05);
-  padding: 2rem;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 1.5rem;
-  justify-content: center;
+  padding: 0.4rem 0.8rem;
+  min-height: 120px;
+  margin: 0.6rem auto;
+  max-width: 65rem;
+  background-color: var(--color-warm-white);
+  border: 3px solid var(--color-dark-brown);
+  border-radius: 0.625rem;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.05);
 }
 
+/* =====================
+   Sidebar (Mascot + Title)
+===================== */
 .search__sidebar {
-  flex: 1 1 220px;
   display: flex;
   flex-direction: column;
-  align-items: center;     /* Center horizontally */
-  justify-content: flex-start; 
+  align-items: center;
   text-align: center;
-  padding: 0;
+  min-width: 140px;
+  gap: 0.25rem;
 }
 
 .search__sidebar h2 {
-  font-size: 3rem;            /* Bigger size */
+  font-size: 1.75rem;
   font-weight: 500;
-  color: var(--color-dark-brown); /* Dark brown color */
-  margin-bottom: 1rem;
+  color: var(--color-dark-brown);
+  margin-bottom: 0.3rem;
 }
 
 .search__sidebar img {
-  width: 190px;
-  height: 190px;
+  width: 90px;
+  height: 90px;
   object-fit: cover;
-  border-radius: 50%; /* Makes it a circle */
-  border: 2px solid var(--color-dark-brown); /* Optional frame */
-  background-color: var(--color-warm-white); /* Optional for contrast */
-  padding: 0.25rem;
+  border-radius: 50%;
+  border: 2px solid var(--color-dark-brown);
+  background-color: var(--color-warm-white);
+  padding: 0.2rem;
 }
 
+/* =====================
+   Form Wrapper
+===================== */
+.search__form-wrapper {
+  position: relative;
+  flex: 1;
+  display: block; /* Use block instead of flex for clean absolute layout */
+}
 
+/* =====================
+   Form Layout (Flexbox version)
+===================== */
 .search__form {
-  flex: 2 1 500px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1rem;
-  min-width: 0;
-  align-items: start; /* ensure items stack at the top */
-  position: relative; /* for precise button placement if needed */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  flex: 1;
+  min-height: 130px; /* Ensures button sticks to bottom */
+  position: relative;
 }
 
+/* =====================
+   Form Groups
+===================== */
 .search__form-group {
+  flex: 1 1 14%;
   display: flex;
   flex-direction: column;
-  font-size: 0.875rem;
+  font-size: 0.85rem;
+  min-width: 130px;
+}
+
+.search__form-group.country {
+  margin-left: -2.5rem; /* Pulls it a little to the left */
+  margin-right: 0.5rem; /* Optional: adds space after it */
 }
 
 .search__form-group label {
@@ -306,30 +347,36 @@ header {
   margin-bottom: 0.25rem;
 }
 
-.search__form-group input[type="text"],
-.search__form-group select {
-  padding: 0.5rem;
-  border-radius: 0.3125rem;
-  border: 1px solid #ccc;
-  font-family: inherit;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  width: 100%;
-}
-
 .search__form-group label input {
   margin-right: 0.5rem;
 }
 
+.search__form-group input[type="text"],
+.search__form-group select {
+  padding: 0.25rem;
+  border-radius: 0.3125rem;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  width: 100%;
+}
+
+/* =====================
+   Search Button (ABSOLUTE)
+===================== */
 .search__submit {
-  grid-column: -2 / -1;           /* place in the last column */
-  justify-self: end;              /* align to the right */
-  align-self: end;                /* align to the bottom */
-  padding: 0.5rem 1.8rem;
-  font-size: 1.5rem;
+  position: absolute;
+  bottom: 0.3rem;
+  right: 0.3rem;
+  margin: 0;
+  padding: 0.4rem 1rem;
+  width: 130px; /* or whatever width you prefer */
+  text-align: center;
+  font-size: 1.3rem;
   background-color: var(--color-soft-mustard);
   color: white;
-  border: 2px solid var(--color-dark-brown); /* dark brown frame */
+  border: 2px solid var(--color-dark-brown);
   border-radius: 0.3125rem;
   cursor: pointer;
   font-weight: bold;
@@ -341,6 +388,7 @@ header {
 }
 
 
+
 /* =====================
    Gallery Section
 ===================== */
@@ -349,22 +397,22 @@ header {
   text-align: center;
   color: var(--color-dark-brown);
   font-weight: 600;
-  margin-bottom: 1.25rem;
-  font-size: 1.375rem;
+  margin-bottom: 0.7rem;
+  font-size: 1.25rem;
 }
 
 .gallery__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(6.25rem, 1fr));
-  gap: 1.25rem;
-  margin: 2.5rem 0 1.875rem 0;
-  padding: 0 2.5rem;
+  gap: 1rem;
+  margin: 0.25rem 0 0.3rem 0;
+  padding: 0 0;
   width: 100%;
 }
 
 .gallery__grid img {
   width: 100%;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 3 / 1.9;
   object-fit: cover;
   border: 2px solid var(--color-dark-brown);
   border-radius: 0.625rem;
@@ -373,7 +421,7 @@ header {
 }
 
 .gallery__grid img:hover {
-  transform: scale(1.05);
+  transform: scale(0.8);
 }
 
 
@@ -382,20 +430,20 @@ header {
 ===================== */
 
 footer {
-  margin-top: 2.5rem;
+  margin-top: 0.3rem;
   text-align: center;
-  font-size: 0.875rem;
-  padding: 1.25rem;
+  font-size: 1rem;
+  padding: 0.3rem;
   background-color: var(--color-muted-teal);
   color: var(--color-warm-white);
-  border-top: 3px solid var(--color-powder-blue);
+  border-top: 2px solid var(--color-powder-blue);
 }
 
 footer a {
   color: #E6A4B4;
   text-decoration: none;
   font-weight: 500;
-  margin: 0 0.625rem;
+  margin: 0 0.3rem;
 }
 
 footer a:hover,
