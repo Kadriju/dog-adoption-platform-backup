@@ -44,6 +44,7 @@ body {
   --color-medium-salmon: #E56767; 
   --color-black:#000;
   --color-logo-frame: #7E3E20;
+  --color-deep-green-teal: #38584F;
 }
 
 
@@ -72,9 +73,9 @@ body {
 ===================== */
 header {
   background-color: var(--color-warm-white);
-  border-top: 2px solid var(--color-dark-brown);
-  border-bottom: 2px solid var(--color-dark-brown);
-  height: 4.5rem; 
+  border-top: 3px solid var(--color-deep-green-teal);
+  border-bottom: 3px solid var(--color-deep-green-teal);
+  height: 4.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -84,6 +85,7 @@ header {
   overflow: visible;
 }
 
+
 .header__layout {
   display: flex;
   align-items: center;
@@ -95,30 +97,31 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+
 
 }
 
 .header__logo {
   position: relative;
-  z-index: 2;
-  overflow: visible;
-  display: flex;
-  align-items: flex-start;
-  height: 100%;  
+  top: 1.8rem;
+  background-color: var(--color-sage-green);
+  padding: 0.4rem;
+  border: 2px solid var(--color-dark-brown);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+.header__logo img {
+  border: none;
+  background: none;
+  height: 6.5rem;
 }
 
-.header__logo img {
-  height: 7.5rem; 
-  width: auto;
-  display: block;
-  transform: none; 
-  margin: 0;      
-  padding: 0;
-}
 
 
 
 /* Navigation section */
+
+
 .nav-container {
   height: 100%; /* Make sure nav fills header height */
   display: flex;
@@ -127,14 +130,17 @@ header {
   flex: 1;
 }
 
+
 .nav__list {
   display: flex;
-  justify-content: center;
+  flex: 1;
+  justify-content: space-evenly; /* or space-between */
   align-items: center;
-  gap: 2rem;
   list-style: none;
-  height: 100%;
+  margin: 0;
+  padding: 0;
 }
+
 
 .nav__item a {
   text-decoration: none;
@@ -142,7 +148,7 @@ header {
   text-transform: uppercase;
   color: var(--color-dark-brown);
   font-size: 1.4rem;
-  line-height: 1.2; 
+  line-height: 1.2;
   letter-spacing: 0.08rem;
   padding: 0.1rem 0.25rem;
   display: flex;
@@ -152,16 +158,17 @@ header {
   border-radius: 0.25rem;
 }
 
+
 .nav__item a:hover,
 .nav__item a:focus {
   background-color: var(--color-muted-teal);
   color: white;
 }
 
-
 /* =====================
    Language Flag
 ===================== */
+
 
 .language-menu {
   position: relative;
@@ -170,6 +177,7 @@ header {
   justify-content: center;
   height: 100%;
 }
+
 
 .language-menu__button {
   background: none;
@@ -181,14 +189,17 @@ header {
   align-items: center;
 }
 
+
 /* Flag image inside the header */
 .language-menu__button img {
-  max-height: 3rem;
+  max-height: 2rem;
   width: auto;
-  border: 0.125rem solid #3D2A19;
+  border: 0.150rem solid #5C4326;
   border-radius: 0.25rem;
   display: block; /* Ensures the image isn't treated like inline text */
 }
+
+
 
 
 .language-menu__list {
@@ -206,18 +217,22 @@ header {
   z-index: 10;
 }
 
+
 .language-menu__list li {
   padding: 0.25rem 1rem;
 }
+
 
 .language-menu__list li img {
   height: 2rem;
   transition: transform 0.2s ease;
 }
 
+
 .language-menu__list li img:hover {
   transform: scale(1.1);
 }
+
 
 .language-menu:hover .language-menu__list {
   display: block;
@@ -231,20 +246,20 @@ header {
 
 .hero {
   background-color: var(--color-sage-green);
-  padding: 0.6rem 0 0.5rem 0; /* top | right | bottom | left */
+  padding: 0.6rem 0 0 0; /* top | right | bottom | left */
   text-align: center;
 }
 
 .hero__title {
-  font-size: 1.7rem;
-  font-weight: 600;
-  color: var(--color-dark-brown);
+  font-size: 1.5rem;
+  font-weight: 550;
+  color: #3C5C54;
   margin-bottom: 0.2rem;
 }
 
 .hero__subtitle {
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--color-warm-white);
   margin: 0;
 }
@@ -264,12 +279,12 @@ header {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1.5rem;
-  padding: 1rem 1.5rem;
-  min-height: 160px;
+  padding: 0.6rem 0.8rem;
+  min-height: 185px;
   margin: 0.6rem auto;
   max-width: 75rem;
   background-color: var(--color-warm-white);
-  border: 3px solid var(--color-dark-brown);
+  border: 3px solid var(--color-deep-green-teal);
   border-radius: 0.625rem;
   box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.05);
 }
@@ -287,15 +302,16 @@ header {
 }
 
 .search__sidebar h2 {
-  font-size: 1.75rem;
+  font-size: 1.9rem;
   font-weight: 500;
   color: var(--color-dark-brown);
   margin-bottom: 0.3rem;
+  
 }
 
 .search__sidebar img {
-  width: 90px;
-  height: 90px;
+  width: 110px;
+  height: 110px;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid var(--color-dark-brown);
@@ -367,7 +383,7 @@ header {
 ===================== */
 .search__submit {
   position: absolute;
-  bottom: 0.3rem;
+  bottom: -1.5rem;
   right: 0.3rem;
   margin: 0;
   padding: 0.4rem 1rem;
@@ -395,7 +411,7 @@ header {
 
 .gallery__heading {
   text-align: center;
-  color: var(--color-dark-brown);
+  color: #3C5C54;
   font-weight: 600;
   margin-bottom: 0.7rem;
   font-size: 1.25rem;
