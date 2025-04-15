@@ -20,7 +20,7 @@
 />
 
 
-  />
+
 
   <!-- Structured Data for SEO -->
   <script type="application/ld+json">
@@ -81,8 +81,8 @@
 <!-- Hero Section -->
 <section class="hero" aria-labelledby="main-heading">
   <div class="container">
-    <h1 id="main-heading" class="hero__title">Find Your New Best Friend</h1>
-    <p class="hero__subtitle">
+    <h1 id="main-heading" class="hero__title highlighted-text">Find Your New Best Friend !</h1>
+     <p class="hero__subtitle">
       <span class="heart">♥</span>
       Give a loving home to a grateful dog
       <span class="heart">♥</span>
@@ -97,12 +97,24 @@
     <h2 class="search__title">
       Dog Search <i class="fa-solid fa-location-dot"></i>
     </h2>
-    <img src="images/mascot.png" alt="Mascot Dog" />
-  </div>
 
-  <!-- Wrapper for form + button -->
+    <div class="sparkle-wrapper">
+      <img src="images/mascot.png" alt="Mascot Dog" class="mascot-img" />
+
+      <!-- Fancy golden sparkles -->
+      <span class="sparkle sparkle--1"></span>
+      <span class="sparkle sparkle--2"></span>
+      <span class="sparkle sparkle--3"></span>
+      <span class="sparkle sparkle--4"></span>
+      <span class="sparkle sparkle--5"></span>
+      <span class="sparkle sparkle--6"></span>
+      <span class="sparkle sparkle--7"></span>
+      <span class="sparkle sparkle--8">✧</span>
+    </div>
+  </div> <!-- ✅ Closing sidebar -->
+
+  <!-- Form and search fields -->
   <div class="search__form-wrapper">
-    <!-- ✅ Form only contains fields -->
     <form class="search__form" action="#" method="GET">
       <div class="search__form-group">
         <label>Sex:</label>
@@ -138,12 +150,13 @@
         <label for="dog-id">ID Number:</label>
         <input type="text" id="dog-id" name="dog-id" placeholder="Enter dog ID" />
       </div>
-    </form>
 
-    <!-- ✅ Button now outside form but inside wrapper -->
-    <button class="search__submit" type="submit">SEARCH</button>
+      <!-- ✅ Submit button inside the form -->
+      <button class="search__submit" type="submit">SEARCH</button>
+    </form>
   </div>
 </div>
+
 
 <!-- Gallery Section -->
 <section class="container" aria-labelledby="gallery-heading">

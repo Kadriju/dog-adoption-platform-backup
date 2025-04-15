@@ -39,9 +39,11 @@ body {
   --color-muted-coral: #E6A4B4;
   --color-golden-beige: #E3C27E;
   --color-soft-mustard: #D8B25C;
+  --warm-golden-yellow: #E4AF28;
   --color-text-dark: #3D2A19;
   --color-dark-brown: #5C4326;
-  --color-medium-salmon: #E56767; 
+  --soft-dark-purple: #5D3A6A; 
+  --color-medium-salmon: #E56767;
   --color-black:#000;
   --color-logo-frame: #7E3E20;
   --color-deep-green-teal: #38584F;
@@ -75,7 +77,7 @@ header {
   background-color: var(--color-warm-white);
   border-top: 3px solid var(--color-deep-green-teal);
   border-bottom: 3px solid var(--color-deep-green-teal);
-  height: 4.5rem;
+  height: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -113,10 +115,8 @@ header {
 .header__logo img {
   border: none;
   background: none;
-  height: 6.5rem;
+  height: 6rem;
 }
-
-
 
 
 /* Navigation section */
@@ -251,11 +251,42 @@ header {
 }
 
 .hero__title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 550;
-  color: #3C5C54;
+  color: var(--warm-golden-yellow);
   margin-bottom: 0.2rem;
 }
+
+@keyframes glow {
+  0% {
+    text-shadow:
+      0 0 3px #3D2A19,
+      0 0 6px #3D2A19,
+      1px 1px 2px #3D2A19,
+      -1px -1px 2px #3D2A19;
+  }
+  50% {
+    text-shadow:
+      0 0 6px #3D2A19,
+      0 0 12px #3D2A19,
+      1px 1px 4px #3D2A19,
+      -1px -1px 4px #3D2A19;
+  }
+  100% {
+    text-shadow:
+      0 0 3px #3D2A19,
+      0 0 6px #3D2A19,
+      1px 1px 2px #3D2A19,
+      -1px -1px 2px #3D2A19;
+  }
+}
+
+.highlighted-text {
+  color: var(--warm-golden-yellow);
+  font-weight: bold;
+  animation: glow 2s infinite ease-in-out;
+}
+
 
 .hero__subtitle {
   font-size: 1.2rem;
@@ -304,10 +335,64 @@ header {
 .search__sidebar h2 {
   font-size: 1.9rem;
   font-weight: 500;
-  color: var(--color-dark-brown);
+  color: #5D3A6A;
   margin-bottom: 0.3rem;
   
 }
+
+.sparkle-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.mascot-img {
+  display: block;
+  width: 100px;
+  height: auto;
+  z-index: 1;
+}
+
+/* Base sparkle star */
+.sparkle {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: gold;
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%, 
+    68% 57%, 79% 91%, 50% 70%, 
+    21% 91%, 32% 57%, 2% 35%, 
+    39% 35%
+  );
+  opacity: 0;
+  transform: scale(0.5) rotate(0deg);
+  animation: sparkleTwinkle 2.5s infinite ease-in-out;
+  z-index: 2;
+  box-shadow: 
+    0 0 4px gold,
+    0 0 10px rgba(255, 215, 0, 0.7),
+    0 0 14px rgba(255, 255, 200, 0.5);
+}
+
+/* Star animation */
+@keyframes sparkleTwinkle {
+  0%   { opacity: 0; transform: scale(0.4) rotate(0deg); }
+  30%  { opacity: 1; transform: scale(1.2) rotate(72deg); }
+  60%  { opacity: 1; transform: scale(1) rotate(144deg); }
+  100% { opacity: 0; transform: scale(0.4) rotate(360deg); }
+}
+
+/* Random placement & delays */
+.sparkle--1 { top: -12px; left: 20px; animation-delay: 0s; }
+.sparkle--2 { top: 10px; right: -14px; animation-delay: 0.3s; }
+.sparkle--3 { top: 45%; left: -18px; animation-delay: 0.6s; }
+.sparkle--4 { bottom: 100%; left: 30px; animation-delay: 0.9s; }
+.sparkle--5 { bottom: -14px; right: 8px; animation-delay: 1.2s; }
+.sparkle--6 { top: 25px; left: 70%; animation-delay: 1.5s; }
+.sparkle--7 { bottom: 12px; left: 0px; animation-delay: 1.8s; }
+.sparkle--8 { top: 60%; right: -10px; animation-delay: 2.1s; }
+
+
 
 .search__sidebar img {
   width: 110px;
@@ -326,6 +411,7 @@ header {
   position: relative;
   flex: 1;
   display: block; /* Use block instead of flex for clean absolute layout */
+  margin-left: 4rem;
 }
 
 /* =====================
@@ -367,6 +453,9 @@ header {
   margin-right: 0.5rem;
 }
 
+.search__form-group.id {
+  margin-left: 2rem; /* or more */
+}
 .search__form-group input[type="text"],
 .search__form-group select {
   padding: 0.25rem;
@@ -379,29 +468,71 @@ header {
 }
 
 /* =====================
-   Search Button (ABSOLUTE)
+   Glowing Purple Text Animation (Idle)
 ===================== */
-.search__submit {
-  position: absolute;
-  bottom: -1.5rem;
-  right: 0.3rem;
-  margin: 0;
-  padding: 0.4rem 1rem;
-  width: 130px; /* or whatever width you prefer */
-  text-align: center;
-  font-size: 1.3rem;
-  background-color: var(--color-soft-mustard);
-  color: white;
-  border: 2px solid var(--color-dark-brown);
-  border-radius: 0.3125rem;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+@keyframes glow-purple-text {
+  0% {
+    text-shadow:
+      0 0 2px #5e2a7e,
+      0 0 4px #5e2a7e;
+  }
+  50% {
+    text-shadow:
+      0 0 6px #7e3cb3,
+      0 0 12px #a47cc3,
+      0 0 16px #c792ea;
+  }
+  100% {
+    text-shadow:
+      0 0 2px #5e2a7e,
+      0 0 4px #5e2a7e;
+  }
 }
 
-.search__submit:hover {
-  background-color: var(--color-golden-beige);
+/* =====================
+   Button Container (for positioning)
+===================== */
+.search__box {
+  position: relative;
+  margin-top: 1rem;
 }
+
+/* =====================
+   Search Button Styles
+===================== */
+.search__submit {
+  margin-top: 7rem;
+  padding: 0.4rem 1.3rem;
+  background-color: #ffe082;
+  color: white;
+  font-size: 1.2rem;
+  border: 3px solid #a47cc3;
+  border-radius: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+
+  animation: glow-purple-text 2s infinite ease-in-out;
+  transition: text-shadow 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Intensified glow on hover */
+.search__submit:hover {
+  animation: none;
+  text-shadow:
+    0 0 8px #7e3cb3,
+    0 0 14px #a47cc3,
+    0 0 20px #e6ccff;
+  box-shadow: 0 0 12px #a47cc3;
+}
+
+/* Sparkles removed */
+.search__submit::after {
+  display: none;
+}
+
 
 
 
