@@ -146,7 +146,7 @@ header {
   text-decoration: none;
   font-weight: 900;
   text-transform: uppercase;
-  color: var(--color-dark-brown);
+  color: #6B5843;
   font-size: 1.4rem;
   line-height: 1.2;
   letter-spacing: 0.08rem;
@@ -158,12 +158,46 @@ header {
   border-radius: 0.25rem;
 }
 
+.donate-button {
+  background-color: #FDE9E0; /* soft pink-champagne */
+  color: #E56767 !important; /* salmon pink text */
+  padding: 0.5rem 1.2rem;
+  border-radius: 2rem;
+  font-weight: 900;
+  font-size: 1.4rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; /* space between heart and text */
+  height: 100%;
+  transition: all 0.25s ease;
+  border: 2px solid #C98585; /* soft rosewood */
+  box-shadow: 0 4px 8px rgba(233, 155, 155, 0.3); /* soft blush glow */
+  background-clip: padding-box;
+}
 
-.nav__item a:hover,
-.nav__item a:focus {
+.donate-text {
+  animation: glow-golden-soft 2s infinite ease-in-out;
+  color: #E56767 !important;
+  font-weight: 900;
+}
+
+
+.nav__item a:not(.donate-button):hover,
+.nav__item a:not(.donate-button):focus {
   background-color: var(--color-muted-teal);
   color: white;
 }
+
+.donate-button:hover,
+.donate-button:focus {
+  background-color: #F9D7CD;
+  transform: scale(1.04);
+  box-shadow: 0 6px 12px rgba(233, 155, 155, 0.5);
+  color: #E56767 !important;
+}
+
+
 
 /* =====================
    Language Flag
@@ -251,7 +285,7 @@ header {
 }
 
 .hero__title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 550;
   color: var(--warm-golden-yellow);
   margin-bottom: 0.2rem;
@@ -473,21 +507,23 @@ header {
 @keyframes glow-purple-text {
   0% {
     text-shadow:
-      0 0 2px #5e2a7e,
-      0 0 4px #5e2a7e;
+      0 0 4px #C5A8E8,
+      0 0 6px #D6B8F3;
   }
   50% {
     text-shadow:
-      0 0 6px #7e3cb3,
-      0 0 12px #a47cc3,
-      0 0 16px #c792ea;
+      0 0 6px #D6B8F3,
+      0 0 12px #E9D6FA;
   }
   100% {
     text-shadow:
-      0 0 2px #5e2a7e,
-      0 0 4px #5e2a7e;
+      0 0 4px #C5A8E8,
+      0 0 6px #D6B8F3;
   }
 }
+
+
+
 
 /* =====================
    Button Container (for positioning)
@@ -506,7 +542,7 @@ header {
   background-color: #ffe082;
   color: white;
   font-size: 1.2rem;
-  border: 3px solid #a47cc3;
+  border: 2px solid 	#A784AF;
   border-radius: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -544,7 +580,7 @@ header {
   text-align: center;
   color: #3C5C54;
   font-weight: 600;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.5rem;
   font-size: 1.25rem;
 }
 
@@ -552,7 +588,7 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
   gap: 1rem;
-  margin: 0.25rem 0 0.3rem 0;
+  margin: 0.2rem 0 0.2rem 0;
   padding: 0 0;
   width: 100%;
 }
@@ -636,3 +672,28 @@ footer a:focus {
     width: auto;
   }
 }
+
+@keyframes glow-golden-soft {
+  0% {
+    text-shadow:
+      0 0 3px #FFF8E7,
+      0 0 6px #FFF8E7,
+      1px 1px 2px #FFF5CC,
+      -1px -1px 2px #FFF5CC;
+  }
+  50% {
+    text-shadow:
+      0 0 6px #FFFCE1,
+      0 0 12px #FFFCE1,
+      1px 1px 4px #FFF5CC,
+      -1px -1px 4px #FFF5CC;
+  }
+  100% {
+    text-shadow:
+      0 0 3px #FFF8E7,
+      0 0 6px #FFF8E7,
+      1px 1px 2px #FFF5CC,
+      -1px -1px 2px #FFF5CC;
+  }
+}
+
