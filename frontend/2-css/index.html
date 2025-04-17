@@ -1,25 +1,23 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Metadata -->
-  <title>Adopt a Dog in Europe | Find your new best friend</title>
-  <meta name="description" content="Browse and adopt dogs from shelters across Europe. Find your new best friend and give a dog a loving home today with Dogs of Europe." />
-  <meta name="keywords" content="dog adoption, adopt a dog, shelter dogs Europe, dogs for adoption, rescue dogs, European dog shelters" />
+  <title>Adopt your new best friend from a dog shelter in Europe</title>  
+  <meta name="description" content="Search, browse and find dogs from shelters across Europe. Find your new best friend and give a dog a loving home today with Dogs of Europe." />
+  <meta name="keywords" content="dogs, dog adoption, adopt a dog, shelter dogs Europe, dogs for adoption, rescue dogs, European dog shelters" />
   <meta name="author" content="Dogs of Europe Team" />
 
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- ✅ Font Awesome (for fa-search icon) -->
+  <!-- Font Awesome (for fa-search icon) -->
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 />
-
-
 
 
   <!-- Structured Data for SEO -->
@@ -121,22 +119,23 @@
   <!-- Form and search fields -->
   <div class="search__form-wrapper">
     <form class="search__form" action="#" method="GET">
-      <div class="search__form-group">
-        <label>Sex:</label>
+
+      <div class="search__form-group sex">
+        <p class="form-title">Sex:</p>
         <label><input type="radio" name="sex" value="all" checked /> All</label>
         <label><input type="radio" name="sex" value="female" /> Female</label>
         <label><input type="radio" name="sex" value="male" /> Male</label>
       </div>
 
-      <div class="search__form-group">
-        <label>Age:</label>
+      <div class="search__form-group age">
+        <p class="form-title">Age:</p>
         <label><input type="radio" name="age" value="0-1" /> 0–1 year</label>
         <label><input type="radio" name="age" value="1-5" /> 1–5 years</label>
         <label><input type="radio" name="age" value="6+" /> 6+ years</label>
       </div>
 
-      <div class="search__form-group">
-        <label>Size:</label>
+      <div class="search__form-group size">
+        <p class="form-title">Size:</p>
         <label><input type="checkbox" name="size" value="small" /> Small</label>
         <label><input type="checkbox" name="size" value="medium" /> Medium</label>
         <label><input type="checkbox" name="size" value="large" /> Large</label>
@@ -144,26 +143,27 @@
       </div>
 
       <div class="search__form-group country">
-        <label for="country">Country:</label>
+        <p class="form-title">Country:</p>
         <select id="country" name="country">
           <option value="">-- Select Country --</option>
-          <!-- Add country options here -->
+          <option value="estonia">Estonia</option>
+          <option value="latvia">Latvia</option>
+          <option value="lithuania">Lithuania</option>
         </select>
       </div>
 
       <div class="search__form-group id">
-        <label for="dog-id">ID Number:</label>
+        <p class="form-title">ID Number:</p>
         <input type="text" id="dog-id" name="dog-id" placeholder="Enter dog ID" />
+        <button class="search__submit" type="submit">SEARCH</button>
       </div>
 
-      <!-- ✅ Submit button inside the form -->
-      <button class="search__submit" type="submit">SEARCH</button>
-    </form>
+    </form> <!-- ✅ CLOSES the form here -->
   </div>
 </div>
 
 
-<!-- Gallery Section -->
+  <!-- Gallery Section -->
 <section class="container" aria-labelledby="gallery-heading">
   <h2 id="gallery-heading" class="gallery__heading">Bringing love, companionship & joy into your life</h2>
   <ul class="gallery__grid">
@@ -172,9 +172,10 @@
     <li><img src="images/image3.jpg" alt="Best companion" /></li>
     <li><img src="images/image4.jpg" alt="Best friend" /></li>
     <li><img src="images/image5.jpg" alt="Perfect guard dog" /></li>
-    <li><img src="images/image6.jpg" alt="Puppy who needs a home and family" /></li>
+    <li><img src="images/image6.jpg" alt="Puppy who needs a home and love" /></li>
   </ul>
 </section>
+
 
 </main>
 
@@ -182,7 +183,7 @@
 <footer role="contentinfo">
   <p>&copy; 2025 Dogs of Europe | 
     <a href="#" title="Contact Dogs of Europe">Contact</a> | 
-    <a href="#" title="Useful Links for Dog Adoption">Helpful Links</a>
+    All rights reserved.
   </p>
 </footer>
 
