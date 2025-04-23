@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Metadata -->
+
   <title>Adopt your new best friend from a dog shelter in Europe</title>  
   <meta name="description" content="Search, browse and find dogs from shelters across Europe. Find your new best friend and give a dog a loving home today with Dogs of Europe." />
   <meta name="keywords" content="dogs, dog adoption, adopt a dog, shelter dogs Europe, dogs for adoption, rescue dogs, European dog shelters" />
@@ -19,30 +20,35 @@
   <link rel="stylesheet" href="styles.css" />
 
   <!-- Font Awesome (for fa-search icon) -->
+
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 />
 
+ <!-- Structured Data for SEO -->
 
-  <!-- Structured Data for SEO -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Dogs of Europe",
-      "url": "https://www.dogsofeurope.com",
-      "logo": "https://www.dogsofeurope.com/images/logo.png",
-      "description": "Browse and adopt dogs from shelters across Europe.",
-      "sameAs": [
-        "https://www.dogsofeurope.com",
-        "https://www.dogsofeurope.org",
-        "https://www.dogsofeurope.eu"
-      ]
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Dogs of Europe",
+    "url": "https://www.dogsofeurope.com",
+    "logo": "https://www.dogsofeurope.com/images/logo.png",
+    "description": "Browse and adopt dogs from shelters across Europe.",
+    "sameAs": [
+      "https://www.dogsofeurope.com",
+      "https://www.dogsofeurope.org",
+      "https://www.dogsofeurope.eu"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "info@dogsofeurope.com",
+      "contactType": "Customer Support"
     }
-  </script>
+  }
+  </script>  
 </head>
-
 <body>
 
   <header class="header__layout" role="banner">
@@ -84,9 +90,11 @@
   
 
   <!-- Main Content -->
+
   <main id="main-content" role="main">
 
 <!-- Hero Section -->
+
 <section class="hero" aria-labelledby="main-heading">
   <div class="container">
     <h1 id="main-heading" class="hero__title highlighted-text">Find Your New Best Friend !</h1>
@@ -99,9 +107,11 @@
 </section>
 
 <!-- Search Section -->
+
 <div class="search">
 
   <!-- Sidebar with mascot -->
+
   <div class="search__sidebar">
     <h2 class="search__title">
       Dog Search <i class="fa-solid fa-location-dot"></i>
@@ -111,6 +121,7 @@
       <img src="images/mascot.png" alt="Mascot Dog" class="mascot-img" />
 
       <!-- Fancy golden sparkles -->
+
       <span class="sparkle sparkle--1"></span>
       <span class="sparkle sparkle--2"></span>
       <span class="sparkle sparkle--3"></span>
@@ -120,9 +131,10 @@
       <span class="sparkle sparkle--7"></span>
       <span class="sparkle sparkle--8">✧</span>
     </div>
-  </div> <!--Closing sidebar -->
+  </div> 
 
   <!-- Form and search fields -->
+
   <div class="search__form-wrapper">
     <form class="search__form" action="#" method="GET">
 
@@ -164,12 +176,12 @@
         <button class="search__submit" type="submit">SEARCH</button>
       </div>
 
-    </form> <!--CLOSES the form here -->
+    </form> 
   </div>
 </div>
 
-
   <!-- Gallery Section -->
+
 <section class="container" aria-labelledby="gallery-heading">
   <h2 id="gallery-heading" class="gallery__heading">Bringing love, companionship & joy into your life</h2>
   <ul class="gallery__grid">
@@ -181,11 +193,10 @@
     <li><img src="images/image6.jpg" alt="A puppy who needs a loving home and family" /></li>
   </ul>
 </section>
-
-
 </main>
 
 <!-- Footer -->
+ 
 <footer role="contentinfo">
   <p>&copy; 2025 Dogs of Europe | 
     <a href="#" title="Contact Dogs of Europe">Contact</a> | 
