@@ -29,29 +29,30 @@ body {
 /* Color Palette Variables */
 
 :root {
-  --color-white: #FFFFFF;
+  
   --color-black:#000;
-  --color-sage-green: #A8BBA2;
-  --color-powder-blue: #BFD7EA;
-  --color-light-gray: #ccc; 
+  --color-white: #FFFFFF;
   --color-warm-white: #FAF3E0;
-  --color-muted-teal: #6B9080;
-  --color-warm-taupe: #C2A28D;
-  --color-light-chestnut: #B38B6D;
-  --color-muted-coral: #E6A4B4;
-  --color-muted-rose: #C98585; 
-  --color-soft-peach: #FDE9E0; 
   --color-golden-beige: #E3C27E;
+  --color-pastel-yellow: #ffe082;
   --color-soft-mustard: #D8B25C;
   --warm-golden-yellow: #E4AF28;
-  --color-pastel-yellow: #ffe082; 
-  --color-text-dark: #3D2A19;
-  --color-dark-brown: #5C4326;
-  --color-medium-browm: #6B5843;
-  --soft-dark-purple: #5D3A6A; 
-  --color-muted-lavender: #A784AF;
+  --color-powder-blue: #BFD7EA;
+  --color-light-gray: #ccc; 
+  --color-soft-peach: #FDE9E0;
+  --color-muted-rose: #C98585;
+  --color-muted-coral: #E6A4B4;
   --color-medium-salmon: #E56767;
+  --color-muted-lavender: #A784AF;
+  --soft-dark-purple: #5D3A6A;
+  --color-light-chestnut: #B38B6D;
+  --color-warm-taupe: #C2A28D;
+  --color-medium-browm: #6B5843;
+  --color-dark-brown: #5C4326;
+  --color-text-dark: #3D2A19;
   --color-logo-frame: #7E3E20;
+  --color-sage-green: #A8BBA2;
+  --color-muted-teal: #6B9080;
   --color-deep-green-teal: #38584F;
 }
 
