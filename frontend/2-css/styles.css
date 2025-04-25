@@ -5,22 +5,20 @@
 
 /* Reset and base styles */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 html {
   box-sizing: border-box;
-  font-size: 1rem;
   line-height: 1.3;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 body {
   font-family: Poppins, sans-serif;
   background-color: var(--color-sage-green);
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -29,31 +27,58 @@ body {
 /* Color Palette Variables */
 
 :root {
-  
-  --color-black:#000;
+  /* Neutral Tones */
+  --color-black: #000;
   --color-white: #FFFFFF;
   --color-warm-white: #FAF3E0;
+  --color-light-gray: #ccc;
+
+  /* Yellow & Gold Tones */
   --color-golden-beige: #E3C27E;
   --color-pastel-yellow: #ffe082;
   --color-soft-mustard: #D8B25C;
-  --warm-golden-yellow: #E4AF28;
-  --color-powder-blue: #BFD7EA;
-  --color-light-gray: #ccc; 
+  --color-warm-golden-yellow: #E4AF28;
+
+  /* Peach, Rose & Coral Tones */
   --color-soft-peach: #FDE9E0;
   --color-muted-rose: #C98585;
   --color-muted-coral: #E6A4B4;
   --color-medium-salmon: #E56767;
+
+  /* Lavender & Purple Tones */
   --color-muted-lavender: #A784AF;
-  --soft-dark-purple: #5D3A6A;
+  --color-soft-dark-purple: #5D3A6A;
+
+  /* Brown & Taupe Tones */
   --color-light-chestnut: #B38B6D;
   --color-warm-taupe: #C2A28D;
-  --color-medium-browm: #6B5843;
+  --color-medium-brown: #6B5843;
   --color-dark-brown: #5C4326;
-  --color-text-dark: #3D2A19;
-  --color-logo-frame: #7E3E20;
+
+  /* Green & Teal Tones */
   --color-sage-green: #A8BBA2;
   --color-muted-teal: #6B9080;
   --color-deep-green-teal: #38584F;
+
+  /* Other / UI-Specific */
+  --color-text-dark: #3D2A19;
+  --color-logo-frame: #7E3E20;
+  --color-powder-blue: #BFD7EA;
+}
+
+
+/* Utility Classes */
+
+.text-brown {
+  color: var(--color-medium-brown);
+}
+
+.bg-sage {
+  background-color: var(--color-sage-green);
+}
+
+.bg-golden {
+  background-color: var(--color-warm-golden-yellow);
 }
 
 
@@ -131,7 +156,7 @@ header {
   text-decoration: none;
   font-weight: 900;
   text-transform: uppercase;
-  color: var(--color-medium-browm);
+  color: var(--color-medium-brown);
   font-size: 1.4rem;
   line-height: 1.2;
   letter-spacing: 0.08rem;
@@ -263,13 +288,13 @@ header {
 .hero__title {
   font-size: 2.2rem;
   font-weight: 550;
-  color: var(--warm-golden-yellow);
+  color: var(--color-warm-golden-yellow);
   margin-bottom: 0.2rem;
 }
 
 
 .highlighted-text {
-  color: var(--warm-golden-yellow);
+  color: var(--color-warm-golden-yellow);
   font-weight: bold;
   animation: glow 2s infinite ease-in-out;
 }
@@ -302,7 +327,7 @@ header {
   margin: 0.6rem auto;
   max-width: 77rem;
   background-color: var(--color-warm-white);
-  border: 0.1875rem solid var(--soft-dark-purple);
+  border: 0.1875rem solid var(--color-soft-dark-purple);
   border-radius: 0.625rem;
   box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.05);
 }
@@ -323,7 +348,7 @@ header {
 .search__sidebar h2 {
   font-size: 2rem;
   font-weight: 500;
-  color: var(--soft-dark-purple);
+  color: var(--color-soft-dark-purple);
   margin-bottom: 0.3rem;
   
 }
@@ -421,7 +446,7 @@ header {
 .form-title {
   font-weight: 600;
   margin-bottom: 0.8rem;
-  color: var(--soft-dark-purple);
+  color: var(--color-soft-dark-purple);
   font-size: 1rem; 
 }
 
