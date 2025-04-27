@@ -50,43 +50,45 @@
   </script>  
 </head>
 <body>
-
   <header class="header__layout" role="banner">
-    <div class="header__logo">
-      <a href="/" aria-label="Dogs of Europe Home">
-        <img src="images/logo.png" alt="Dogs of Europe logo" />
-      </a>
-    </div>
+    <div class="container header__inner">
   
-    <nav class="nav-container" role="navigation" aria-label="Main navigation">
-      <ul class="nav__list">
-        <li class="nav__item"><a href="#">Home</a></li>
-        <li class="nav__item"><a href="#">Our Mission</a></li>
-        <li class="nav__item">
-          <a href="/donate" class="donate-button">
-            ❤️ <span class="donate-text">Donate</span>
-          </a> 
-        </li>
-        <li class="nav__item"><a href="#">Info &amp; Links</a></li>
-        <li class="nav__item"><a href="#">Happy Stories</a></li>
-      </ul>
-    </nav>
-    
+      <div class="header__logo">
+        <a href="/" aria-label="Dogs of Europe Home">
+          <img src="images/logo.png" alt="Dogs of Europe logo" />
+        </a>
+      </div>
   
-    <div class="language-menu">
-      <button class="language-menu__button" aria-haspopup="true" aria-expanded="false">
-        <img src="images/uk-flag.png" alt="English" />
-      </button>
-      <ul class="language-menu__list">
-        <li><a href="#"><img src="images/uk-flag.png" alt="English" /></a></li>
-        <li><a href="#"><img src="images/sweden-flag.png" alt="Svenska" /></a></li>
-        <li><a href="#"><img src="images/norway-flag.png" alt="Norsk" /></a></li>
-        <li><a href="#"><img src="images/finland-flag.png" alt="Suomi" /></a></li>
-        <li><a href="#"><img src="images/denmark-flag.png" alt="Dansk" /></a></li>
-      </ul>
-    </div>
-    
-  </header> 
+      <nav class="nav-container" role="navigation" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#">Home</a></li>
+          <li class="nav__item"><a href="#">Our Mission</a></li>
+          <li class="nav__item">
+            <a href="/donate" class="donate-button">
+              ❤️ <span class="donate-text">Donate</span>
+            </a> 
+          </li>
+          <li class="nav__item"><a href="#">Info &amp; Links</a></li>
+          <li class="nav__item"><a href="#">Happy Stories</a></li>
+        </ul>
+      </nav>
+  
+      <div class="language-menu">
+        <button class="language-menu__button" aria-haspopup="true" aria-expanded="false">
+          <img src="images/uk-flag.png" alt="English" />
+        </button>
+        <ul class="language-menu__list">
+          <li><a href="#"><img src="images/uk-flag.png" alt="English" /></a></li>
+          <li><a href="#"><img src="images/sweden-flag.png" alt="Svenska" /></a></li>
+          <li><a href="#"><img src="images/norway-flag.png" alt="Norsk" /></a></li>
+          <li><a href="#"><img src="images/finland-flag.png" alt="Suomi" /></a></li>
+          <li><a href="#"><img src="images/denmark-flag.png" alt="Dansk" /></a></li>
+        </ul>
+      </div>
+  
+    </div>  
+  </header>
+  
   
 
   <!-- Main Content -->
@@ -109,27 +111,27 @@
 <!-- Search Section -->
 
 <div class="search">
+  <div class="container">
 
-  <!-- Sidebar with mascot -->
+    <div class="search__sidebar">
+      <h2 class="search__title">
+        Dog Search <i class="fa-solid fa-location-dot"></i>
+      </h2>
 
-  <div class="search__sidebar">
-    <h2 class="search__title">
-      Dog Search <i class="fa-solid fa-location-dot"></i>
-    </h2>
+      <div class="sparkle-wrapper">
+        <img src="images/mascot.png" alt="Mascot Dog" class="mascot-img" />
 
-    <div class="sparkle-wrapper">
-      <img src="images/mascot.png" alt="Mascot Dog" class="mascot-img" />
+        <!-- Fancy golden sparkles -->
 
-      <!-- Fancy golden sparkles -->
-
-      <span class="sparkle sparkle--1"></span>
-      <span class="sparkle sparkle--2"></span>
-      <span class="sparkle sparkle--3"></span>
-      <span class="sparkle sparkle--4"></span>
-      <span class="sparkle sparkle--5"></span>
-      <span class="sparkle sparkle--6"></span>
-      <span class="sparkle sparkle--7"></span>
-      <span class="sparkle sparkle--8">✧</span>
+        <span class="sparkle sparkle--1"></span>
+        <span class="sparkle sparkle--2"></span>
+        <span class="sparkle sparkle--3"></span>
+        <span class="sparkle sparkle--4"></span>
+        <span class="sparkle sparkle--5"></span>
+        <span class="sparkle sparkle--6"></span>
+        <span class="sparkle sparkle--7"></span>
+        <span class="sparkle sparkle--8">✧</span>
+      </div>
     </div>
   </div> 
 
@@ -198,10 +200,12 @@
 <!-- Footer -->
  
 <footer role="contentinfo">
-  <p>&copy; 2025 Dogs of Europe | 
-    <a href="#" title="Contact Dogs of Europe">Contact</a> | 
-    All rights reserved.
-  </p>
+  <div class="container">
+    <p>&copy; 2025 Dogs of Europe | 
+      <a href="#" title="Contact Dogs of Europe">Contact</a> | 
+      All rights reserved.
+    </p>
+  </div>
 </footer>
 
 </body>
