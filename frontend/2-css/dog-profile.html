@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Results | Dogs of Europe</title>  
+  <meta name="description" content="Browse dogs available for adoption in shelters across Europe." />
+  <meta name="keywords" content="dog adoption, search shelter dogs, adopt a dog, dogs in Europe" />
+  <meta name="author" content="Dogs of Europe Team" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="search-results.css">
+  <link rel="stylesheet" href="dog-profile.css">
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Dogs of Europe",
+    "url": "https://www.dogsofeurope.com",
+    "logo": "https://www.dogsofeurope.com/images/logo.png",
+    "description": "Browse and adopt dogs from shelters across Europe.",
+    "sameAs": [
+      "https://www.dogsofeurope.com",
+      "https://www.dogsofeurope.org",
+      "https://www.dogsofeurope.eu"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "info@dogsofeurope.com",
+      "contactType": "Customer Support"
+    }
+  }
+  </script>  
+</head>
+<body>
+
+  <!-- HEADER -->
+
+  <header class="header__layout" role="banner">
+    <div class="container header__inner">
+      <div class="header__logo">
+        <a href="/" aria-label="Dogs of Europe Home">
+          <img src="images/logo.png" alt="Dogs of Europe logo" />
+        </a>
+      </div>
+
+      <nav class="nav-container" role="navigation" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#">Home</a></li>
+          <li class="nav__item"><a href="#">Our Mission</a></li>
+          <li class="nav__item">
+            <a href="/donate" class="donate-button">❤️ <span class="donate-text">Donate</span></a>
+          </li>
+          <li class="nav__item"><a href="#">Info &amp; Links</a></li>
+          <li class="nav__item"><a href="#">Happy Stories</a></li>
+        </ul>
+      </nav>
+
+      <div class="language-menu">
+        <button class="language-menu__button" aria-haspopup="true" aria-expanded="false">
+          <img src="images/uk-flag.png" alt="English" />
+        </button>
+        <ul class="language-menu__list">
+          <li><a href="#"><img src="images/uk-flag.png" alt="English" /></a></li>
+          <li><a href="#"><img src="images/sweden-flag.png" alt="Svenska" /></a></li>
+          <li><a href="#"><img src="images/norway-flag.png" alt="Norsk" /></a></li>
+          <li><a href="#"><img src="images/finland-flag.png" alt="Suomi" /></a></li>
+          <li><a href="#"><img src="images/denmark-flag.png" alt="Dansk" /></a></li>
+        </ul>
+      </div>
+    </div>  
+  </header>
+
+  <main class="dog-profile container">
+    <section class="dog-top-section">
+      <!-- Left: Dog Info -->
+      <div class="dog-details">
+        <h1>Dog Name</h1>
+        <ul>
+          <li><strong>Sex:</strong> Female</li>
+          <li><strong>Age:</strong> 3 years</li>
+          <li><strong>Size:</strong> Medium</li>
+          <li><strong>Country:</strong> Estonia</li>
+          <li><strong>Shelter:</strong> Tallinn Shelter</li>
+          <li><strong>ID Number:</strong> EE12345</li>
+        </ul>
+      </div>
+  
+      <!-- Right: Photo Gallery -->
+      <div class="photo-gallery">
+        <img src="images/mokka.jpg" alt="Mokka photo 1" />
+        <img src="images/mokka.jpg" alt="Mokka photo 2" />
+        <img src="images/mokka.jpg" alt="Mokka photo 3" />
+        <!-- Add more if needed -->
+      </div>
+    </section>
+  
+    <!-- Description -->
+    <section class="dog-description">
+      <h2>About Me</h2>
+      <p>
+        Mokka is a playful and sweet dog who loves people and other animals. She's house-trained,
+        vaccinated, and looking for a forever home.
+      </p>
+    </section>
+  
+    <!-- Contact Info -->
+    <section class="contact-shelter">
+        <h2>Contact Shelter</h2>
+        <p><strong>Email:</strong> shelter@example.com</p>
+        <p><strong>Phone:</strong> +372 5555 1234</p>
+    </section>
+      
+    <div class="offer-home">
+        <button class="offer-home-button">Offer Home</button>
+    </div>
+      
+  </main>
+  
+  
+   
+  
+
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="container">
+      <p>&copy; 2025 Dogs of Europe | 
+        <a href="#" title="Contact Dogs of Europe">Contact</a> | 
+        All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

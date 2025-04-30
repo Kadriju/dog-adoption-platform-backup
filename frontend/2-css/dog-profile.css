@@ -1,0 +1,124 @@
+.dog-profile {
+    max-width: 60rem;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  /* Layout for top section with info on left and gallery on right */
+  .dog-top-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  
+  /* LEFT: Dog info */
+.dog-details {
+    flex: 0 0 40%;
+    background-color: var(--color-soft-beige);
+    padding: 1.2rem 1.5rem;
+    border-radius: 0.5rem;
+    line-height: 2;
+  }
+  
+  /* Shared layout for both columns */
+  .dog-details,
+  .photo-gallery {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  /* RIGHT: Gallery */
+  .photo-gallery {
+    flex: 0 0 60%;
+    padding-top: 1rem;
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+  
+  
+  
+  
+  .photo-gallery img {
+    width: 100%;
+    height: 160px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 2px solid var(--color-soft-dark-purple);
+  }
+  
+ 
+  
+  /* Dog info list formatting */
+  .dog-info ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.9;
+  }
+  
+  .dog-info li {
+    margin: 0.5rem 0;
+  }
+  
+  .dog-description,
+  .contact-shelter,
+  .offer-home {
+    margin-bottom: 2rem; /* adds space below each section */
+  }
+
+  .contact-shelter {
+    margin-bottom: 1.5rem; /* space below email/phone */
+  }
+  
+  .offer-home {
+    margin-bottom: 0; /* ensures button touches footer */
+  }
+  
+  .offer-home-button {
+    display: inline-block;
+    margin-top: 0.5rem; /* space above button */
+  }
+  
+
+  /* Offer home button */
+  .offer-home-button {
+    background-color: var(--color-soft-peach);
+    color: var(--color-medium-salmon);
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .offer-home-button:hover {
+    background-color: var(--color-muted-rose);
+    color: var(--color-white);
+    transform: scale(1.05);
+  }
+  
+
+  @media (max-width: 768px) {
+    .dog-top-section {
+      flex-direction: column;
+    }
+  
+    .dog-details,
+    .photo-gallery {
+      max-width: 100%;
+      flex: 1 1 100%;
+    }
+  
+    .photo-gallery {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+  }
+  
+  
+  
