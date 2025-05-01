@@ -2,77 +2,75 @@
     max-width: 60rem;
     margin: 2rem auto;
     padding: 1rem;
-  }
-  
-  /* Layout for top section with info on left and gallery on right */
-  .dog-top-section {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-  }
-  
-  /* LEFT: Dog info */
-.dog-details {
-    flex: 0 0 40%;
-    background-color: var(--color-soft-beige);
-    padding: 1.2rem 1.5rem;
+    border: 3px solid var(--color-deep-green-teal);
+    background-color: var(--color-warm-white);
     border-radius: 0.5rem;
-    line-height: 2;
-  }
-  
-  /* Shared layout for both columns */
-  .dog-details,
-  .photo-gallery {
-    display: flex;
-    min-height: 100%;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  
-  /* RIGHT: Gallery */
-  .photo-gallery {
-    flex: 0 0 60%;
-    padding-top: 1rem;
-    margin-top: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 1rem;
-  }
-  
-  
-  
-  
-  .photo-gallery img {
-    width: 100%;
-    height: 160px;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    border-radius: 0.5rem;
-    border: 2px solid var(--color-soft-dark-purple);
-  }
-  
- 
-  
-  /* Dog info list formatting */
-  .dog-info ul {
-    list-style: none;
-    padding: 0;
-    line-height: 1.9;
-  }
-  
-  .dog-info li {
-    margin: 0.5rem 0;
-  }
-  
-  .dog-description,
-  .contact-shelter,
-  .offer-home {
-    margin-bottom: 2rem; /* adds space below each section */
   }
 
-  .contact-shelter {
-    margin-bottom: 1.5rem; /* space below email/phone */
+  .dog-overview {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: start;
+    background-color: var(--color-soft-beige); 
+    padding: 1rem; 
+    border-radius: 0.5rem;
   }
+
+  .dog-details {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;   
+    padding-right: 0;  
+    padding-bottom: 1.3rem;   
+    margin-right: 0;  
+    border: 3px solid var(--color-soft-dark-purple);
+    border-radius: 0.5rem;
+    color: var(--color-dark-grape); 
+    line-height: 3.3; 
+  }
+
+  .dog-details li strong {
+    display: inline-block;
+  }
+  
+
+  .dog-name {
+    font-family: 'Kalam', cursive;
+    text-align: left;
+    font-weight: 500;
+    color: var(--color-muted-lavender); 
+    -webkit-text-stroke: 2px #46265A;
+    text-transform: uppercase;
+    font-size: 2.6em;
+    letter-spacing: 0.2rem;
+    margin-bottom: -1rem;
+    margin-top: -1rem;
+  }
+
+  .dog-details ul {
+    margin-top: -1rem; /* Adjust this value to move it up */
+    font-size: 1em;
+  }
+
+  .photo-gallery {
+    display: flex;
+    flex-wrap: wrap;  
+    align-items: flex-start;             /* Allows wrapping to a new line */
+    gap: 0.5rem;                   /* Slightly smaller gap */
+    align-items: flex-start;       /* Align to top */
+  }
+
+  .photo-gallery img {
+    width: calc(50% - 0.25rem);    /* Two per row, considering gap */
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 3px solid var(--color-soft-dark-purple);
+  }
+
+
   
   .offer-home {
     margin-bottom: 0; /* ensures button touches footer */
@@ -109,7 +107,7 @@
       flex-direction: column;
     }
   
-    .dog-details,
+    .dog-description,
     .photo-gallery {
       max-width: 100%;
       flex: 1 1 100%;
