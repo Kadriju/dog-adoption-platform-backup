@@ -1,3 +1,13 @@
+header {
+  background-color: var(--color-warm-white);
+  border-top: 0.2rem solid var(--color-deep-green-teal);
+  border-bottom: 0.2rem solid var(--color-deep-green-teal);
+  height: 4.5rem; 
+  padding: 0 0;
+  position: relative;
+  z-index: 1;
+}
+
 .dog-profile {
     max-width: 60rem;
     margin: 2rem auto;
@@ -33,7 +43,6 @@
   .dog-details li strong {
     display: inline-block;
   }
-  
 
   .dog-name {
     font-family: 'Kalam', cursive;
@@ -49,20 +58,20 @@
   }
 
   .dog-details ul {
-    margin-top: -1rem; /* Adjust this value to move it up */
+    margin-top: -1rem; 
     font-size: 1em;
   }
 
   .photo-gallery {
     display: flex;
     flex-wrap: wrap;  
-    align-items: flex-start;             /* Allows wrapping to a new line */
-    gap: 0.5rem;                   /* Slightly smaller gap */
-    align-items: flex-start;       /* Align to top */
+    align-items: flex-start;             
+    gap: 0.5rem;                   
+    align-items: flex-start;       
   }
 
   .photo-gallery img {
-    width: calc(50% - 0.25rem);    /* Two per row, considering gap */
+    width: calc(50% - 0.25rem);    
     max-width: 100%;
     height: auto;
     object-fit: cover;
@@ -70,35 +79,89 @@
     border: 3px solid var(--color-soft-dark-purple);
   }
 
+  .dog-description {
+    color: var(--color-dark-grape); 
+    line-height: 1.6;
+    padding-bottom: 0.8rem;
+  }
 
-  
+  .dog-description h2 {
+    font-weight: 500;
+    font-size: 1.4em;
+    color: var(--color-black); 
+  }
+
+  .dog-description p {
+    font-weight: 500;
+  }
+
+  .shelter-contact {
+    color: var(--color-dark-grape); 
+    line-height: 1.6;
+    padding-bottom: 0.8rem;
+  }
+
+  .shelter-contact h2 {
+    font-weight: 500;
+    font-size: 1.4em;
+    color: var(--color-black); 
+  }
+
+  .shelter-contact p strong {
+    font-weight: 600;
+  }
+
   .offer-home {
-    margin-bottom: 0; /* ensures button touches footer */
+    margin-bottom: 0; 
   }
   
   .offer-home-button {
     display: inline-block;
-    margin-top: 0.5rem; /* space above button */
+    margin-top: 0.5rem; 
   }
   
-
-  /* Offer home button */
   .offer-home-button {
     background-color: var(--color-soft-peach);
     color: var(--color-medium-salmon);
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 2rem;
-    border: none;
+    padding: 0.3rem 0.4rem 0.5rem 0.9rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    border: 2px solid var(--color-medium-salmon);
+    border-radius: 1.5rem;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 0.4rem 0.8rem rgba(233, 155, 155, 0.4); /* glow effect */
+    background-clip: padding-box;
+    position: relative;
+    overflow: hidden;
   }
+
+
+  .offer-home-button__text {
+    animation: glow-golden-soft 2s infinite ease-in-out;
+    color: var(--color-medium-salmon);
+    font-weight: 700;
+  }
+
   
   .offer-home-button:hover {
-    background-color: var(--color-muted-rose);
-    color: var(--color-white);
-    transform: scale(1.05);
+    background-color: var(--color-soft-peach);
+    transform: scale(1.10);
+    box-shadow: 0 0.5rem 1rem rgba(233, 155, 155, 0.6);
+    color: var(--color-medium-salmon) !important;
+    transition: all 0.3s ease;
+  }
+  
+
+  @keyframes glow-golden-soft {
+    0%, 100% {
+      text-shadow: 0 0 0.2rem rgba(233, 155, 155, 0.3),
+                   0 0 0.4rem rgba(233, 155, 155, 0.3);
+    }
+    50% {
+      text-shadow: 0 0 0.5rem rgba(233, 155, 155, 0.5),
+                   0 0 1rem rgba(233, 155, 155, 0.5);
+    }
   }
   
 
