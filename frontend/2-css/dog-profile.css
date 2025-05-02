@@ -1,185 +1,195 @@
+/* Header */
 header {
   background-color: var(--color-warm-white);
   border-top: 0.2rem solid var(--color-deep-green-teal);
   border-bottom: 0.2rem solid var(--color-deep-green-teal);
-  height: 4.5rem; 
-  padding: 0 0;
+  height: 4.5rem;
+  padding: 0;
   position: relative;
   z-index: 1;
 }
 
+/* Dog profile container */
 .dog-profile {
-    max-width: 60rem;
-    margin: 2rem auto;
-    padding: 1rem;
-    border: 3px solid var(--color-deep-green-teal);
-    background-color: var(--color-warm-white);
-    border-radius: 0.5rem;
-  }
+  max-width: 60rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: var(--color-warm-white);
+  border: 3px solid var(--color-deep-green-teal);
+  border-radius: 0.5rem;
+}
 
-  .dog-overview {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 2rem;
-    align-items: start;
-    background-color: var(--color-soft-beige); 
-    padding: 1rem; 
-    border-radius: 0.5rem;
-  }
+/* Overview section (image + details) */
+.dog-overview {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: start;
+  background-color: var(--color-soft-beige);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
 
-  .dog-details {
-    display: flex;
+/* Dog details box */
+.dog-details {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 1.3rem 3rem;
+  margin-right: 0;
+  background-color: transparent;
+  border: 3px solid var(--color-soft-dark-purple);
+  border-radius: 0.5rem;
+  color: var(--color-dark-grape);
+  line-height: 3.1;
+}
+
+.dog-details ul {
+  margin-top: -1rem;
+  font-size: 1.1em;
+  list-style: none;
+  padding-left: 0;
+}
+
+.dog-details li strong {
+  display: inline-block;
+}
+
+.dog-detail-value {
+  font-size: 1rem;
+  color: var(--color-black);
+  font-weight: 500;
+  margin-left: 0.2rem;
+}
+
+/* Dog name styling */
+.dog-name {
+  font-family: 'Kalam', cursive;
+  text-align: left;
+  font-weight: 500;
+  color: var(--color-muted-lavender);
+  -webkit-text-stroke: 2px #46265A;
+  text-transform: uppercase;
+  font-size: 2.6em;
+  letter-spacing: 0.2rem;
+  margin: -1rem 0 -1rem 0;
+}
+
+/* Dog description */
+.dog-description {
+  color: var(--color-dark-grape);
+  line-height: 1.6;
+  padding-bottom: 0.8rem;
+}
+
+.dog-description h2 {
+  font-weight: 500;
+  font-size: 1.4em;
+  color: var(--color-black);
+}
+
+.dog-description p {
+  font-weight: 500;
+}
+
+/* Shelter contact section */
+.shelter-contact {
+  color: var(--color-dark-grape);
+  line-height: 1.6;
+  padding-bottom: 0.8rem;
+}
+
+.shelter-contact h2 {
+  font-weight: 500;
+  font-size: 1.4em;
+  color: var(--color-black);
+}
+
+.shelter-contact p strong {
+  font-weight: 600;
+}
+
+.contact-detail {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-black);
+}
+
+/* Photo gallery */
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.photo-gallery img {
+  width: calc(50% - 0.25rem);
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  border: 3px solid var(--color-soft-dark-purple);
+}
+
+/* Offer home button */
+.offer-home-button {
+  display: inline-block;
+  margin: 0.5rem 0;
+  background-color: var(--color-soft-peach);
+  color: var(--color-medium-salmon);
+  padding: 0.3rem 0.4rem 0.5rem 0.9rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  border: 2px solid var(--color-medium-salmon);
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0.4rem 0.8rem rgba(233, 155, 155, 0.4);
+  background-clip: padding-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.offer-home-button__text {
+  animation: glow-golden-soft 2s infinite ease-in-out;
+  color: var(--color-medium-salmon);
+  font-weight: 700;
+}
+
+.offer-home-button:hover {
+  background-color: var(--color-soft-peach);
+  transform: scale(1.1);
+  box-shadow: 0 0.5rem 1rem rgba(233, 155, 155, 0.6);
+  color: var(--color-medium-salmon) !important;
+}
+
+/* Glow animation */
+@keyframes glow-golden-soft {
+  0%, 100% {
+    text-shadow: 0 0 0.2rem rgba(233, 155, 155, 0.3),
+                 0 0 0.4rem rgba(233, 155, 155, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 0.5rem rgba(233, 155, 155, 0.5),
+                 0 0 1rem rgba(233, 155, 155, 0.5);
+  }
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .dog-top-section {
     flex-direction: column;
-    padding-left: 3rem;   
-    padding-right: 0;  
-    padding-bottom: 1.3rem;   
-    margin-right: 0;  
-    border: 3px solid var(--color-soft-dark-purple);
-    border-radius: 0.5rem;
-    color: var(--color-dark-grape); 
-    line-height: 3.3; 
   }
 
-  .dog-details li strong {
-    display: inline-block;
-  }
-
-  .dog-name {
-    font-family: 'Kalam', cursive;
-    text-align: left;
-    font-weight: 500;
-    color: var(--color-muted-lavender); 
-    -webkit-text-stroke: 2px #46265A;
-    text-transform: uppercase;
-    font-size: 2.6em;
-    letter-spacing: 0.2rem;
-    margin-bottom: -1rem;
-    margin-top: -1rem;
-  }
-
-  .dog-details ul {
-    margin-top: -1rem; 
-    font-size: 1em;
+  .dog-description,
+  .photo-gallery {
+    max-width: 100%;
+    flex: 1 1 100%;
   }
 
   .photo-gallery {
-    display: flex;
-    flex-wrap: wrap;  
-    align-items: flex-start;             
-    gap: 0.5rem;                   
-    align-items: flex-start;       
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
-
-  .photo-gallery img {
-    width: calc(50% - 0.25rem);    
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 0.5rem;
-    border: 3px solid var(--color-soft-dark-purple);
-  }
-
-  .dog-description {
-    color: var(--color-dark-grape); 
-    line-height: 1.6;
-    padding-bottom: 0.8rem;
-  }
-
-  .dog-description h2 {
-    font-weight: 500;
-    font-size: 1.4em;
-    color: var(--color-black); 
-  }
-
-  .dog-description p {
-    font-weight: 500;
-  }
-
-  .shelter-contact {
-    color: var(--color-dark-grape); 
-    line-height: 1.6;
-    padding-bottom: 0.8rem;
-  }
-
-  .shelter-contact h2 {
-    font-weight: 500;
-    font-size: 1.4em;
-    color: var(--color-black); 
-  }
-
-  .shelter-contact p strong {
-    font-weight: 600;
-  }
-
-  .offer-home {
-    margin-bottom: 0; 
-  }
-  
-  .offer-home-button {
-    display: inline-block;
-    margin-top: 0.5rem; 
-  }
-  
-  .offer-home-button {
-    background-color: var(--color-soft-peach);
-    color: var(--color-medium-salmon);
-    padding: 0.3rem 0.4rem 0.5rem 0.9rem;
-    font-size: 1.3rem;
-    letter-spacing: 0.1rem;
-    border: 2px solid var(--color-medium-salmon);
-    border-radius: 1.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 0.4rem 0.8rem rgba(233, 155, 155, 0.4); /* glow effect */
-    background-clip: padding-box;
-    position: relative;
-    overflow: hidden;
-  }
-
-
-  .offer-home-button__text {
-    animation: glow-golden-soft 2s infinite ease-in-out;
-    color: var(--color-medium-salmon);
-    font-weight: 700;
-  }
-
-  
-  .offer-home-button:hover {
-    background-color: var(--color-soft-peach);
-    transform: scale(1.10);
-    box-shadow: 0 0.5rem 1rem rgba(233, 155, 155, 0.6);
-    color: var(--color-medium-salmon) !important;
-    transition: all 0.3s ease;
-  }
-  
-
-  @keyframes glow-golden-soft {
-    0%, 100% {
-      text-shadow: 0 0 0.2rem rgba(233, 155, 155, 0.3),
-                   0 0 0.4rem rgba(233, 155, 155, 0.3);
-    }
-    50% {
-      text-shadow: 0 0 0.5rem rgba(233, 155, 155, 0.5),
-                   0 0 1rem rgba(233, 155, 155, 0.5);
-    }
-  }
-  
-
-  @media (max-width: 768px) {
-    .dog-top-section {
-      flex-direction: column;
-    }
-  
-    .dog-description,
-    .photo-gallery {
-      max-width: 100%;
-      flex: 1 1 100%;
-    }
-  
-    .photo-gallery {
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-  }
-  
-  
-  
+}
