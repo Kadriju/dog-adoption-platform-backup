@@ -48,6 +48,7 @@ img {
   --color-muted-rose: #C98585;
   --color-muted-coral: #E6A4B4;
   --color-medium-salmon: #E56767;
+  --color-rosy-brown: #b76e79; 
 
   /* Lavender & Purple Tones */
   --color-muted-lavender: #A784AF;
@@ -65,11 +66,15 @@ img {
   --color-muted-teal: #6B9080;
   --color-deep-green-teal: #38584F;
 
+  /* Blue Tones */
+  --color-powder-blue: #BFD7EA;
+  --color-royal-blue: #3a7fc1; 
+
   /* Other / UI-Specific */
   --color-text-dark: #3D2A19;
   --color-logo-frame: #7E3E20;
-  --color-powder-blue: #BFD7EA;
-}
+ }
+
 
 
 /* Utility Classes */
