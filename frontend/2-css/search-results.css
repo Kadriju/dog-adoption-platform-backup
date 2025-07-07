@@ -11,10 +11,11 @@ header {
   z-index: 1;
 }
 
-.header__logo {
-  left: -2.1rem;
-  }
-  
+.search-page .header__logo {
+  left: -1.9rem;
+}
+
+ 
   /* Headings and Emojis */
   
   .results-heading {
