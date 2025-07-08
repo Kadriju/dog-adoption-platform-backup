@@ -1,13 +1,4 @@
-/* Header */
-header {
-  background-color: var(--color-warm-white);
-  border-top: 0.2rem solid var(--color-deep-green-teal);
-  border-bottom: 0.2rem solid var(--color-deep-green-teal);
-  height: 4.5rem;
-  padding: 0;
-  position: relative;
-  z-index: 1;
-}
+
 
 .header__logo {
   left: -2.1rem;

@@ -1,15 +1,4 @@
 
-  /* Header */
-
-header {
-  background-color: var(--color-warm-white);
-  border-top: 0.2rem solid var(--color-deep-green-teal);
-  border-bottom: 0.2rem solid var(--color-deep-green-teal);
-  height: 4.5rem;
-  padding: 0;
-  position: relative;
-  z-index: 1;
-}
 
 .search-page .header__logo {
   left: -1.9rem;
@@ -20,36 +9,54 @@ header {
   
   .results-heading {
     color: var(--color-soft-dark-purple);
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
     letter-spacing: 0.03rem;
     margin: 1rem 0 0 0;
     text-align: center;
+    
   }
   
   .paw-large {
     display: inline-block;
-    font-size: 2.3rem;
+    font-size: 2.4rem;
     margin: 0 0.1rem;
     position: relative;
     top: -0.2rem;
     transform: rotate(-20deg);
     vertical-align: middle;
+    
+    
   }
   
   .available-heading {
     color: var(--color-warm-white);
-    font-size: 1.4rem;
-    font-weight: 500;
-    margin: 0 0 0.2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 0.1rem;
     text-align: center;
+
+    text-shadow:
+    0 0.1rem 0.1rem rgba(183, 110, 121, 0.5),   /* rosy-brown tone */
+    0 0.2rem 0.3rem rgba(60, 45, 30, 0.35);      /* rich brown base */
+
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
   }
   
   .heart {
     color: var(--color-medium-salmon);
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 0 0.5rem;
     vertical-align: middle;
+
+    text-shadow:
+    0 0.08rem 0.05rem rgba(255, 255, 255, 0.3),     /* light bevel highlight */
+    0 0.12rem 0.12rem rgba(183, 110, 121, 0.6),     /* rosy-brown mid-shadow */
+    0 0.25rem 0.35rem rgba(60, 45, 30, 0.5);        /* deeper dark shadow */
+
+  
+
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
   }
   
   
@@ -57,15 +64,15 @@ header {
   
   .dog-grid {
     display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.8rem;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     margin: 0 auto;
     max-width: 77rem;
     padding: 1rem 0.3rem;
   }
   
   .dog-card {
-    border: 0.125rem solid var(--color-soft-dark-purple);
+    border: 0.2rem solid var(--color-soft-dark-purple);
     border-radius: 0.625rem;
     box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.06);
     color: inherit;
@@ -87,14 +94,14 @@ header {
   }
   
   .dog-card img {
-    height: 250px;
+    height: 160px;
     object-fit: cover;
     width: 100%;
   }
   
   .dog-info {
     background-color: var(--color-soft-peach);
-    padding: 1rem;
+    padding: 0.7rem;
   }
 
   .gender-symbol {
@@ -114,35 +121,17 @@ header {
   
   .dog-info h2 {
     color: var(--color-dark-brown);
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.25rem;
   }
   
   .dog-info p {
     color: var(--color-soft-dark-purple);
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 500;
   }
   
   
-  /* Footer */
-  
-  footer {
-    background-color: var(--color-muted-teal);
-    border-top: 0.2rem solid var(--color-powder-blue);
-    color: var(--color-warm-white);
-    font-size: 1.1rem;
-    line-height: 1.3;
-    margin-top: 0.2rem;
-    padding: 0.4rem 0;
-    text-align: center;
-  }
-  
-  footer a {
-    color: var(--color-muted-coral);
-    font-weight: 550;
-    margin: 0 0.3rem;
-    text-decoration: none;
-  }
+
   
