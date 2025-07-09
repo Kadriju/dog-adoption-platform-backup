@@ -206,15 +206,22 @@ header {
   font-size: 1.4rem;
   text-decoration: none;
   display: inline-flex;
+  height: auto;
   align-items: center;
   gap: 0.5rem;
-  height: 100%;
-  transition: all 0.3s ease;
-  border: 0.125rem solid var(--color-muted-rose);
-  box-shadow: 0 0.4rem 0.8rem rgba(233, 155, 155, 0.4);
+  border: 2.5px solid var(--color-muted-rose);
   background-clip: padding-box;
   position: relative;
   overflow: hidden;
+
+  /* Strong 3D shadow stack */
+  box-shadow:
+    inset 2px 2px 4px rgba(255, 255, 255, 0.7),   /* top-left highlight */
+    inset -2px -2px 4px rgba(0, 0, 0, 0.1),       /* bottom-right shadow */
+    0 4px 6px rgba(0, 0, 0, 0.2),                 /* base lift */
+    0 8px 16px rgba(233, 155, 155, 0.3);          /* soft ambient glow */
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .donate-button__text {
@@ -231,11 +238,19 @@ header {
 
 .donate-button:is(:hover, :focus) {
   background-color: var(--color-soft-peach);
-  transform: scale(1.10);
-  box-shadow: 0 0.5rem 1rem rgba(233, 155, 155, 0.6);
+  transform: scale(1.10) translateY(-2px);
   color: var(--color-medium-salmon) !important;
-  transition: all 0.3s ease;
+
+  /* Stronger and richer 3D shadow stack */
+  box-shadow:
+    inset 2px 2px 4px rgba(255, 255, 255, 0.6),    /* top-left inner bevel */
+    inset -2px -2px 4px rgba(0, 0, 0, 0.08),       /* bottom-right inner shadow */
+    0 6px 10px rgba(0, 0, 0, 0.25),                /* base lift shadow */
+    0 10px 20px rgba(233, 155, 155, 0.35);         /* ambient glow */
+
+  transition: all 0.25s ease;
 }
+
 
 
 /* Language Flag */
