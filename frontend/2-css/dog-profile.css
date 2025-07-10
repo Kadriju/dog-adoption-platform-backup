@@ -5,6 +5,67 @@
   }
   
 
+.donate-button {
+  position: relative;
+  display: inline-block;
+  margin-top: -0.1rem;
+  background-color: var(--color-soft-peach);
+  color: var(--color-medium-salmon);
+  padding: 0.3rem 0.6rem !important; 
+  letter-spacing: 0.2rem ;
+  font-weight: 700;
+  border-radius: 7rem !important;
+  cursor: pointer;
+  background-clip: padding-box;
+  overflow: hidden;
+  border: 3px solid var(--color-medium-salmon);
+
+  /* Deep bevel and layered glow */
+  box-shadow:
+    inset 3px 3px 6px rgba(255, 255, 255, 0.85),
+    inset -3px -3px 8px rgba(0, 0, 0, 0.08),
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    0 10px 20px rgba(233, 155, 155, 0.4),
+    0 0 1rem rgba(255, 200, 200, 0.2);
+  
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.donate-button::before {
+  content: "";
+  position: absolute;
+  inset: -0.25rem;
+  border-radius: 7rem;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 0 0.75rem rgba(255, 255, 255, 0.4),
+    inset 0 0 0.75rem rgba(233, 155, 155, 0.25);
+  z-index: -1;
+}
+
+.donate-button__text {
+  animation: glow-golden-soft 2s infinite ease-in-out;
+  color: var(--color-medium-salmon);
+  font-size: 1.5rem;
+}
+
+.donate-button:hover,
+.donate-button:focus {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow:
+    inset 3px 3px 6px rgba(255, 255, 255, 0.85),
+    inset -3px -3px 8px rgba(0, 0, 0, 0.1),
+    0 8px 16px rgba(0, 0, 0, 0.35),
+    0 12px 24px rgba(233, 155, 155, 0.5);
+}
+
+
+.nav__item a:not(.donate-button):is(:hover, :focus) {
+  background-color: var(--color-muted-teal);
+  color: var(--color-white);
+}
+
+
 /* Dog profile container */
 .dog-profile {
   max-width: 45rem;
@@ -172,46 +233,75 @@
     0 12px 24px rgba(0, 0, 0, 0.12); /* Deeper shadow for floating effect */
 }
 
+.button-row {
+  display: flex;
+  gap: 1rem; /* spacing between buttons */
+  justify-content: flex-start; /* center the buttons horizontally */
+  align-items: center;
+  margin-top: 0.3rem;
+  flex-wrap: wrap; /* ensures they stack on small screens */
+}
 
-/* Offer home button */
-.offer-home-button {
-  display: inline-block;
-  margin: 0.25rem 0;
-  background-color: var(--color-soft-peach);
+.unified-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 0.08rem;
   color: var(--color-medium-salmon);
-  padding: 0.15rem 0.2rem 0.25rem 0.45rem;
-  font-size: 1.2rem;
-  letter-spacing: 0.05rem;
-  font-weight: 600;
-  border-radius: 1.5rem;
-  cursor: pointer;
+  background-color: var(--color-soft-peach);
+  padding: 0.3rem 0.5rem;
+  border-radius: 7rem;
+  border: 3px solid var(--color-medium-salmon);
   background-clip: padding-box;
+  cursor: pointer;
   position: relative;
   overflow: hidden;
-  border: 2px solid var(--color-medium-salmon);
 
-  /* Strong beveled 3D border effect */
+  /* 3D layered bevel and glow */
   box-shadow:
-    inset 2px 2px 4px rgba(255, 255, 255, 0.8),     /* top-left light bevel */
-    inset -2px -2px 4px rgba(0, 0, 0, 0.1),         /* bottom-right shadow bevel */
-    0 4px 6px rgba(0, 0, 0, 0.2),                   /* base lift shadow */
-    0 6px 12px rgba(233, 155, 155, 0.25);           /* soft ambient glow */
+    inset 3px 3px 6px rgba(255, 255, 255, 0.85),
+    inset -3px -3px 8px rgba(0, 0, 0, 0.08),
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    0 10px 20px rgba(233, 155, 155, 0.4),
+    0 0 1rem rgba(255, 200, 200, 0.2);
 
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.offer-home-button__text {
-  animation: glow-golden-soft 2s infinite ease-in-out;
-  color: var(--color-medium-salmon);
-  font-weight: 600;
+.unified-button:hover,
+.unified-button:focus {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow:
+    inset 3px 3px 6px rgba(255, 255, 255, 0.85),
+    inset -3px -3px 8px rgba(0, 0, 0, 0.1),
+    0 8px 16px rgba(0, 0, 0, 0.35),
+    0 12px 24px rgba(233, 155, 155, 0.5);
 }
 
-.offer-home-button:hover {
-  background-color: var(--color-soft-peach);
-  transform: scale(1.1);
-  box-shadow: 0 0.5rem 1rem rgba(233, 155, 155, 0.6);
-  color: var(--color-medium-salmon) !important;
+.unified-button::before {
+  content: "";
+  position: absolute;
+  inset: -0.25rem;
+  border-radius: 7rem;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 0 0.75rem rgba(255, 255, 255, 0.4),
+    inset 0 0 0.75rem rgba(233, 155, 155, 0.25);
+  z-index: -1;
 }
+
+.unified-button span {
+  animation: glow-golden-soft 2s infinite ease-in-out;
+  color: var(--color-medium-salmon);
+}
+
+
 
 /* Glow animation */
 @keyframes glow-golden-soft {

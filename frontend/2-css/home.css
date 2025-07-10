@@ -198,36 +198,57 @@ header {
 }
 
 .donate-button {
-  background-color: var(--color-soft-peach);
-  color: var(--color-medium-salmon) !important;
-  padding: 0.5rem 1.4rem;
-  border-radius: 2rem;
-  font-weight: 900;
-  font-size: 1.4rem;
-  text-decoration: none;
-  display: inline-flex;
-  height: auto;
-  align-items: center;
-  gap: 0.5rem;
-  border: 2.5px solid var(--color-muted-rose);
-  background-clip: padding-box;
   position: relative;
+  display: inline-block;
+  margin-top: -0.1rem;
+  background-color: var(--color-soft-peach);
+  color: var(--color-medium-salmon);
+  padding: 0.3rem 0.6rem !important; 
+  letter-spacing: 0.2rem ;
+  font-weight: 700;
+  border-radius: 7rem !important;
+  cursor: pointer;
+  background-clip: padding-box;
   overflow: hidden;
+  border: 3px solid var(--color-medium-salmon);
 
-  /* Strong 3D shadow stack */
+  /* Deep bevel and layered glow */
   box-shadow:
-    inset 2px 2px 4px rgba(255, 255, 255, 0.7),   /* top-left highlight */
-    inset -2px -2px 4px rgba(0, 0, 0, 0.1),       /* bottom-right shadow */
-    0 4px 6px rgba(0, 0, 0, 0.2),                 /* base lift */
-    0 8px 16px rgba(233, 155, 155, 0.3);          /* soft ambient glow */
-
+    inset 3px 3px 6px rgba(255, 255, 255, 0.85),
+    inset -3px -3px 8px rgba(0, 0, 0, 0.08),
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    0 10px 20px rgba(233, 155, 155, 0.4),
+    0 0 1rem rgba(255, 200, 200, 0.2);
+  
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.donate-button::before {
+  content: "";
+  position: absolute;
+  inset: -0.25rem;
+  border-radius: 7rem;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 0 0.75rem rgba(255, 255, 255, 0.4),
+    inset 0 0 0.75rem rgba(233, 155, 155, 0.25);
+  z-index: -1;
 }
 
 .donate-button__text {
   animation: glow-golden-soft 2s infinite ease-in-out;
-  color: var(--color-medium-salmon) !important;
-  font-weight: 900;
+  color: var(--color-medium-salmon);
+  font-size: 1.5rem;
+}
+
+.donate-button:hover,
+.donate-button:focus {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow:
+    inset 3px 3px 6px rgba(255, 255, 255, 0.85),
+    inset -3px -3px 8px rgba(0, 0, 0, 0.1),
+    0 8px 16px rgba(0, 0, 0, 0.35),
+    0 12px 24px rgba(233, 155, 155, 0.5);
 }
 
 
@@ -236,29 +257,13 @@ header {
   color: var(--color-white);
 }
 
-.donate-button:is(:hover, :focus) {
-  background-color: var(--color-soft-peach);
-  transform: scale(1.10) translateY(-2px);
-  color: var(--color-medium-salmon) !important;
-
-  /* Stronger and richer 3D shadow stack */
-  box-shadow:
-    inset 2px 2px 4px rgba(255, 255, 255, 0.6),    /* top-left inner bevel */
-    inset -2px -2px 4px rgba(0, 0, 0, 0.08),       /* bottom-right inner shadow */
-    0 6px 10px rgba(0, 0, 0, 0.25),                /* base lift shadow */
-    0 10px 20px rgba(233, 155, 155, 0.35);         /* ambient glow */
-
-  transition: all 0.25s ease;
-}
-
-
 
 /* Language Flag */
 
 .language-menu {
   position: absolute;
   top: 50%;
-  right: -1rem; 
+  right: -2rem; 
   transform: translateY(-50%);
   display: flex;
   align-items: center;
@@ -517,7 +522,7 @@ header {
 
 .search__form-group.country {
   margin-left: 0; 
-  margin-right: 1rem; /
+  margin-right: 1rem; 
 }
 
 .search__form-group label {
