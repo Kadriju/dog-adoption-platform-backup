@@ -62,18 +62,27 @@
       </div>
   
       <nav class="nav-container" role="navigation" aria-label="Main navigation">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#">Home</a></li>
-          <li class="nav__item"><a href="#">Our Mission</a></li>
-          <li class="nav__item">
-            <a href="/donate" class="donate-button">
-              ❤️ <span class="donate-button__text">Donate</span>
-            </a> 
-          </li>
-          <li class="nav__item"><a href="#">Info &amp; Links</a></li>
-          <li class="nav__item"><a href="#">Happy Stories</a></li>
-        </ul>
-      </nav>
+  <ul class="nav__list">
+    <li class="nav__item"><a href="#">Home</a></li>
+    <li class="nav__item"><a href="#">Our Mission</a></li>
+    <li class="nav__item"><a href="#">Rescue Shop</a></li>
+    
+    <li class="nav__item">
+      <a href="/donate" class="donate-button">
+        ❤️ <span class="donate-button__text">Donate</span>
+      </a> 
+    </li>
+    
+    <li class="nav__item"><a href="#">Dog Tips &amp; Info</a></li>
+    <li class="nav__item upload-dog-button-wrapper">
+      <a href="/upload" class="upload-dog-button">
+        <span class="upload-plus">+</span> Upload Dog 🐶
+      </a>
+
+    </li>
+  </ul>
+</nav>
+
   
       <div class="language-menu">
         <button class="language-menu__button" aria-haspopup="true" aria-expanded="false">
@@ -167,15 +176,24 @@
         <p class="form-title">Country:</p>
         <select id="country" name="country">
           <option value="">-- Select Country --</option>
+          <option value="estonia">All Europe</option>
           <option value="estonia">Estonia</option>
           <option value="latvia">Latvia</option>
           <option value="lithuania">Lithuania</option>
         </select>
       </div>
 
+      <div class="search__form-group id keyword">
+        <label for="keyword" class="form-title">Keyword</label>
+        <input type="text" id="keyword" name="keyword" placeholder="e.g. breed or trait" />
+        <small class="form-hint">Optional — leave blank to search all dogs</small>
+      </div>
+
+
       <div class="search__form-group id">
         <p class="form-title">ID Number:</p>
         <input type="text" id="dog-id" name="dog-id" placeholder="Enter dog ID" />
+        <small class="form-hint">Optional — leave blank unless you know the ID</small>
         <button class="search__submit" type="submit">SEARCH</button>
       </div>
 

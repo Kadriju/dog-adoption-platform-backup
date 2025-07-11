@@ -66,6 +66,7 @@ img {
   --color-sage-green: #A8BBA2;
   --color-muted-teal: #6B9080;
   --color-deep-green-teal: #38584F;
+  --color-deep-green: #3b6f58;
 
   /* Blue Tones */
   --color-powder-blue: #BFD7EA;
@@ -170,12 +171,12 @@ header {
 .nav-container {
   display: flex;
   justify-content: center;
-  padding-left: 1.5rem;
+  padding-left: 2.9rem;
 }
 
 .nav__list {
   display: flex;
-  gap: 3.5rem; 
+  gap: 1.5rem; 
   list-style: none;
   margin: 0;
   padding: 0;
@@ -183,18 +184,22 @@ header {
 
 .nav__item a {
   text-decoration: none;
-  font-weight: 900;
+  font-weight: 700;
   text-transform: uppercase;
   color: var(--color-medium-brown);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   line-height: 1.2;
-  letter-spacing: 0.08rem;
-  padding: 0.1rem 0.25rem;
+  letter-spacing: 0.04rem;
+  padding: 0.1rem 0.5rem;
   display: flex;
   align-items: center;
   height: 100%;
   transition: all 0.3s ease;
   border-radius: 0.25rem;
+}
+
+.nav__item.upload-dog-button-wrapper {
+  margin-top: 0.3rem; 
 }
 
 .donate-button {
@@ -203,7 +208,7 @@ header {
   margin-top: -0.1rem;
   background-color: var(--color-soft-peach);
   color: var(--color-medium-salmon);
-  padding: 0.3rem 0.6rem !important; 
+  padding: 0.3rem 0.8rem 0.3rem 0.2rem !important; 
   letter-spacing: 0.2rem ;
   font-weight: 700;
   border-radius: 7rem !important;
@@ -256,6 +261,58 @@ header {
   background-color: var(--color-muted-teal);
   color: var(--color-white);
 }
+
+.nav__item .upload-dog-button {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--color-muted-teal);
+  color: var(--color-white);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.6rem;
+  margin-right: 0.6rem;
+  border-radius: 50rem;
+  text-decoration: none;
+  border: 2px solid var(--color-light-chestnut);
+  height: 2rem;
+  background-clip: padding-box;
+
+  /* Thinner dark brown frame */
+  box-shadow:
+    0 0 0 1px var(--color-dark-brown), /* outer dark brown border */
+    inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    0 4px 8px rgba(0, 0, 0, 0.1);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.upload-dog-button:hover,
+.upload-dog-button:focus {
+  background-color: var(--color-deep-green);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow:
+    0 0 0 1px var(--color-dark-brown),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.15),
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.upload-plus {
+  font-size: 1.5rem;     /* Make the + larger */
+  font-weight: 400;      /* Make it bolder */
+  margin-right: 0.3rem;  /* Add spacing between + and text */
+  line-height: 1;
+}
+
+
+
 
 
 /* Language Flag */
@@ -377,7 +434,7 @@ header {
   align-items: flex-start;
   gap: 1.5rem;
   padding: 0.6rem 0.8rem;
-  min-height: 11.5625rem;
+  min-height: 9rem;
   margin: 0.5rem auto;
   max-width: 77rem;
   background-color: var(--color-warm-white);
@@ -396,13 +453,13 @@ header {
   align-items: center;
   text-align: center;
   min-width: 9.375rem;
-  gap: 0.25rem;
+  gap: 0.6rem;
   margin-left: 0.5rem;
   margin-right: 0.8rem;
 }
 
 .search__sidebar h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 500;
   color: var(--color-soft-dark-purple);
   margin-bottom: 0.3rem;
@@ -457,13 +514,13 @@ header {
 
 
 .search__sidebar img {
-  width: 6.875rem;
-  height: 6.875rem;
+  width: 6.7rem;
+  height: 6.7rem;
   object-fit: cover;
   border-radius: 50%;
   border: 0.125rem solid var(--color-dark-brown);
   background-color: var(--color-warm-white);
-  padding: 0.2rem;
+  padding: 0.4rem;
 }
 
 /* Form Wrapper */
@@ -484,7 +541,6 @@ header {
   align-items: flex-start;
   gap: 0;
   flex: 1;
-  min-height: 8.125rem; 
   position: relative;
 }
 
@@ -534,6 +590,13 @@ header {
   margin-right: 0.5rem;
 }
 
+.form-hint {
+  font-size: 0.75rem;
+  color: var(--color-medium-brown);
+  margin-top: 0.2rem;
+  opacity: 0.8;
+}
+
 .search__form-group.id {
   display: flex;
   flex-direction: column;
@@ -573,7 +636,7 @@ header {
 /* Search Button Styles */
 
 .search__submit {
-  margin-top: 3rem;
+  margin-top: 1.2rem;
   margin-left: 0.7rem;
   align-self: center;
   padding: 0.4rem 1.3rem;
