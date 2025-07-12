@@ -171,12 +171,12 @@ header {
 .nav-container {
   display: flex;
   justify-content: center;
-  padding-left: 2.9rem;
+  padding-left: 3rem;
 }
 
 .nav__list {
   display: flex;
-  gap: 1.5rem; 
+  gap: 1rem; 
   list-style: none;
   margin: 0;
   padding: 0;
@@ -187,19 +187,29 @@ header {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--color-medium-brown);
+  text-shadow: 0.6px 0.6px 1.1px rgba(209, 156, 124, 0.3);
   font-size: 1.3rem;
   line-height: 1.2;
-  letter-spacing: 0.04rem;
-  padding: 0.1rem 0.5rem;
+  
+  padding: 0.1rem 0.4rem;
   display: flex;
   align-items: center;
   height: 100%;
   transition: all 0.3s ease;
   border-radius: 0.25rem;
+  
 }
 
 .nav__item.upload-dog-button-wrapper {
   margin-top: 0.3rem; 
+}
+
+.our-mission {
+  margin-left: -0.4rem;
+}
+
+.rescue-shop {
+  margin-left: -0.6rem;
 }
 
 .donate-button {
@@ -208,7 +218,7 @@ header {
   margin-top: -0.1rem;
   background-color: var(--color-soft-peach);
   color: var(--color-medium-salmon);
-  padding: 0.3rem 0.8rem 0.3rem 0.2rem !important; 
+  padding: 0.1rem 0.7rem 0.1rem 0.4rem !important; 
   letter-spacing: 0.2rem ;
   font-weight: 700;
   border-radius: 7rem !important;
@@ -260,6 +270,8 @@ header {
 .nav__item a:not(.donate-button):is(:hover, :focus) {
   background-color: var(--color-muted-teal);
   color: var(--color-white);
+  transform: translateY(-1px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .nav__item .upload-dog-button {
@@ -267,29 +279,28 @@ header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
+  margin-top: -0.4rem;
   background-color: var(--color-muted-teal);
   color: var(--color-white);
   font-weight: 600;
   text-transform: uppercase;
   font-size: 0.85rem;
-  padding: 0.4rem 0.6rem;
-  margin-right: 0.6rem;
+  padding: 0.9rem 0.6rem;
+  margin-left: -0.4rem;
   border-radius: 50rem;
   text-decoration: none;
-  border: 2px solid var(--color-light-chestnut);
-  height: 2rem;
+  border: 2px solid var(--color-soft-peach);
+  height: 2.2rem;
   background-clip: padding-box;
 
-  /* Thinner dark brown frame */
-  box-shadow:
-    0 0 0 1px var(--color-dark-brown), /* outer dark brown border */
-    inset 1px 1px 2px rgba(255, 255, 255, 0.3),
-    inset -1px -1px 2px rgba(0, 0, 0, 0.1),
-    0 2px 4px rgba(0, 0, 0, 0.2),
-    0 4px 8px rgba(0, 0, 0, 0.1);
-
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+ box-shadow:
+  0 0 0 1.3px var(--color-golden-beige),         /* outer golden beige frame */
+  inset 1.5px 1.5px 3px rgba(255, 255, 255, 0.35), /* soft top-left highlight */
+  inset -1.5px -1.5px 3px rgba(0, 0, 0, 0.15),     /* soft bottom-right shadow */
+  0 3px 6px rgba(0, 0, 0, 0.25),                   /* primary outer shadow */
+  0 5px 10px rgba(0, 0, 0, 0.15);                  /* extended shadow for subtle lift */
+ transition: transform 0.2s ease, box-shadow 0.2s ease;
+ 
 }
 
 .upload-dog-button:hover,
@@ -319,8 +330,8 @@ header {
 
 .language-menu {
   position: absolute;
-  top: 50%;
-  right: -2rem; 
+  top: 47%;
+  right: -2.5rem; 
   transform: translateY(-50%);
   display: flex;
   align-items: center;
@@ -343,9 +354,9 @@ header {
 /* Flag image inside the header */
 
 .language-menu__button img {
-  max-height: 2rem;
+  max-height: 2.1rem;
   width: auto;
-  border: 0.150rem solid var(--color-dark-brown);
+  border: 0.140rem solid var(--color-light-chestnut);
   border-radius: 0.25rem;
   display: block; 
 }
@@ -639,10 +650,10 @@ header {
   margin-top: 1.2rem;
   margin-left: 0.7rem;
   align-self: center;
-  padding: 0.4rem 1.3rem;
+  padding: 0.3rem 0.9rem;
   background-color: var(--color-pastel-yellow);
   color: var(--color-white);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   border: 0.125rem solid var(--color-muted-lavender);
   border-radius: 0.6rem;
   font-weight: 700;
