@@ -1,12 +1,14 @@
 <!DOCTYPE html> 
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Metadata -->
 
-  <title>Adopt your new best friend from a dog shelter in Europe</title>  
+  <title>Adopt your new best friend | Dogs of Europe</title> 
+ 
   <meta name="description" content="Search, browse and find homeless dogs from shelters across Europe. Find your new best friend & soulmate and give a dog a loving home & family today through Dogs of Europe." />
   <meta name="keywords" content="dogs, dog adoption, adopt a dog, adoption, dog shelters, shelter dogs Europe, dogs for adoption, homeless dogs, rescue dogs, European dog shelters, best friend, soulmate, love of your life, personal trainer, companion, find a perfect partner" />
   <meta name="author" content="Dogs of Europe Team" />
@@ -17,14 +19,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="home.css" />
 
   <!-- Font Awesome (for fa-search icon) -->
 
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
+  />
+
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/home.css" />
 
  <!-- Structured Data for SEO -->
 
@@ -51,64 +55,12 @@
   }
   </script>  
 </head>
+
+
 <body>
-  <header class="header__layout" role="banner">
-    <div class="container header__inner">
-  
-      <div class="header__logo">
-        <a href="/" aria-label="Dogs of Europe Home">
-          <img src="images/logo.png" alt="Dogs of Europe logo" />
-        </a>
-      </div>
-  
-      <nav class="nav-container" role="navigation" aria-label="Main navigation">
-  <ul class="nav__list">
-    <li class="nav__item"><a href="#">Home</a></li>
-    <li class="nav__item">
-      <a href="#" class="our-mission">
-       🐾  <span class="our-mission__text">Our Mission</span>
-      </a>
-    </li>
-    <li class="nav__item">
-      <a href="#" class="rescue-shop">
-       🎁  <span class="rescue-shop__text">Rescue Shop</span>
-      </a>
-    </li>
-    
-    <li class="nav__item">
-      <a href="/donate" class="donate-button">
-        ❤️ <span class="donate-button__text">Donate</span>
-      </a> 
-    </li>
-    
-    <li class="nav__item"><a href="#">🐶 Dog Tips &amp; Info</a></li>
-    <li class="nav__item upload-dog-button-wrapper">
-      <a href="/upload" class="upload-dog-button">
-        <span class="upload-plus">+</span> Upload Dog 🐶
-      </a>
 
-    </li>
-  </ul>
-</nav>
-
-  
-      <div class="language-menu">
-        <button class="language-menu__button" aria-haspopup="true" aria-expanded="false">
-          <img src="images/uk-flag.png" alt="English" />
-        </button>
-        <ul class="language-menu__list">
-          <li><a href="#"><img src="images/uk-flag.png" alt="English" /></a></li>
-          <li><a href="#"><img src="images/sweden-flag.png" alt="Svenska" /></a></li>
-          <li><a href="#"><img src="images/norway-flag.png" alt="Norsk" /></a></li>
-          <li><a href="#"><img src="images/finland-flag.png" alt="Suomi" /></a></li>
-          <li><a href="#"><img src="images/denmark-flag.png" alt="Dansk" /></a></li>
-        </ul>
-      </div>
-  
-    </div>  
-  </header>
-  
-  
+  <div data-include="html-partials/header.html"></div>
+ 
   <!-- Main Content -->
 
   <main id="main-content" role="main">
@@ -222,18 +174,12 @@
     <li><img src="images/image6.jpg" alt="A puppy who needs a loving home and family" /></li>
   </ul>
 </section>
+
 </main>
 
-<!-- Footer -->
- 
-<footer role="contentinfo">
-  <div class="container">
-    <p>&copy; 2025 Dogs of Europe | 
-      <a href="#" title="Contact Dogs of Europe">Contact</a> | 
-      All rights reserved.
-    </p>
-  </div>
-</footer>
+  <div data-include="html-partials/footer.html"></div>
+
+<script src="js/include.js"></script>
 
 </body>
 </html>
