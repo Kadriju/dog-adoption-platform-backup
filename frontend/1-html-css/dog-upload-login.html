@@ -1,88 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO Metadata -->
+    <title>Upload a dog / Shelter Login | Dogs of Europe</title>
+    <meta name="description" content="Search, browse and find homeless dogs from shelters across Europe. Find your new best friend & soulmate and give a dog a loving home & family today through Dogs of Europe." />
+    <meta name="keywords" content="dogs, dog adoption, adopt a dog, adoption, dog shelters, shelter dogs Europe, dogs for adoption, homeless dogs, rescue dogs, European dog shelters, best friend, soulmate, love of your life, personal trainer, companion, find a perfect partner" />
+    <meta name="author" content="Dogs of Europe Team" />
 
-  <!-- SEO Metadata -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
-  <title>Upload a dog / shelter Login | Dogs of Europe</title>
-  <meta name="description" content="Search, browse and find homeless dogs from shelters across Europe. Find your new best friend & soulmate and give a dog a loving home & family today through Dogs of Europe." />
-  <meta name="keywords" content="dogs, dog adoption, adopt a dog, adoption, dog shelters, shelter dogs Europe, dogs for adoption, homeless dogs, rescue dogs, European dog shelters, best friend, soulmate, love of your life, personal trainer, companion, find a perfect partner" />
-  <meta name="author" content="Dogs of Europe Team" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome (for fa-search icon) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/dog-upload-login.css" />
 
-  <!-- Font Awesome (for fa-search icon) -->
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Dogs of Europe",
+        "url": "https://www.dogsofeurope.com",
+        "logo": "https://www.dogsofeurope.com/images/logo.png",
+        "description": "Browse and adopt dogs from shelters across Europe.",
+        "sameAs": [
+          "https://www.dogsofeurope.com",
+          "https://www.dogsofeurope.org",
+          "https://www.dogsofeurope.eu",
+          "https://www.facebook.com/dogsofeurope",
+          "https://www.instagram.com/dogsofeurope_official/"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "info@dogsofeurope.com",
+          "contactType": "Customer Support"
+        }
+      }
+    </script>
+  </head>
 
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+  <body>
+    <div data-include="html-partials/header.html"></div>
 
-  <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/dog-upload-login.css" />
+    <!-- LOGIN FORM -->
+    <main class="main-login-page">
+      <section class="login-page-wrapper">
 
- <!-- Structured Data for SEO -->
+        <!-- Upload Form for Private Users -->
+        <div class="login-page">
+          <div class="login-container">
+            <h2 class="login-title">Upload a Dog</h2>
+            <form class="login-form" id="upload-form">
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Dogs of Europe",
-    "url": "https://www.dogsofeurope.com",
-    "logo": "https://www.dogsofeurope.com/images/logo.png",
-    "description": "Browse and adopt dogs from shelters across Europe.",
-    "sameAs": [
-      "https://www.dogsofeurope.com",
-      "https://www.dogsofeurope.org",
-      "https://www.dogsofeurope.eu",
-      "https://www.facebook.com/dogsofeurope",
-      "https://www.instagram.com/dogsofeurope_official/"
-   ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "email": "info@dogsofeurope.com",
-      "contactType": "Customer Support"
-    }
-  }
-  </script>  
-</head>
+              <label for="dog-count">How many dogs are you uploading?</label>
+              <select id="dog-count" name="dog-count">
+                <!-- Dynamically allows selection of 1 to 10 -->
+                <option value="1">1 dog</option>
+                <option value="2">2 dogs</option>
+                <option value="3">3 dogs</option>
+                <option value="4">4 dogs</option>
+                <option value="5">5 dogs</option>
+                <option value="6">6 dogs</option>
+                <option value="7">7 dogs</option>
+                <option value="8">8 dogs</option>
+                <option value="9">9 dogs</option>
+                <option value="10">10 dogs</option>
+                <option value="10">11 dogs</option>
+                <option value="10">12 dogs</option>
+              </select>
 
-<body>
-
-  <div data-include="html-partials/header.html"></div>
-  
-        <!-- LOGIN FORM -->
-        <main class="login-page">
-          <section class="login-container">
-            <h1 class="login-title">Shelter Login</h1>
-            <form action="/shelter-dashboard" method="POST" class="login-form">
-              
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" required placeholder="you@example.com" />
-      
-              <label for="password">Password</label>
-              <input type="password" id="password" name="password" required placeholder="Enter your password" />
-      
-              <button type="submit" class="login-button">Log In</button>
-      
-              <p class="login-help">
-                Forgot your password? <a href="/reset-password">Reset it here</a>.
+              <p class="price-summary">
+                Total price: <strong id="total-price">€9.90</strong><br />
+                <small id="price-per-dog">(€9.90 per dog)</small>
               </p>
+
+              <!-- Placeholder for future payment method / upload details -->
+              <button class="login-button" type="submit">Continue to Upload</button>
             </form>
-          </section>
-        </main>
+          </div>
+        </div>
 
-        <div data-include="html-partials/footer.html"></div>
+        <!-- Shelter Login remains on the right -->
+        <div class="login-page">
+          <div class="login-container">
+            <h2 class="login-title">Shelter Login</h2>
+            <form class="login-form">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" />
 
-        <script src="js/include.js"></script>
-      
-      </body>
-</html>     
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="Enter your password" />
+
+              <button class="login-button" type="submit">Login</button>
+            </form>
+            <div class="login-help">
+              <a href="#">Forgot password?</a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <div data-include="html-partials/footer.html"></div>
+
+    <script src="js/include.js"></script>
+
+    <script src="js/tiered-pricing.js" defer></script>
+
+
+  </body>
+</html>
+   
