@@ -160,19 +160,19 @@
 }
 
 .photo-gallery img:hover {
-  transform: scale(1.05); /* Slight zoom in */
+  transform: scale(1.05); 
   box-shadow:
     0 8px 16px rgba(0, 0, 0, 0.2),
-    0 12px 24px rgba(0, 0, 0, 0.12); /* Deeper shadow for floating effect */
+    0 12px 24px rgba(0, 0, 0, 0.12); 
 }
 
 .button-row {
   display: flex;
-  gap: 1rem; /* spacing between buttons */
-  justify-content: flex-start; /* center the buttons horizontally */
+  gap: 1rem; 
+  justify-content: flex-start; 
   align-items: center;
   margin-top: 0.3rem;
-  flex-wrap: wrap; /* ensures they stack on small screens */
+  flex-wrap: wrap; 
 }
 
 .unified-button {
@@ -233,7 +233,6 @@
   animation: glow-golden-soft 2s infinite ease-in-out;
   color: var(--color-medium-salmon);
 }
-
 
 
 /* Glow animation */

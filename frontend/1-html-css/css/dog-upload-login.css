@@ -1,84 +1,112 @@
  /* Wrapper for side-by-side containers */
-  .login-page-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem; /* space between the two containers */
-    flex-wrap: wrap; /* responsive stacking on smaller screens */
-    
-  }
+.login-page-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
 
-  
-  /* Login Container */
-  .login-page {
-    flex: 1 1 25rem;
-    max-width: 25rem; 
-    padding: 2rem;
-  }
-  
-  .login-container {
-    background-color: var(--color-warm-white);
-    padding: 2rem;
-    border: 0.1rem solid var(--color-deep-green-teal);
-    border-radius: 1rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08),
-    0 6px 16px rgba(0, 0, 0, 0.12);
-  }
-  
-  .login-title {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
-    color: #2b2d42;
-  }
-  
-  .login-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-  }
-  
-  .login-form input {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1.25rem;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-  }
+/* Container that holds each card */
+.login-page {
+  flex: 1 1 25rem;
+  max-width: 25rem;
+  padding: 2.5rem;
+  height: 100%;
+}
 
-  .price-summary {
-    margin-top: 1rem;
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #2b2d42;
-  }
+/* Main card container */
+.login-container {
+  background-color: var(--color-warm-white);
+  padding: 1.5rem;
+  border: 2px solid var(--color-deep-green-teal);
+  outline: 2px solid var(--color-powder-blue);
+  border-radius: 1rem;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.12),
+    0 6px 12px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 370px;
+}
 
-  
-  .login-button {
-    width: 100%;
-    padding: 0.75rem;
-    background-color: #2b7a78;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .login-button:hover {
-    background-color: #205e5b;
-  }
-  
-  .login-help {
-    margin-top: 1rem;
-    text-align: center;
-    font-size: 0.9rem;
-  }
-  
-  .login-help a {
-    color: #3a86ff;
-    text-decoration: none;
-  }
-  
+
+/* Title styling */
+.login-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-dark-grape);
+}
+
+/* Form content block */
+.login-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  color: var(--color-black);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Generic form label styling */
+.login-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+/* Input field styling */
+.login-form input,
+.login-form select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.login-form > *:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+
+/* Price summary block */
+.price-summary {
+  margin-top: 0.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--color-black);
+}
+
+/* Spacer pushes button to the bottom */
+.spacer {
+  flex-grow: 1;
+}
+
+/* Buttons */
+.login-button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #2b7a78;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+  box-shadow: 0 1.5px 0 #205e5b, 0 0.7px 2px rgba(0, 0, 0, 0.15);
+  position: relative;
+  top: 0;
+}
+
+.login-button:hover {
+  background-color: #205e5b;
+}
+
+

@@ -57,55 +57,59 @@
         <!-- Upload Form for Private Users -->
         <div class="login-page">
           <div class="login-container">
-            <h2 class="login-title">Upload a Dog</h2>
-            <form class="login-form" id="upload-form">
+            <h2 class="login-title">🐶 Upload a Dog</h2>
 
-              <label for="dog-count">How many dogs are you uploading?</label>
-              <select id="dog-count" name="dog-count">
-                <!-- Dynamically allows selection of 1 to 10 -->
-                <option value="1">1 dog</option>
-                <option value="2">2 dogs</option>
-                <option value="3">3 dogs</option>
-                <option value="4">4 dogs</option>
-                <option value="5">5 dogs</option>
-                <option value="6">6 dogs</option>
-                <option value="7">7 dogs</option>
-                <option value="8">8 dogs</option>
-                <option value="9">9 dogs</option>
-                <option value="10">10 dogs</option>
-                <option value="10">11 dogs</option>
-                <option value="10">12 dogs</option>
-              </select>
+            <!-- Content block -->
+            <div class="login-content">
+              <form class="login-form" id="upload-form">
+                <label for="dog-count">How many dogs are you uploading?</label>
+                <select id="dog-count" name="dog-count">
+                  <option value="1">1 dog</option>
+                  <option value="2">2 dogs</option>
+                  <option value="3">3 dogs</option>
+                  <option value="4">4 dogs</option>
+                  <option value="5">5 dogs</option>
+                  <option value="6">6 dogs</option>
+                  <option value="7">7 dogs</option>
+                  <option value="8">8 dogs</option>
+                  <option value="9">9 dogs</option>
+                  <option value="10">10 dogs</option>
+                  <option value="11">11 dogs</option>
+                  <option value="12">12 dogs</option>
+                </select>
 
-              <p class="price-summary">
-                Total price: <strong id="total-price">€9.90</strong><br />
-                <small id="price-per-dog">(€9.90 per dog)</small>
-              </p>
+                <p class="price-summary">
+                  Total price: <span id="total-price">€9.90</span><br />
+                  <small id="price-per-dog">(€9.90 per dog)</small>
+                </p>
+              </form>
+            </div>
 
-              <!-- Placeholder for future payment method / upload details -->
-              <button class="login-button" type="submit">Continue to Upload</button>
-            </form>
+            <!-- Spacer to push button down -->
+            <div class="spacer"></div>
+
+            <button class="login-button" type="submit" form="upload-form">🎉 Continue to Upload</button>
           </div>
         </div>
 
-        <!-- Shelter Login remains on the right -->
+        <!-- Shelter Login -->
         <div class="login-page">
           <div class="login-container">
-            <h2 class="login-title">Shelter Login</h2>
-            <form class="login-form">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Enter your email" />
+            <h2 class="login-title">🏠 Shelter Login</h2>
 
-              <label for="password">Password</label>
-              <input type="password" id="password" name="password" placeholder="Enter your password" />
+            <div class="login-content">
+              <form class="login-form">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" />
 
-              <button class="login-button" type="submit">Login</button>
-            </form>
-            <div class="login-help">
-              <a href="#">Forgot password?</a>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" />
+              </form>
             </div>
-          </div>
-        </div>
+
+            <div class="spacer"></div>
+
+            <button class="login-button" type="submit" form="login-form">Login</button>
 
       </section>
     </main>
@@ -115,7 +119,6 @@
     <script src="js/include.js"></script>
 
     <script src="js/tiered-pricing.js" defer></script>
-
 
   </body>
 </html>
