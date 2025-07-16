@@ -1,11 +1,9 @@
 
 # adoption-platform
-The platform aims to create Europe’s first centralized database and web page for all shelter  dogs across Europe. The goal is to improve adoption rates, reduce shelter overcrowding, and  provide an accessible, multilingual adoption platform for potential adopters and animal shelters. 
+The platform aims to create Europe’s first centralized database and web page for all homeles & shelter dogs across Europe. The goal is to improve adoption rates, reduce shelter overcrowding, and  provide an accessible, multilingual adoption platform for potential adopters and animal shelters. 
 [Europes_first_web_page_and_database_for_all_shelter_dogs_%26_cats_in_Europe.pdf](https://github.com/user-attachments/files/19050605/Europes_first_web_page_and_database_for_all_shelter_dogs_.26_cats_in_Europe.pdf)
-Get-a-Pet-EU
-Europes first web page and database for all shelter dogs & cats in Europe
 
-This could radically increase adoption rates and animal welfare in Europe for shelter dogs and cats and avoid long-term suffering in the shelters or being euthanized. Most people only look at the shelter webpages in their own country when they are looking to adopt a cat or dog and if they don't find a perfect match then they buy a dog or cat instead of adopting.
+This could radically increase adoption rates and animal welfare in Europe for shelter dogs and avoid long-term suffering in the shelters or being euthanized. Most people only look at the shelter webpages in their own country when they are looking to adopt a dog and if they don't find a perfect match then they buy a dog instead of adopting.
 
 Transport and documents within Europe are very cheap and simple, it is really easy to move animals from one EU country to another by car, plane or ship. Also, there is an imbalance between western / northern Europe and eastern / south Europe. Eastern and southern Europe have many animals in their shelters but a lack of potential adopters while the western and northern Europe have few animals in shelters but a lot of potential adopters.
 
@@ -15,13 +13,11 @@ For European dogs and cats to find their ideal home and for European homes to fi
 
 Local shelters do not need to worry that this will result in fewer adoptions nationwide since people will always prefer to adopt an animal from a shelter close to them that they can meet before adoption. This option is meant to be the backup if people don't find an animal in a shelter close to them.
 
-The front-end of the webpage The “start” page will present a simple and easy way of searching for a dog or cat. The search criterias for dogs will be: sex, age, size, in all EU or a specific country and for cats: sex, age, all EU or a specific country.
+The front-end of the webpage The “start” page will present a simple and easy way of searching for a dog. The search criterias for dogs will be: sex, age, size, in all EU or a specific country.
 
-Something similar to: https://varjupaik.ee/loomad/loomad-varjupaigas.
+Once a user clicks on a dog they will also see “more info” where the shelter writes any additional info about the animal (personality, history, special needs etc) and medical info (sterilized/castrated, vaccines). The user will also see which country and shelter the animal is located in (contact info) and a link to an interest form they can fill in that will automatically be sent to the shelter.
 
-Once a user clicks on a dog or cat they will also see “more info” where the shelter writes any additional info about the animal (personality, history, special needs etc) and medical info (sterilized/castrated, vaccines). The user will also see which country and shelter the animal is located in (contact info) and a link to an interest form they can fill in that will automatically be sent to the shelter.
-
-This structure also makes it possible for people to see all dogs and cats in their country. National overviews of all shelter animals do not exist in most countries. So our webpage would cover the lack of an European webpage / database and also the lack of national webpages / databases.
+This structure also makes it possible for people to see all dogs in their country. National overviews of all shelter animals do not exist in most countries. So our webpage would cover the lack of an European webpage / database and also the lack of national webpages / databases.
 
 On the upper menu that is located in the top part of the webpage horizontally there will be the choices: Start, Our mission, Donate, Useful info & links (transportation, documents, why shelter animals are a safe option etc) and Happy stories (success stories of adoptions).
 
@@ -29,7 +25,7 @@ At the top of the webpage there will also be language options. All European lang
 
 Back-end and database
 
-This project needs to use a relational database (which one is most fitted for this project?). We need to take into account that this database will most likely eventually store the information about thousands of dogs and cats. Chat gpt recommends to use Postgre SQL - “We need to consider scalability, performance, and support for complex queries. A PostgreSQL database is an excellent choice for this project because it is robust, supports advanced search features, and handles large datasets efficiently.”
+This project needs to use a relational database (which one is most fitted for this project?). We need to take into account that this database will most likely eventually store the information about thousands of dogs. Chat gpt recommends to use Postgre SQL - “We need to consider scalability, performance, and support for complex queries. A PostgreSQL database is an excellent choice for this project because it is robust, supports advanced search features, and handles large datasets efficiently.”
 
 An example of the database design and architecture:
 
@@ -52,13 +48,6 @@ Self-Service for Shelters: ○ Build a dashboard with role-based access for shel
 Minimal Tech Support: ○ Ensure the platform is well-documented with a robust FAQ section for shelter staff. ○ Automate responses for common technical queries using chatbots. This approach combines automation, robust error handling, and scalability to ensure the system operates with minimal manual intervention.
 Webpage names: The following domain names are available for registering: www.petsofeurope.org or .eu www.dogsofeurope.org or.eu www.catsofeurope.org or .eu
 
-After we are ready with the webpage: I also have plans for what needs to be done before launching the webpage, the financial part, getting sponsors, EU grants and donations, advertising, getting all European shelters to sign up and upload all dogs and cats and much more. But one step at a time, let's make the webpage first ☺ !
-=======
-
-# Dog Adoption Platform
-
-## Description
-
 This project aims to create a platform that connects people looking to adopt dogs with shelters and rescue organizations.
 
 ## Features
@@ -67,7 +56,6 @@ This project aims to create a platform that connects people looking to adopt dog
 * Filter by breed, age, etc.
 * Contact shelters
 
-## Getting Started
 
-... (You'll add more details later)
+
 
