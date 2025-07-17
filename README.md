@@ -21,7 +21,7 @@ This version will be progressively refactored into a **Tailwind CSS-based** vers
 ## Related Repositories
 
 - [Main repository with full stack features](https://github.com/IngeRi92/adoption-platform)
-- [Backup version (HTML + CSS)](https://github.com/Kadriju/dog-adoption-platform-backup)
+- [Backup version (identical)](https://github.com/Kadriju/dog-adoption-platform-backup)
 
 
 # adoption-platform
