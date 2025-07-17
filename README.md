@@ -1,3 +1,28 @@
+# Dog Adoption Platform — HTML & CSS Version
+
+This repository contains the **vanilla HTML and CSS** version of the Dog Adoption Platform project. It is the initial foundation of the site, created before introducing any frameworks such as Tailwinfd or JavaScript enhancements.
+
+## Purpose
+
+- Build a clean, semantic HTML structure.
+- Style the layout using pure CSS for maintainability and clarity.
+- Ensure good accessibility and responsiveness using standard practices.
+
+## What's Included
+
+- Semantic HTML pages
+- Custom CSS for layout, colors, typography, and responsiveness
+- No external libraries or frameworks used
+
+## Next Steps
+
+This version will be progressively refactored into a **Tailwind CSS-based** version for faster development, improved design scalability, and utility-first styling.
+
+## Related Repositories
+
+- [Main repository with full stack features](https://github.com/IngeRi92/adoption-platform)
+- [Backup version (HTML + CSS)](https://github.com/Kadriju/dog-adoption-platform-backup)
+
 
 # adoption-platform
 The platform aims to create Europe’s first centralized database and web page for all homeles & shelter dogs across Europe. The goal is to improve adoption rates, reduce shelter overcrowding, and  provide an accessible, multilingual adoption platform for potential adopters and animal shelters. 
