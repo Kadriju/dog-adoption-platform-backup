@@ -58,7 +58,7 @@
   .dog-grid {
     display: grid;
     gap: 0.8rem;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     margin: 0 auto;
     max-width: 60rem;
     padding: 1rem 0.3rem;
@@ -87,7 +87,7 @@
   }
   
   .dog-card img {
-    height: 160px;
+    height: 10rem;
     object-fit: cover;
     width: 100%;
   }

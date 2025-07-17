@@ -1,3 +1,6 @@
+
+
+
  /* Wrapper for side-by-side containers */
 .login-page-wrapper {
   display: flex;
@@ -18,17 +21,18 @@
 .login-container {
   background-color: var(--color-warm-white);
   padding: 1.5rem;
-  border: 2px solid var(--color-deep-green-teal);
-  outline: 2px solid var(--color-powder-blue);
+  border: 0.125rem solid var(--color-deep-green-teal);
+  outline: 0.125rem solid var(--color-powder-blue);
   border-radius: 1rem;
   box-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.12),
-    0 6px 12px rgba(0, 0, 0, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  0 0.125rem 0.25rem rgba(0, 0, 0, 0.12),
+  0 0.375rem 0.75rem rgba(0, 0, 0, 0.18),
+  inset 0 0.0625rem 0 rgba(255, 255, 255, 0.4);
+
   display: flex;
   flex-direction: column;
   height: 100%;
-  min-height: 370px;
+  min-height: 23.125rem;
 }
 
 
@@ -63,7 +67,7 @@
 .login-form select {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #ccc;
+  border: 0.0625rem solid #ccc;
   border-radius: 0.5rem;
   font-size: 1rem;
 }
@@ -100,7 +104,7 @@
   cursor: pointer;
   transition: background-color 0.3s;
   margin-top: 1rem;
-  box-shadow: 0 1.5px 0 #205e5b, 0 0.7px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.09375rem 0 #205e5b, 0 0.04375rem 0.125rem rgba(0, 0, 0, 0.15);
   position: relative;
   top: 0;
 }

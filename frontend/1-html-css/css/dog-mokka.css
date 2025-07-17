@@ -5,21 +5,20 @@
   margin: 0.8rem auto;
   padding: 0.5rem;
   background-color: var(--color-warm-white); 
-  border: 3px solid var(--color-powder-blue);
+  border: 0.1875rem solid var(--color-powder-blue);
   border-radius: 1rem;
 
   /* Stronger 3D effect with layered shadows */
   box-shadow:
-    0 0 0 3px var(--color-deep-green-teal),                  
-    0 6px 12px rgba(0, 0, 0, 0.12),                          
-    0 12px 24px rgba(0, 0, 0, 0.08),                         
-    inset 0 1px 1px rgba(255, 255, 255, 0.7),                
-    inset 0 -2px 4px rgba(0, 0, 0, 0.08),                    
-    inset 2px 0 3px rgba(0, 0, 0, 0.03),                     
-    inset -2px 0 3px rgba(0, 0, 0, 0.03);                    
-  
-  transition: transform 0.3s ease, box-shadow 0.4s ease;
+    0 0 0 0.1875rem var(--color-deep-green-teal),                   
+    0 0.375rem 0.75rem rgba(0, 0, 0, 0.12),                          
+    0 0.75rem 1.5rem rgba(0, 0, 0, 0.08),                            
+    inset 0 0.0625rem 0.0625rem rgba(255, 255, 255, 0.7),           
+    inset 0 -0.125rem 0.25rem rgba(0, 0, 0, 0.08),                  
+    inset 0.125rem 0 0.1875rem rgba(0, 0, 0, 0.03),                 
+    inset -0.125rem 0 0.1875rem rgba(0, 0, 0, 0.03);                
 }
+
 
 /* Overview section (image + details) */
 .dog-overview {
@@ -39,21 +38,22 @@
   padding: 0 0 0.65rem 1.5rem;
   margin-right: 0;
   background-color: transparent;
-  border: 1.5px solid var(--color-muted-lavender);
-  box-shadow: 0 0 0 1.5px var(--color-soft-dark-purple);
+  border: 0.09375rem solid var(--color-muted-lavender);
+  box-shadow: 0 0 0 0.09375rem var(--color-soft-dark-purple);
   border-radius: 0.5rem;
   color: var(--color-dark-grape);
   line-height: 2.98;
 
   /* 3D effect using stacked shadows */
   box-shadow:
-    0 0 0 1.5px var(--color-soft-dark-purple),        
-    0 4px 6px rgba(0, 0, 0, 0.08),                      
-    0 6px 12px rgba(0, 0, 0, 0.06),                     
-    inset 0 1px 1px rgba(255, 255, 255, 0.5),           
-    inset 0 -2px 3px rgba(0, 0, 0, 0.05),               
-    inset 2px 0 2px rgba(0, 0, 0, 0.03),                
-    inset -2px 0 2px rgba(0, 0, 0, 0.03);               
+  0 0 0 0.09375rem var(--color-soft-dark-purple),          
+  0 0.25rem 0.375rem rgba(0, 0, 0, 0.08),                  
+  0 0.375rem 0.75rem rgba(0, 0, 0, 0.06),                   
+  inset 0 0.0625rem 0.0625rem rgba(255, 255, 255, 0.5),     
+  inset 0 -0.125rem 0.1875rem rgba(0, 0, 0, 0.05),          
+  inset 0.125rem 0 0.125rem rgba(0, 0, 0, 0.03),            
+  inset -0.125rem 0 0.125rem rgba(0, 0, 0, 0.03);           
+             
 
   transition: transform 0.3s ease, box-shadow 0.2s ease;
 }
@@ -83,7 +83,7 @@
   text-align: left;
   font-weight: 500;
   color: var(--color-muted-lavender);
-  -webkit-text-stroke: 1.2px #46265A;
+  -webkit-text-stroke: 0.075rem #46265A;
   text-transform: uppercase;
   font-size: 1.8em;
   letter-spacing: 0.3rem;
@@ -148,12 +148,12 @@
   height: auto;
   object-fit: cover;
   border-radius: 0.5rem;
-  border: 3px solid var(--color-soft-dark-purple);
+  border: 0.1875rem solid var(--color-soft-dark-purple);
 
   /* 3D box shadow */
   box-shadow:
-    0 4px 6px rgba(0, 0, 0, 0.1),
-    0 6px 12px rgba(0, 0, 0, 0.06);
+  0 0.25rem 0.375rem rgba(0, 0, 0, 0.1),
+  0 0.375rem 0.75rem rgba(0, 0, 0, 0.06);
 
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.2s ease;
@@ -162,8 +162,8 @@
 .photo-gallery img:hover {
   transform: scale(1.05); 
   box-shadow:
-    0 8px 16px rgba(0, 0, 0, 0.2),
-    0 12px 24px rgba(0, 0, 0, 0.12); 
+  0 0.5rem 1rem rgba(0, 0, 0, 0.2),
+  0 0.75rem 1.5rem rgba(0, 0, 0, 0.12);
 }
 
 .button-row {
@@ -190,7 +190,7 @@
   background-color: var(--color-soft-peach);
   padding: 0.3rem 0.5rem;
   border-radius: 7rem;
-  border: 3px solid var(--color-medium-salmon);
+  border: 0.1875rem solid var(--color-medium-salmon);
   background-clip: padding-box;
   cursor: pointer;
   position: relative;
@@ -198,31 +198,32 @@
 
   /* 3D layered bevel and glow */
   box-shadow:
-    inset 3px 3px 6px rgba(255, 255, 255, 0.85),
-    inset -3px -3px 8px rgba(0, 0, 0, 0.08),
-    0 4px 8px rgba(0, 0, 0, 0.3),
-    0 10px 20px rgba(233, 155, 155, 0.4),
-    0 0 1rem rgba(255, 200, 200, 0.2);
+  inset 0.1875rem 0.1875rem 0.375rem rgba(255, 255, 255, 0.85),
+  inset -0.1875rem -0.1875rem 0.5rem rgba(0, 0, 0, 0.08),
+  0 0.25rem 0.5rem rgba(0, 0, 0, 0.3),
+  0 0.625rem 1.25rem rgba(233, 155, 155, 0.4),
+  0 0 1rem rgba(255, 200, 200, 0.2);
 
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .unified-button:hover,
 .unified-button:focus {
-  transform: scale(1.08) translateY(-2px);
+  transform: scale(1.08) translateY(-0.125rem);
   box-shadow:
-    inset 3px 3px 6px rgba(255, 255, 255, 0.85),
-    inset -3px -3px 8px rgba(0, 0, 0, 0.1),
-    0 8px 16px rgba(0, 0, 0, 0.35),
-    0 12px 24px rgba(233, 155, 155, 0.5);
+  inset 0.1875rem 0.1875rem 0.375rem rgba(255, 255, 255, 0.85),
+  inset -0.1875rem -0.1875rem 0.5rem rgba(0, 0, 0, 0.1),
+  0 0.5rem 1rem rgba(0, 0, 0, 0.35),
+  0 0.75rem 1.5rem rgba(233, 155, 155, 0.5);
 }
+
 
 .unified-button::before {
   content: "";
   position: absolute;
   inset: -0.25rem;
   border-radius: 7rem;
-  border: 2px solid rgba(255, 255, 255, 0.4);
+  border: 0.125rem solid rgba(255, 255, 255, 0.4);
   box-shadow:
     0 0 0.75rem rgba(255, 255, 255, 0.4),
     inset 0 0 0.75rem rgba(233, 155, 155, 0.25);
@@ -248,7 +249,7 @@
 }
 
 /* Responsive layout */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .dog-top-section {
     flex-direction: column;
   }
@@ -261,6 +262,6 @@
 
   .photo-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(11.25rem, 1fr));
   }
 }
