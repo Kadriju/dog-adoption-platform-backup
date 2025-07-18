@@ -1,7 +1,32 @@
+# Dog Adoption Platform — HTML & CSS Version
+
+This repository contains the **vanilla HTML and CSS** version of the Dog Adoption Platform project. It is the initial foundation of the site, created before introducing any frameworks such as Tailwinfd or JavaScript enhancements.
+
+## Purpose
+
+- Build a clean, semantic HTML structure.
+- Style the layout using pure CSS for maintainability and clarity.
+- Ensure good accessibility and responsiveness using standard practices.
+
+## What's Included
+
+- Semantic HTML pages
+- Custom CSS for layout, colors, typography, and responsiveness
+- No external libraries or frameworks used
+
+## Next Steps
+
+This version will be progressively refactored into a **Tailwind CSS-based** version for faster development, improved design scalability, and utility-first styling.
+
+## Related Repositories
+
+- [Main repository with full stack features](https://github.com/IngeRi92/adoption-platform)
+- [Backup version (identical)](https://github.com/Kadriju/dog-adoption-platform-backup)
+
 
 # adoption-platform
 The platform aims to create Europe’s first centralized database and web page for all homeles & shelter dogs across Europe. The goal is to improve adoption rates, reduce shelter overcrowding, and  provide an accessible, multilingual adoption platform for potential adopters and animal shelters. 
-[Europes_first_web_page_and_database_for_all_shelter_dogs_%26_cats_in_Europe.pdf](https://github.com/user-attachments/files/19050605/Europes_first_web_page_and_database_for_all_shelter_dogs_.26_cats_in_Europe.pdf)
+[Europes_first_web_page_and_database_for_all_shelter_dogs_in_Europe.pdf](https://github.com/user-attachments/files/19050605/Europes_first_web_page_and_database_for_all_shelter_dogs_.26_cats_in_Europe.pdf)
 
 This could radically increase adoption rates and animal welfare in Europe for shelter dogs and avoid long-term suffering in the shelters or being euthanized. Most people only look at the shelter webpages in their own country when they are looking to adopt a dog and if they don't find a perfect match then they buy a dog instead of adopting.
 
