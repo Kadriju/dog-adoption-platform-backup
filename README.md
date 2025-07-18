@@ -9,7 +9,7 @@ Transport and documents within Europe are very cheap and simple, it is really ea
 
 Having a central European webpage for all shelter animals in Europe would result in people being able to look at thousands of different dogs and cats and most likely find that perfect match for them - their new best friend, family member, fur-baby and in some cases, their soulmate.
 
-For European dogs and cats to find their ideal home and for European homes to find their ideal pet.
+For European dogs to find their ideal home and for European homes to find their ideal pet.
 
 Local shelters do not need to worry that this will result in fewer adoptions nationwide since people will always prefer to adopt an animal from a shelter close to them that they can meet before adoption. This option is meant to be the backup if people don't find an animal in a shelter close to them.
 
