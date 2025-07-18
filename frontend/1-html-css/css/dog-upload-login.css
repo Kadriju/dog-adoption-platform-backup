@@ -13,14 +13,14 @@
 .login-page {
   flex: 1 1 25rem;
   max-width: 25rem;
-  padding: 2.5rem;
+  padding: 2.6rem;
   height: 100%;
 }
 
 /* Main card container */
 .login-container {
   background-color: var(--color-warm-white);
-  padding: 1.5rem;
+  padding: 1.7rem;
   border: 0.125rem solid var(--color-deep-green-teal);
   outline: 0.125rem solid var(--color-powder-blue);
   border-radius: 1rem;
@@ -39,8 +39,8 @@
 /* Title styling */
 .login-title {
   text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 1.8rem;
+  margin-bottom: 1.7rem;
+  font-size: 1.7rem;
   font-weight: 600;
   color: var(--color-dark-grape);
 }
@@ -49,7 +49,7 @@
 .login-content {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1rem;
   color: var(--color-black);
   font-weight: 600;
   font-size: 1.1rem;
@@ -58,7 +58,7 @@
 /* Generic form label styling */
 .login-form label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   font-weight: 500;
 }
 
@@ -73,16 +73,16 @@
 }
 
 .login-form > *:not(:last-child) {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.1rem;
 }
 
 
 /* Price summary block */
 .price-summary {
-  margin-top: 0.5rem;
-  font-weight: 500;
-  font-size: 1.1rem;
-  color: var(--color-black);
+  margin-top: -0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-deep-green-teal);
 }
 
 /* Spacer pushes button to the bottom */
