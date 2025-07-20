@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Tailwind Custom Config -->
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Poppins', 'sans-serif'],
+        },
+        colors: {
+          // Neutral
+          black: '#000000',
+          white: '#FFFFFF',
+          warmWhite: '#FAF3E0',
+          lightGray: '#cccccc',
+
+          // Yellow & Gold
+          goldenBeige: '#E3C27E',
+          pastelYellow: '#ffe082',
+          softMustard: '#D8B25C',
+          warmGoldenYellow: '#E4AF28',
+
+          // Peach, Rose & Coral
+          softPeach: '#FDE9E0',
+          mutedRose: '#C98585',
+          mutedCoral: '#E6A4B4',
+          mediumSalmon: '#E56767',
+          rosyBrown: '#b76e79',
+
+          // Lavender & Purple
+          mutedLavender: '#A784AF',
+          softDarkPurple: '#5D3A6A',
+          darkGrape: '#46265A',
+
+          // Brown & Taupe
+          lightChestnut: '#B38B6D',
+          warmTaupe: '#C2A28D',
+          mediumBrown: '#6B5843',
+          darkBrown: '#5C4326',
+
+          // Green & Teal
+          sageGreen: '#A8BBA2',
+          mutedTeal: '#6B9080',
+          deepGreenTeal: '#38584F',
+          deepGreen: '#3b6f58',
+
+          // Blue
+          powderBlue: '#BFD7EA',
+          royalBlue: '#3a7fc1',
+
+          // Other UI-specific
+          textDark: '#3D2A19',
+          logoFrame: '#7E3E20',
+        },
+        spacing: {
+          '0.1875': '0.1875rem',
+          '0.375': '0.375rem',
+          '0.625': '0.625rem',
+          '1.25': '1.25rem',
+          '2.2': '2.2rem',
+          '3.9': '3.9rem',
+          '6.25': '6.25rem',
+          '7': '1.75rem',
+          '28': '7rem',
+        },
+        borderRadius: {
+          '7xl': '7rem',
+        },
+        
+        boxShadow: {
+          donate: 'inset 0.1875rem 0.1875rem 0.375rem rgba(255,255,255,0.85), inset -0.1875rem -0.1875rem 0.5rem rgba(0,0,0,0.08), 0 0.25rem 0.5rem rgba(0,0,0,0.3), 0 0.625rem 1.25rem rgba(233,155,155,0.4), 0 0 1rem rgba(255,200,200,0.2)'
+        },
+
+
+        keyframes: {
+          glow: {
+            '0%, 100%': {
+              textShadow: '0 0 0.1875rem #3D2A19, 0 0 0.375rem #3D2A19, 0.0625rem 0.0625rem 0.125rem #3D2A19, -0.0625rem -0.0625rem 0.125rem #3D2A19',
+            },
+            '50%': {
+              textShadow: '0 0 0.375rem #3D2A19, 0 0 0.75rem #3D2A19, 0.0625rem 0.0625rem 0.25rem #3D2A19, -0.0625rem -0.0625rem 0.25rem #3D2A19',
+            },
+          },
+          glowPurple: {
+            '0%': {
+              textShadow: '0 0 0.375rem #C5A8E8, 0 0 0.625rem #D6B8F3, 0 0 0.875rem #E9D6FA',
+            },
+            '50%': {
+              textShadow: '0 0 0.625rem #D6B8F3, 0 0 1.125rem #E9D6FA, 0 0 1.5rem #ffffff',
+            },
+            '100%': {
+              textShadow: '0 0 0.375rem #C5A8E8, 0 0 0.625rem #D6B8F3, 0 0 0.875rem #E9D6FA',
+            },
+          },
+          glowGold: {
+            '0%, 100%': {
+              textShadow: '0 0 0.2rem rgba(233, 155, 155, 0.3), 0 0 0.4rem rgba(233, 155, 155, 0.3)',
+            },
+            '50%': {
+              textShadow: '0 0 0.5rem rgba(233, 155, 155, 0.5), 0 0 1rem rgba(233, 155, 155, 0.5)',
+            },
+          },
+          sparkleTwinkle: {
+            '0%': { opacity: '0', transform: 'scale(0.4) rotate(0deg)' },
+            '30%': { opacity: '1', transform: 'scale(1.2) rotate(72deg)' },
+            '60%': { opacity: '1', transform: 'scale(1) rotate(144deg)' },
+            '100%': { opacity: '0', transform: 'scale(0.4) rotate(360deg)' },
+          },
+        },
+        animation: {
+          glow: 'glow 2s ease-in-out infinite',
+          glowPurple: 'glowPurple 2s ease-in-out infinite',
+          glowGold: 'glowGold 2s ease-in-out infinite',
+          sparkle: 'sparkleTwinkle 2.5s ease-in-out infinite',
+        },
+        screens: {
+          xs: '480px',
+          sm: '640px',
+          md: '768px',
+          lg: '1024px',
+          xl: '1280px',
+          '2xl': '1536px',
+        },
+      }
+    }
+  }
+</script>
+
+  <!-- SEO Metadata -->
+ 
+  <meta name="description" content="Search, browse and find homeless dogs from shelters across Europe. Find your new best friend & soulmate and give a dog a loving home & family today through Dogs of Europe." />
+  <meta name="keywords" content="dogs, dog adoption, adopt a dog, adoption, dog shelters, shelter dogs Europe, dogs for adoption, homeless dogs, rescue dogs, European dog shelters, best friend, soulmate, love of your life, personal trainer, companion, find a perfect partner" />
+  <meta name="author" content="Dogs of Europe Team" />
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- Font Awesome (for fa-search icon) -->
+
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+ <!-- Structured Data for SEO -->
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Dogs of Europe",
+    "url": "https://www.dogsofeurope.com",
+    "logo": "https://www.dogsofeurope.com/images/logo.png",
+    "description": "Browse and adopt dogs from shelters across Europe.",
+    "sameAs": [
+      "https://www.dogsofeurope.com",
+      "https://www.dogsofeurope.org",
+      "https://www.dogsofeurope.eu",
+      "https://www.facebook.com/dogsofeurope",
+      "https://www.instagram.com/dogsofeurope_official/"
+   ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "info@dogsofeurope.com",
+      "contactType": "Customer Support"
+    }
+  }
+  </script>  
+</head>
+ 
+<body>
+
+  <div data-include="html-partials/header.html"></div>
+
+  <main class="dog-profile container">
+
+    <section class="dog-overview">
+
+      <!-- Left: Dog Info -->
+
+      <div class="dog-details">
+        <h1 class="dog-name">Mokka</h1>
+        <ul>
+          <li><strong>Sex:</strong> <span class="dog-detail-value">Female</span></li>
+          <li><strong>Age:</strong> <span class="dog-detail-value">3 years</span></li>
+          <li><strong>Size:</strong> <span class="dog-detail-value">Small</span></li>
+          <li><strong>Country:</strong> <span class="dog-detail-value">Estonia</span></li>
+          <li><strong>Location:</strong> <span class="dog-detail-value">Tallinn Shelter</span></li>
+          <li><strong>ID Number:</strong> <span class="dog-detail-value">EE12345</span></li>
+        </ul>
+      </div>
+
+      <!-- Right: Photo Gallery -->
+
+      <div class="photo-gallery">
+        <img src="images/mokka.jpg" alt="Mokka photo 1" />
+        <img src="images/mokka.jpg" alt="Mokka photo 2" />
+        <img src="images/mokka.jpg" alt="Mokka photo 3" />
+        <img src="images/mokka.jpg" alt="Mokka photo 4" />
+        <!-- Add more if needed -->
+      </div>
+    </section>
+  
+    <!-- Description and contact -->
+
+    <section class="dog-description">
+      <h2>About Me</h2>
+      <p>
+        Mokka is a playful and sweet dog who loves people and other animals. She's house-trained,
+        sterilized, vaccinated and looking for a loving forever home. She gets nervous around 
+        smaller children so the best option would be a home without children or children over the
+        age of 10 years who are calm around dogs.
+      </p>
+    </section>
+
+    <section class="dog-contact">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <span class="contact-detail">shelter@example.com</span></p>
+      <p><strong>Phone:</strong> <span class="contact-detail">+372 5555 1234</span></p>
+    </section>
+    
+  <div class="button-row">
+  <a href="/offer" class="unified-button">
+     <span>Offer Home❤️</span>
+  </a>
+  <a href="/donate" class="unified-button">
+     <span>Donate❤️</span>
+  </a>
+</div>
+    
+  </main>
+
+  <div data-include="html-partials/footer.html"></div>
+
+  <script src="js/include.js"></script>
+
+</body>
+</html>
