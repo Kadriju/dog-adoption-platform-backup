@@ -35,6 +35,7 @@
     --tracking-widest: 0.1em;
     --leading-tight: 1.25;
     --leading-snug: 1.375;
+    --radius-md: 0.375rem;
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
@@ -43,27 +44,24 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --color-warmWhite: #FAF3E0;
-    --color-lightGray: #cccccc;
-    --color-goldenBeige: #E3C27E;
-    --color-warmGoldenYellow: #E4AF28;
-    --color-softPeach: #FDE9E0;
-    --color-mutedCoral: #E6A4B4;
-    --color-mediumSalmon: #E56767;
-    --color-rosyBrown: #b76e79;
-    --color-mutedLavender: #A784AF;
-    --color-softDarkPurple: #5D3A6A;
-    --color-darkGrape: #46265A;
-    --color-lightChestnut: #B38B6D;
-    --color-mediumBrown: #6B5843;
-    --color-darkBrown: #5C4326;
-    --color-sageGreen: #A8BBA2;
-    --color-mutedTeal: #6B9080;
-    --color-deepGreenTeal: #38584F;
-    --color-deepGreen: #3b6f58;
-    --color-powderBlue: #BFD7EA;
-    --color-royalBlue: #3a7fc1;
-    --color-textDark: #3D2A19;
+    --color-warm-white: #FAF3E0;
+    --color-light-gray: #cccccc;
+    --color-golden-beige: #E3C27E;
+    --color-warm-golden-yellow: #E4AF28;
+    --color-soft-peach: #FDE9E0;
+    --color-muted-coral: #E6A4B4;
+    --color-medium-salmon: #E56767;
+    --color-rosy-brown: #b76e79;
+    --color-soft-dark-purple: #5D3A6A;
+    --color-light-chestnut: #B38B6D;
+    --color-medium-brown: #6B5843;
+    --color-dark-brown: #5C4326;
+    --color-sage-green: #A8BBA2;
+    --color-muted-teal: #6B9080;
+    --color-deep-green-teal: #38584F;
+    --color-deep-green: #3b6f58;
+    --color-powder-blue: #BFD7EA;
+    --color-royal-blue: #3a7fc1;
   }
 }
 @layer base {
@@ -748,11 +746,11 @@
     --tw-border-style: none;
     border-style: none;
   }
-  .border-darkBrown {
-    border-color: var(--color-darkBrown);
+  .border-dark-brown {
+    border-color: var(--color-dark-brown);
   }
-  .border-deepGreenTeal {
-    border-color: var(--color-deepGreenTeal);
+  .border-deep-green-teal {
+    border-color: var(--color-deep-green-teal);
   }
   .border-gray-300 {
     border-color: var(--color-gray-300);
@@ -760,26 +758,23 @@
   .border-gray-900 {
     border-color: var(--color-gray-900);
   }
-  .border-lightChestnut {
-    border-color: var(--color-lightChestnut);
+  .border-light-chestnut {
+    border-color: var(--color-light-chestnut);
   }
-  .border-lightGray {
-    border-color: var(--color-lightGray);
+  .border-light-gray {
+    border-color: var(--color-light-gray);
   }
-  .border-mediumSalmon {
-    border-color: var(--color-mediumSalmon);
+  .border-medium-salmon {
+    border-color: var(--color-medium-salmon);
   }
-  .border-mutedLavender {
-    border-color: var(--color-mutedLavender);
+  .border-powder-blue {
+    border-color: var(--color-powder-blue);
   }
-  .border-powderBlue {
-    border-color: var(--color-powderBlue);
+  .border-soft-dark-purple {
+    border-color: var(--color-soft-dark-purple);
   }
-  .border-softDarkPurple {
-    border-color: var(--color-softDarkPurple);
-  }
-  .border-softPeach {
-    border-color: var(--color-softPeach);
+  .border-soft-peach {
+    border-color: var(--color-soft-peach);
   }
   .border-zinc-300 {
     border-color: var(--color-zinc-300);
@@ -790,8 +785,8 @@
   .bg-\[var\(--color-soft-beige\)\] {
     background-color: var(--color-soft-beige);
   }
-  .bg-goldenBeige {
-    background-color: var(--color-goldenBeige);
+  .bg-golden-beige {
+    background-color: var(--color-golden-beige);
   }
   .bg-gray-100 {
     background-color: var(--color-gray-100);
@@ -799,17 +794,17 @@
   .bg-gray-400 {
     background-color: var(--color-gray-400);
   }
-  .bg-mutedTeal {
-    background-color: var(--color-mutedTeal);
+  .bg-muted-teal {
+    background-color: var(--color-muted-teal);
   }
-  .bg-sageGreen {
-    background-color: var(--color-sageGreen);
+  .bg-sage-green {
+    background-color: var(--color-sage-green);
   }
-  .bg-softPeach {
-    background-color: var(--color-softPeach);
+  .bg-soft-peach {
+    background-color: var(--color-soft-peach);
   }
-  .bg-warmWhite {
-    background-color: var(--color-warmWhite);
+  .bg-warm-white {
+    background-color: var(--color-warm-white);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -959,9 +954,6 @@
   .text-\[1\.1rem\] {
     font-size: 1.1rem;
   }
-  .text-\[1\.2rem\] {
-    font-size: 1.2rem;
-  }
   .text-\[1\.3rem\] {
     font-size: 1.3rem;
   }
@@ -1100,14 +1092,11 @@
   .text-blue-600 {
     color: var(--color-blue-600);
   }
-  .text-darkBrown {
-    color: var(--color-darkBrown);
+  .text-dark-brown {
+    color: var(--color-dark-brown);
   }
-  .text-darkGrape {
-    color: var(--color-darkGrape);
-  }
-  .text-deepGreenTeal {
-    color: var(--color-deepGreenTeal);
+  .text-deep-green {
+    color: var(--color-deep-green);
   }
   .text-gray-600 {
     color: var(--color-gray-600);
@@ -1118,32 +1107,29 @@
   .text-inherit {
     color: inherit;
   }
-  .text-mediumBrown {
-    color: var(--color-mediumBrown);
+  .text-medium-brown {
+    color: var(--color-medium-brown);
   }
-  .text-mediumSalmon {
-    color: var(--color-mediumSalmon);
+  .text-medium-salmon {
+    color: var(--color-medium-salmon);
   }
-  .text-mutedCoral {
-    color: var(--color-mutedCoral);
+  .text-muted-coral {
+    color: var(--color-muted-coral);
   }
-  .text-mutedLavender {
-    color: var(--color-mutedLavender);
+  .text-rosy-brown {
+    color: var(--color-rosy-brown);
   }
-  .text-rosyBrown {
-    color: var(--color-rosyBrown);
+  .text-royal-blue {
+    color: var(--color-royal-blue);
   }
-  .text-royalBlue {
-    color: var(--color-royalBlue);
+  .text-soft-dark-purple {
+    color: var(--color-soft-dark-purple);
   }
-  .text-softDarkPurple {
-    color: var(--color-softDarkPurple);
+  .text-warm-golden-yellow {
+    color: var(--color-warm-golden-yellow);
   }
-  .text-warmGoldenYellow {
-    color: var(--color-warmGoldenYellow);
-  }
-  .text-warmWhite {
-    color: var(--color-warmWhite);
+  .text-warm-white {
+    color: var(--color-warm-white);
   }
   .text-white {
     color: var(--color-white);
@@ -1444,13 +1430,6 @@
       }
     }
   }
-  .hover\:bg-deepGreen {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-deepGreen);
-      }
-    }
-  }
   .hover\:bg-gray-200 {
     &:hover {
       @media (hover: hover) {
@@ -1458,10 +1437,10 @@
       }
     }
   }
-  .hover\:bg-mutedTeal {
+  .hover\:bg-muted-teal {
     &:hover {
       @media (hover: hover) {
-        background-color: var(--color-mutedTeal);
+        background-color: var(--color-muted-teal);
       }
     }
   }

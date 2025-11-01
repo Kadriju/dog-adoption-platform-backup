@@ -1,46 +1,48 @@
 @import "tailwindcss";
 
-/* Optional: tell Tailwind where your HTML and JS live */
-@source "./*.html";
-@source "./**/*.{html,js,jsx,ts,tsx}";
+/* Content files relative to 2-src/input.css */
+@source "../*.html";                               /* 1-home.html, 2-search-results.html, 3-dog-mokka.html, 4-dog-upload-... */
+@source "../3-html-partials/**/*.html";            /* head.html, header.html, footer.html */
+@source "../5-js/**/*.{js,ts,jsx,tsx}";            /* include.js, tiered-pricing.js (if they contain class names) */
+
 
 
 /* --- Custom theme tokens so classes like bg-sageGreen work --- */
 @theme {
   /* Colors used in your HTML */
-  --color-warmWhite: #FAF3E0;
-  --color-lightGray: #cccccc;
+  --color-warm-white: #FAF3E0;
+  --color-light-gray: #cccccc;
 
-  --color-goldenBeige: #E3C27E;
-  --color-pastelYellow: #ffe082;
-  --color-softMustard: #D8B25C;
-  --color-warmGoldenYellow: #E4AF28;
+  --color-golden-beige: #E3C27E;
+  --color-pastel-yellow: #ffe082;
+  --color-soft-mustard: #D8B25C;
+  --color-warm-golden-yellow: #E4AF28;
 
-  --color-softPeach: #FDE9E0;
-  --color-mutedRose: #C98585;
-  --color-mutedCoral: #E6A4B4;
-  --color-mediumSalmon: #E56767;
-  --color-rosyBrown: #b76e79;
+  --color-soft-peach: #FDE9E0;
+  --color-muted-rose: #C98585;
+  --color-muted-coral: #E6A4B4;
+  --color-medium-salmon: #E56767;
+  --color-rosy-brown: #b76e79;
 
-  --color-mutedLavender: #A784AF;
-  --color-softDarkPurple: #5D3A6A;
-  --color-darkGrape: #46265A;
+  --color-muted-lavender: #A784AF;
+  --color-soft-dark-purple: #5D3A6A;
+  --color-dark-grape: #46265A;
 
-  --color-lightChestnut: #B38B6D;
-  --color-warmTaupe: #C2A28D;
-  --color-mediumBrown: #6B5843;
-  --color-darkBrown: #5C4326;
+  --color-light-chestnut: #B38B6D;
+  --color-warm-taupe: #C2A28D;
+  --color-medium-brown: #6B5843;
+  --color-dark-brown: #5C4326;
 
-  --color-sageGreen: #A8BBA2;
-  --color-mutedTeal: #6B9080;
-  --color-deepGreenTeal: #38584F;
-  --color-deepGreen: #3b6f58;
+  --color-sage-green: #A8BBA2;
+  --color-muted-teal: #6B9080;
+  --color-deep-green-teal: #38584F;
+  --color-deep-green: #3b6f58;
 
-  --color-powderBlue: #BFD7EA;
-  --color-royalBlue: #3a7fc1;
+  --color-powder-blue: #BFD7EA;
+  --color-royal-blue: #3a7fc1;
 
-  --color-textDark: #3D2A19;
-  --color-logoFrame: #7E3E20;
+  --color-text-dark: #3D2A19;
+  --color-logo-frame: #7E3E20;
 }
 
 /* Base font/colors (optional) */
