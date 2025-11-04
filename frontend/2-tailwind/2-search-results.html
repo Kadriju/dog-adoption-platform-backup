@@ -1,298 +1,543 @@
-<!DOCTYPE html> 
+<!doctype html>
 <html lang="en">
-
   <head>
-    <title>Find your perfect dog | Dog Mekka</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Find your perfect dog | Dogeli</title>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind build -->
+    <link rel="stylesheet" href="/1-dist/output.css" />
 
-    <link rel="stylesheet" href="1-dist/output.css">
+    <!-- Favicon -->
+    <link rel="icon" href="/4-images/favicon.ico" sizes="any" />
 
-  
-    <!-- SEO Metadata -->
-  
-    <meta name="description" content="Search, browse and find dogs looking for a home in Europe. Find your new best friend & soulmate and give a dog a loving home & family today through Dogs of Europe." />
-    <meta name="keywords" content="dogs, dog adoption, adopt a dog, adoption, dog shelters, shelter dogs Europe, dogs for adoption, homeless dogs, rescue dogs, European dog shelters, best friend, soulmate, love of your life, personal trainer, companion, find a perfect partner, pure breed, puppies, puppy, dogs for sale, buy a dog" />
-    <meta name="author" content="Dogs of Europe Team" />
-
-    <link rel="icon" href="4-images/favicon.ico" type="image/x-icon" />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-
-    <!-- Font Awesome (for fa-search icon) -->
-
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Structured Data for SEO -->
+    <!-- Icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Dogs of Europe",
-      "url": "https://www.dogsofeurope.com",
-      "logo": "https://www.dogsofeurope.com/images/logo.png",
-      "description": "Browse and adopt dogs from shelters across Europe.",
-      "sameAs": [
-        "https://www.dogsofeurope.com",
-        "https://www.dogsofeurope.org",
-        "https://www.dogsofeurope.eu",
-        "https://www.facebook.com/dogsofeurope",
-        "https://www.instagram.com/dogsofeurope_official/"
-    ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "info@dogsofeurope.com",
-        "contactType": "Customer Support"
+    <!-- SEO -->
+    <link rel="canonical" href="https://www.dogeli.com/" />
+    <meta
+      name="description"
+      content="Find your perfect dog. Adopt or buy responsibly. Europe’s hub for dog lovers."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Dogeli" />
+    <meta
+      property="og:title"
+      content="Find your perfect dog. Adopt or buy responsibly. Europe’s hub for dog lovers."
+    />
+    <meta
+      property="og:description"
+      content="Find your perfect dog. Adopt or buy responsibly. Europe’s hub for dog lovers."
+    />
+    <meta property="og:url" content="https://www.dogeli.com/" />
+    <meta property="og:image" content="https://www.dogeli.com/4-images/logosocialmedia.png" />
+    <meta property="og:image:alt" content="Dogeli — Find your perfect dog" />
+    <!-- Optional but helpful -->
+    <meta property="og:image:width" content="1125" />
+    <meta property="og:image:height" content="1125" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Find your perfect dog. Adopt or buy responsibly. Europe’s hub for dog lovers."
+    />
+    <meta
+      name="twitter:description"
+      content="Find your perfect dog. Adopt or buy responsibly. Europe’s hub for dog lovers."
+    />
+    <meta name="twitter:image" content="https://www.dogeli.com/4-images/logosocialmedia.png" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Dogeli",
+        "url": "https://www.dogeli.com",
+        "logo": "https://www.dogeli.com/4-images/logoheader.png",
+        "sameAs": [
+          "https://www.facebook.com/dogeli",
+          "https://www.instagram.com/dogeli/"
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "Customer Support",
+            "email": "info@dogeli.com"
+          }
+        ]
       }
-    }
-    </script>  
+    </script>
   </head>
+</html>
 
-  <body class="font-sans bg-sage-green mt-[0.2rem] antialiased">
-
+  <body class="bg-sage-green mt-[0.2rem] font-sans antialiased">
     <div data-include="3-html-partials/header.html"></div>
 
-    <main id="main-content" role="main" class="max-w-[60rem] mx-auto px-[0.3rem]">
+    <main
+      id="main-content"
+      role="main"
+      class="mx-auto max-w-[60rem] px-[0.3rem]"
+    >
       <!-- H1: 🐶 Search Results + big paw -->
       <h1
         id="dog-results-heading"
-        class="text-soft-dark-purple text-[1.6rem] font-semibold tracking-[0.03rem] mt-[0.7rem] mb-0 text-center leading-[1.2]"
+        class="text-soft-dark-purple mt-[0.7rem] mb-0 text-center text-[1.6rem] leading-[1.2] font-semibold tracking-[0.03rem]"
       >
         🐶 Search Results
         <span
-          class="inline-block align-middle text-[2rem] mx-[0.1rem] relative -top-[0.15rem] rotate-[-20deg]"
-        >🐾</span>
+          class="relative -top-[0.15rem] mx-[0.1rem] inline-block rotate-[-20deg] align-middle text-[2rem]"
+          >🐾</span
+        >
       </h1>
 
       <!-- H2: Available heading with warmWhite text + heart glow -->
       <h2
-        class="text-warm-white text-[1.4rem] font-semibold text-center leading-[1.3] mt-0 mb-[0.1rem]
-              [text-shadow:0_0.1rem_0.1rem_rgba(183,110,121,0.5),0_0.2rem_0.3rem_rgba(60,45,30,0.35)] transition-[transform,text-shadow] duration-300 ease-in-out"
+        class="text-warm-white mt-0 mb-[0.1rem] text-center text-[1.4rem] leading-[1.3] font-semibold transition-[transform,text-shadow] duration-300 ease-in-out [text-shadow:0_0.1rem_0.1rem_rgba(183,110,121,0.5),0_0.2rem_0.3rem_rgba(60,45,30,0.35)]"
       >
         <span
-          class="text-medium-salmon text-[2.4rem] mx-[0.5rem] align-middle
-                [text-shadow:0_0.08rem_0.05rem_rgba(255,255,255,0.3),0_0.12rem_0.12rem_rgba(183,110,121,0.6),0_0.25rem_0.35rem_rgba(60,45,30,0.5)]
-                transition-[transform,text-shadow] duration-300 ease-in-out"
+          class="text-medium-salmon mx-[0.5rem] align-middle text-[2.4rem] transition-[transform,text-shadow] duration-300 ease-in-out [text-shadow:0_0.08rem_0.05rem_rgba(255,255,255,0.3),0_0.12rem_0.12rem_rgba(183,110,121,0.6),0_0.25rem_0.35rem_rgba(60,45,30,0.5)]"
           aria-hidden="true"
-        >♥</span>
+          >♥</span
+        >
         Dogs who are waiting for a loving home
         <span
-          class="text-medium-salmon text-[2.4rem] mx-[0.5rem] align-middle
-                [text-shadow:0_0.08rem_0.05rem_rgba(255,255,255,0.3),0_0.12rem_0.12rem_rgba(183,110,121,0.6),0_0.25rem_0.35rem_rgba(60,45,30,0.5)]
-                transition-[transform,text-shadow] duration-300 ease-in-out"
+          class="text-medium-salmon mx-[0.5rem] align-middle text-[2.4rem] transition-[transform,text-shadow] duration-300 ease-in-out [text-shadow:0_0.08rem_0.05rem_rgba(255,255,255,0.3),0_0.12rem_0.12rem_rgba(183,110,121,0.6),0_0.25rem_0.35rem_rgba(60,45,30,0.5)]"
           aria-hidden="true"
-        >♥</span>
+          >♥</span
+        >
       </h2>
 
       <!-- Grid of dog cards -->
-      <section aria-labelledby="dog-results-heading"
-        class="grid gap-[0.8rem] [grid-template-columns:repeat(auto-fit,minmax(10rem,1fr))] mx-auto py-[1rem] px-[0.3rem]"
+      <section
+        aria-labelledby="dog-results-heading"
+        class="mx-auto grid [grid-template-columns:repeat(auto-fit,minmax(10rem,1fr))] gap-[0.8rem] px-[0.3rem] py-[1rem]"
       >
         <!-- CARD TEMPLATE -->
-        <article class="border-[0.2rem] border-soft-dark-purple rounded-[0.625rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] overflow-hidden transition-transform duration-200 ease-in-out hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)] hover:scale-[1.03]">
-          <a href="3-dog-mokka.html" class="no-underline text-inherit">
-            <img src="4-images/mokka.jpg" alt="Mokka" class="w-full h-[10rem] object-cover" />
+        <article
+          class="border-soft-dark-purple overflow-hidden rounded-[0.625rem] border-[0.2rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] transition-transform duration-200 ease-in-out hover:scale-[1.03] hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)]"
+        >
+          <a href="3-dog-mokka.html" class="text-inherit no-underline">
+            <img
+              src="4-images/mokka.jpg"
+              alt="Mokka"
+              class="h-[10rem] w-full object-cover"
+            />
             <div class="bg-soft-peach p-[0.5rem]">
-              <h2 class="text-dark-brown text-[1.1rem] font-semibold mb-[0.1rem]">
-                <span aria-label="female" class="font-black [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] mr-[0.2rem] inline-block text-rosy-brown">♀</span>
+              <h2
+                class="text-dark-brown mb-[0.1rem] text-[1.1rem] font-semibold"
+              >
+                <span
+                  aria-label="female"
+                  class="text-rosy-brown mr-[0.2rem] inline-block [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] font-black"
+                  >♀</span
+                >
                 Mokka
               </h2>
-              <p class="text-soft-dark-purple text-[1rem] font-medium">Estonia</p>
+              <p class="text-soft-dark-purple text-[1rem] font-medium">
+                Estonia
+              </p>
             </div>
           </a>
         </article>
 
-        <article class="border-[0.2rem] border-soft-dark-purple rounded-[0.625rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] overflow-hidden transition-transform duration-200 ease-in-out hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)] hover:scale-[1.03]">
-          <a href="dog-mory.html" class="no-underline text-inherit">
-            <img src="4-images/mory.jpg" alt="Mory" class="w-full h-[10rem] object-cover" />
+        <article
+          class="border-soft-dark-purple overflow-hidden rounded-[0.625rem] border-[0.2rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] transition-transform duration-200 ease-in-out hover:scale-[1.03] hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)]"
+        >
+          <a href="dog-mory.html" class="text-inherit no-underline">
+            <img
+              src="4-images/mory.jpg"
+              alt="Mory"
+              class="h-[10rem] w-full object-cover"
+            />
             <div class="bg-soft-peach p-[0.5rem]">
-              <h2 class="text-dark-brown text-[1.1rem] font-semibold mb-[0.1rem]">
-                <span aria-label="male" class="font-black [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] mr-[0.2rem] inline-block text-royal-blue">♂</span>
+              <h2
+                class="text-dark-brown mb-[0.1rem] text-[1.1rem] font-semibold"
+              >
+                <span
+                  aria-label="male"
+                  class="text-royal-blue mr-[0.2rem] inline-block [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] font-black"
+                  >♂</span
+                >
                 Mory
               </h2>
-              <p class="text-soft-dark-purple text-[1rem] font-medium">Latvia</p>
+              <p class="text-soft-dark-purple text-[1rem] font-medium">
+                Latvia
+              </p>
             </div>
           </a>
         </article>
 
-        <article class="border-[0.2rem] border-soft-dark-purple rounded-[0.625rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] overflow-hidden transition-transform duration-200 ease-in-out hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)] hover:scale-[1.03]">
-          <a href="dog-sally.html" class="no-underline text-inherit">
-            <img src="4-images/sally.jpg" alt="Sally" class="w-full h-[10rem] object-cover" />
+        <article
+          class="border-soft-dark-purple overflow-hidden rounded-[0.625rem] border-[0.2rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] transition-transform duration-200 ease-in-out hover:scale-[1.03] hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)]"
+        >
+          <a href="dog-sally.html" class="text-inherit no-underline">
+            <img
+              src="4-images/sally.jpg"
+              alt="Sally"
+              class="h-[10rem] w-full object-cover"
+            />
             <div class="bg-soft-peach p-[0.5rem]">
-              <h2 class="text-dark-brown text-[1.1rem] font-semibold mb-[0.1rem]">
-                <span aria-label="female" class="font-black [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] mr-[0.2rem] inline-block text-rosy-brown">♀</span>
+              <h2
+                class="text-dark-brown mb-[0.1rem] text-[1.1rem] font-semibold"
+              >
+                <span
+                  aria-label="female"
+                  class="text-rosy-brown mr-[0.2rem] inline-block [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] font-black"
+                  >♀</span
+                >
                 Sally
               </h2>
-              <p class="text-soft-dark-purple text-[1rem] font-medium">Estonia</p>
+              <p class="text-soft-dark-purple text-[1rem] font-medium">
+                Estonia
+              </p>
             </div>
           </a>
         </article>
 
-        <article class="border-[0.2rem] border-soft-dark-purple rounded-[0.625rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] overflow-hidden transition-transform duration-200 ease-in-out hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)] hover:scale-[1.03]">
-          <a href="dog-maks.html" class="no-underline text-inherit">
-            <img src="4-images/maks.jpg" alt="Maks" class="w-full h-[10rem] object-cover" />
+        <article
+          class="border-soft-dark-purple overflow-hidden rounded-[0.625rem] border-[0.2rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] transition-transform duration-200 ease-in-out hover:scale-[1.03] hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)]"
+        >
+          <a href="dog-maks.html" class="text-inherit no-underline">
+            <img
+              src="4-images/maks.jpg"
+              alt="Maks"
+              class="h-[10rem] w-full object-cover"
+            />
             <div class="bg-soft-peach p-[0.5rem]">
-              <h2 class="text-dark-brown text-[1.1rem] font-semibold mb-[0.1rem]">
-                <span aria-label="male" class="font-black [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] mr-[0.2rem] inline-block text-royal-blue">♂</span>
+              <h2
+                class="text-dark-brown mb-[0.1rem] text-[1.1rem] font-semibold"
+              >
+                <span
+                  aria-label="male"
+                  class="text-royal-blue mr-[0.2rem] inline-block [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] font-black"
+                  >♂</span
+                >
                 Maks
               </h2>
-              <p class="text-soft-dark-purple text-[1rem] font-medium">Latvia</p>
+              <p class="text-soft-dark-purple text-[1rem] font-medium">
+                Latvia
+              </p>
             </div>
           </a>
         </article>
 
-        <article class="border-[0.2rem] border-soft-dark-purple rounded-[0.625rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] overflow-hidden transition-transform duration-200 ease-in-out hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)] hover:scale-[1.03]">
-          <a href="dog-ledy.html" class="no-underline text-inherit">
-            <img src="4-images/ledy.jpg" alt="Ledy" class="w-full h-[10rem] object-cover" />
+        <article
+          class="border-soft-dark-purple overflow-hidden rounded-[0.625rem] border-[0.2rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] transition-transform duration-200 ease-in-out hover:scale-[1.03] hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)]"
+        >
+          <a href="dog-ledy.html" class="text-inherit no-underline">
+            <img
+              src="4-images/ledy.jpg"
+              alt="Ledy"
+              class="h-[10rem] w-full object-cover"
+            />
             <div class="bg-soft-peach p-[0.5rem]">
-              <h2 class="text-dark-brown text-[1.1rem] font-semibold mb-[0.1rem]">
-                <span aria-label="female" class="font-black [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] mr-[0.2rem] inline-block text-rosy-brown">♀</span>
+              <h2
+                class="text-dark-brown mb-[0.1rem] text-[1.1rem] font-semibold"
+              >
+                <span
+                  aria-label="female"
+                  class="text-rosy-brown mr-[0.2rem] inline-block [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] font-black"
+                  >♀</span
+                >
                 Ledy
               </h2>
-              <p class="text-soft-dark-purple text-[1rem] font-medium">Lithuania</p>
+              <p class="text-soft-dark-purple text-[1rem] font-medium">
+                Lithuania
+              </p>
             </div>
           </a>
         </article>
 
-        <article class="border-[0.2rem] border-soft-dark-purple rounded-[0.625rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] overflow-hidden transition-transform duration-200 ease-in-out hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)] hover:scale-[1.03]">
-          <a href="dog-elly.html" class="no-underline text-inherit">
-            <img src="4-images/elly.jpg" alt="Elly" class="w-full h-[10rem] object-cover" />
+        <article
+          class="border-soft-dark-purple overflow-hidden rounded-[0.625rem] border-[0.2rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] transition-transform duration-200 ease-in-out hover:scale-[1.03] hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)]"
+        >
+          <a href="dog-elly.html" class="text-inherit no-underline">
+            <img
+              src="4-images/elly.jpg"
+              alt="Elly"
+              class="h-[10rem] w-full object-cover"
+            />
             <div class="bg-soft-peach p-[0.5rem]">
-              <h2 class="text-dark-brown text-[1.1rem] font-semibold mb-[0.1rem]">
-                <span aria-label="female" class="font-black [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] mr-[0.2rem] inline-block text-rosy-brown">♀</span>
+              <h2
+                class="text-dark-brown mb-[0.1rem] text-[1.1rem] font-semibold"
+              >
+                <span
+                  aria-label="female"
+                  class="text-rosy-brown mr-[0.2rem] inline-block [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] font-black"
+                  >♀</span
+                >
                 Elly
               </h2>
-              <p class="text-soft-dark-purple text-[1rem] font-medium">Estonia</p>
+              <p class="text-soft-dark-purple text-[1rem] font-medium">
+                Estonia
+              </p>
             </div>
           </a>
         </article>
 
-        <article class="border-[0.2rem] border-soft-dark-purple rounded-[0.625rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] overflow-hidden transition-transform duration-200 ease-in-out hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)] hover:scale-[1.03]">
-          <a href="dog-muri.html" class="no-underline text-inherit">
-            <img src="4-images/muri.jpg" alt="Muri" class="w-full h-[10rem] object-cover" />
+        <article
+          class="border-soft-dark-purple overflow-hidden rounded-[0.625rem] border-[0.2rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] transition-transform duration-200 ease-in-out hover:scale-[1.03] hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)]"
+        >
+          <a href="dog-muri.html" class="text-inherit no-underline">
+            <img
+              src="4-images/muri.jpg"
+              alt="Muri"
+              class="h-[10rem] w-full object-cover"
+            />
             <div class="bg-soft-peach p-[0.5rem]">
-              <h2 class="text-dark-brown text-[1.1rem] font-semibold mb-[0.1rem]">
-                <span aria-label="male" class="font-black [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] mr-[0.2rem] inline-block text-royal-blue">♂</span>
+              <h2
+                class="text-dark-brown mb-[0.1rem] text-[1.1rem] font-semibold"
+              >
+                <span
+                  aria-label="male"
+                  class="text-royal-blue mr-[0.2rem] inline-block [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] font-black"
+                  >♂</span
+                >
                 Muri
               </h2>
-              <p class="text-soft-dark-purple text-[1rem] font-medium">Estonia</p>
+              <p class="text-soft-dark-purple text-[1rem] font-medium">
+                Estonia
+              </p>
             </div>
           </a>
         </article>
 
-        <article class="border-[0.2rem] border-soft-dark-purple rounded-[0.625rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] overflow-hidden transition-transform duration-200 ease-in-out hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)] hover:scale-[1.03]">
-          <a href="dog-mokka.html" class="no-underline text-inherit">
-            <img src="4-images/mokka.jpg" alt="Mokka" class="w-full h-[10rem] object-cover" />
+        <article
+          class="border-soft-dark-purple overflow-hidden rounded-[0.625rem] border-[0.2rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] transition-transform duration-200 ease-in-out hover:scale-[1.03] hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)]"
+        >
+          <a href="dog-mokka.html" class="text-inherit no-underline">
+            <img
+              src="4-images/mokka.jpg"
+              alt="Mokka"
+              class="h-[10rem] w-full object-cover"
+            />
             <div class="bg-soft-peach p-[0.5rem]">
-              <h2 class="text-dark-brown text-[1.1rem] font-semibold mb-[0.1rem]">
-                <span aria-label="female" class="font-black [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] mr-[0.2rem] inline-block text-rosy-brown">♀</span>
+              <h2
+                class="text-dark-brown mb-[0.1rem] text-[1.1rem] font-semibold"
+              >
+                <span
+                  aria-label="female"
+                  class="text-rosy-brown mr-[0.2rem] inline-block [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] font-black"
+                  >♀</span
+                >
                 Mokka
               </h2>
-              <p class="text-soft-dark-purple text-[1rem] font-medium">Estonia</p>
+              <p class="text-soft-dark-purple text-[1rem] font-medium">
+                Estonia
+              </p>
             </div>
           </a>
         </article>
 
-        <article class="border-[0.2rem] border-soft-dark-purple rounded-[0.625rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] overflow-hidden transition-transform duration-200 ease-in-out hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)] hover:scale-[1.03]">
-          <a href="dog-mory.html" class="no-underline text-inherit">
-            <img src="4-images/mory.jpg" alt="Mory" class="w-full h-[10rem] object-cover" />
+        <article
+          class="border-soft-dark-purple overflow-hidden rounded-[0.625rem] border-[0.2rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] transition-transform duration-200 ease-in-out hover:scale-[1.03] hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)]"
+        >
+          <a href="dog-mory.html" class="text-inherit no-underline">
+            <img
+              src="4-images/mory.jpg"
+              alt="Mory"
+              class="h-[10rem] w-full object-cover"
+            />
             <div class="bg-soft-peach p-[0.5rem]">
-              <h2 class="text-dark-brown text-[1.1rem] font-semibold mb-[0.1rem]">
-                <span aria-label="male" class="font-black [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] mr-[0.2rem] inline-block text-royal-blue">♂</span>
+              <h2
+                class="text-dark-brown mb-[0.1rem] text-[1.1rem] font-semibold"
+              >
+                <span
+                  aria-label="male"
+                  class="text-royal-blue mr-[0.2rem] inline-block [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] font-black"
+                  >♂</span
+                >
                 Mory
               </h2>
-              <p class="text-soft-dark-purple text-[1rem] font-medium">Latvia</p>
+              <p class="text-soft-dark-purple text-[1rem] font-medium">
+                Latvia
+              </p>
             </div>
           </a>
         </article>
 
-        <article class="border-[0.2rem] border-soft-dark-purple rounded-[0.625rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] overflow-hidden transition-transform duration-200 ease-in-out hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)] hover:scale-[1.03]">
-          <a href="dog-sally.html" class="no-underline text-inherit">
-            <img src="4-images/sally.jpg" alt="Sally" class="w-full h-[10rem] object-cover" />
+        <article
+          class="border-soft-dark-purple overflow-hidden rounded-[0.625rem] border-[0.2rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] transition-transform duration-200 ease-in-out hover:scale-[1.03] hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)]"
+        >
+          <a href="dog-sally.html" class="text-inherit no-underline">
+            <img
+              src="4-images/sally.jpg"
+              alt="Sally"
+              class="h-[10rem] w-full object-cover"
+            />
             <div class="bg-soft-peach p-[0.5rem]">
-              <h2 class="text-dark-brown text-[1.1rem] font-semibold mb-[0.1rem]">
-                <span aria-label="female" class="font-black [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] mr-[0.2rem] inline-block text-rosy-brown">♀</span>
+              <h2
+                class="text-dark-brown mb-[0.1rem] text-[1.1rem] font-semibold"
+              >
+                <span
+                  aria-label="female"
+                  class="text-rosy-brown mr-[0.2rem] inline-block [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] font-black"
+                  >♀</span
+                >
                 Sally
               </h2>
-              <p class="text-soft-dark-purple text-[1rem] font-medium">Estonia</p>
+              <p class="text-soft-dark-purple text-[1rem] font-medium">
+                Estonia
+              </p>
             </div>
           </a>
         </article>
 
-        <article class="border-[0.2rem] border-soft-dark-purple rounded-[0.625rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] overflow-hidden transition-transform duration-200 ease-in-out hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)] hover:scale-[1.03]">
-          <a href="dog-maks.html" class="no-underline text-inherit">
-            <img src="4-images/maks.jpg" alt="Maks" class="w-full h-[10rem] object-cover" />
+        <article
+          class="border-soft-dark-purple overflow-hidden rounded-[0.625rem] border-[0.2rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] transition-transform duration-200 ease-in-out hover:scale-[1.03] hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)]"
+        >
+          <a href="dog-maks.html" class="text-inherit no-underline">
+            <img
+              src="4-images/maks.jpg"
+              alt="Maks"
+              class="h-[10rem] w-full object-cover"
+            />
             <div class="bg-soft-peach p-[0.5rem]">
-              <h2 class="text-dark-brown text-[1.1rem] font-semibold mb-[0.1rem]">
-                <span aria-label="male" class="font-black [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] mr-[0.2rem] inline-block text-royal-blue">♂</span>
+              <h2
+                class="text-dark-brown mb-[0.1rem] text-[1.1rem] font-semibold"
+              >
+                <span
+                  aria-label="male"
+                  class="text-royal-blue mr-[0.2rem] inline-block [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] font-black"
+                  >♂</span
+                >
                 Maks
               </h2>
-              <p class="text-soft-dark-purple text-[1rem] font-medium">Latvia</p>
+              <p class="text-soft-dark-purple text-[1rem] font-medium">
+                Latvia
+              </p>
             </div>
           </a>
         </article>
 
-        <article class="border-[0.2rem] border-soft-dark-purple rounded-[0.625rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] overflow-hidden transition-transform duration-200 ease-in-out hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)] hover:scale-[1.03]">
-          <a href="dog-ledy.html" class="no-underline text-inherit">
-            <img src="4-images/ledy.jpg" alt="Ledy" class="w-full h-[10rem] object-cover" />
+        <article
+          class="border-soft-dark-purple overflow-hidden rounded-[0.625rem] border-[0.2rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] transition-transform duration-200 ease-in-out hover:scale-[1.03] hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)]"
+        >
+          <a href="dog-ledy.html" class="text-inherit no-underline">
+            <img
+              src="4-images/ledy.jpg"
+              alt="Ledy"
+              class="h-[10rem] w-full object-cover"
+            />
             <div class="bg-soft-peach p-[0.5rem]">
-              <h2 class="text-dark-brown text-[1.1rem] font-semibold mb-[0.1rem]">
-                <span aria-label="female" class="font-black [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] mr-[0.2rem] inline-block text-rosy-brown">♀</span>
+              <h2
+                class="text-dark-brown mb-[0.1rem] text-[1.1rem] font-semibold"
+              >
+                <span
+                  aria-label="female"
+                  class="text-rosy-brown mr-[0.2rem] inline-block [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] font-black"
+                  >♀</span
+                >
                 Ledy
               </h2>
-              <p class="text-soft-dark-purple text-[1rem] font-medium">Lithuania</p>
+              <p class="text-soft-dark-purple text-[1rem] font-medium">
+                Lithuania
+              </p>
             </div>
           </a>
         </article>
 
-        <article class="border-[0.2rem] border-soft-dark-purple rounded-[0.625rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] overflow-hidden transition-transform duration-200 ease-in-out hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)] hover:scale-[1.03]">
-          <a href="dog-elly.html" class="no-underline text-inherit">
-            <img src="4-images/elly.jpg" alt="Elly" class="w-full h-[10rem] object-cover" />
+        <article
+          class="border-soft-dark-purple overflow-hidden rounded-[0.625rem] border-[0.2rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] transition-transform duration-200 ease-in-out hover:scale-[1.03] hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)]"
+        >
+          <a href="dog-elly.html" class="text-inherit no-underline">
+            <img
+              src="4-images/elly.jpg"
+              alt="Elly"
+              class="h-[10rem] w-full object-cover"
+            />
             <div class="bg-soft-peach p-[0.5rem]">
-              <h2 class="text-dark-brown text-[1.1rem] font-semibold mb-[0.1rem]">
-                <span aria-label="female" class="font-black [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] mr-[0.2rem] inline-block text-rosy-brown">♀</span>
+              <h2
+                class="text-dark-brown mb-[0.1rem] text-[1.1rem] font-semibold"
+              >
+                <span
+                  aria-label="female"
+                  class="text-rosy-brown mr-[0.2rem] inline-block [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] font-black"
+                  >♀</span
+                >
                 Elly
               </h2>
-              <p class="text-soft-dark-purple text-[1rem] font-medium">Estonia</p>
+              <p class="text-soft-dark-purple text-[1rem] font-medium">
+                Estonia
+              </p>
             </div>
           </a>
         </article>
 
-        <article class="border-[0.2rem] border-soft-dark-purple rounded-[0.625rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] overflow-hidden transition-transform duration-200 ease-in-out hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)] hover:scale-[1.03]">
-          <a href="dog-muri.html" class="no-underline text-inherit">
-            <img src="4-images/muri.jpg" alt="Muri" class="w-full h-[10rem] object-cover" />
+        <article
+          class="border-soft-dark-purple overflow-hidden rounded-[0.625rem] border-[0.2rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] transition-transform duration-200 ease-in-out hover:scale-[1.03] hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)]"
+        >
+          <a href="dog-muri.html" class="text-inherit no-underline">
+            <img
+              src="4-images/muri.jpg"
+              alt="Muri"
+              class="h-[10rem] w-full object-cover"
+            />
             <div class="bg-soft-peach p-[0.5rem]">
-              <h2 class="text-dark-brown text-[1.1rem] font-semibold mb-[0.1rem]">
-                <span aria-label="male" class="font-black [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] mr-[0.2rem] inline-block text-royal-blue">♂</span>
+              <h2
+                class="text-dark-brown mb-[0.1rem] text-[1.1rem] font-semibold"
+              >
+                <span
+                  aria-label="male"
+                  class="text-royal-blue mr-[0.2rem] inline-block [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] font-black"
+                  >♂</span
+                >
                 Muri
               </h2>
-              <p class="text-soft-dark-purple text-[1rem] font-medium">Estonia</p>
+              <p class="text-soft-dark-purple text-[1rem] font-medium">
+                Estonia
+              </p>
             </div>
           </a>
         </article>
 
-        <article class="border-[0.2rem] border-soft-dark-purple rounded-[0.625rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] overflow-hidden transition-transform duration-200 ease-in-out hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)] hover:scale-[1.03]">
-          <a href="dog-mokka.html" class="no-underline text-inherit">
-            <img src="4-images/mokka.jpg" alt="Mokka" class="w-full h-[10rem] object-cover" />
+        <article
+          class="border-soft-dark-purple overflow-hidden rounded-[0.625rem] border-[0.2rem] shadow-[0_0.125rem_0.5rem_rgba(0,0,0,0.06)] transition-transform duration-200 ease-in-out hover:scale-[1.03] hover:shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12)]"
+        >
+          <a href="dog-mokka.html" class="text-inherit no-underline">
+            <img
+              src="4-images/mokka.jpg"
+              alt="Mokka"
+              class="h-[10rem] w-full object-cover"
+            />
             <div class="bg-soft-peach p-[0.5rem]">
-              <h2 class="text-dark-brown text-[1.1rem] font-semibold mb-[0.1rem]">
-                <span aria-label="female" class="font-black [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] mr-[0.2rem] inline-block text-rosy-brown">♀</span>
+              <h2
+                class="text-dark-brown mb-[0.1rem] text-[1.1rem] font-semibold"
+              >
+                <span
+                  aria-label="female"
+                  class="text-rosy-brown mr-[0.2rem] inline-block [font-family:'Segoe_UI_Symbol','Arial',sans-serif] text-[1.3rem] font-black"
+                  >♀</span
+                >
                 Mokka
               </h2>
-              <p class="text-soft-dark-purple text-[1rem] font-medium">Estonia</p>
+              <p class="text-soft-dark-purple text-[1rem] font-medium">
+                Estonia
+              </p>
             </div>
           </a>
         </article>
-
-    
       </section>
     </main>
 

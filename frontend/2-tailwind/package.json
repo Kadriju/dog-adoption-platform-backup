@@ -3,18 +3,16 @@
   "version": "1.0.0",
   "description": "Dogs of Europe Tailwind setup",
   "main": "index.js",
-  
   "scripts": {
-  "dev:css": "npx @tailwindcss/cli -i ./2-src/input.css -o ./1-dist/output.css --watch",
-  "build:css": "npx @tailwindcss/cli -i ./2-src/input.css -o ./1-dist/output.css --minify"
-
-
+    "dev:css": "npx @tailwindcss/cli -i ./2-src/input.css -o ./1-dist/output.css --watch",
+    "build:css": "npx @tailwindcss/cli -i ./2-src/input.css -o ./1-dist/output.css --minify"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.16",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.7.1",
     "tailwindcss": "^4.1.16"
   }
 }
-

@@ -1,9 +1,9 @@
 // js/tiered-pricing.js
 (function () {
   // Shared logic (same as your private pricing)
-  const DISCOUNT_STEP = 0.05;     // 5% per extra dog
-  const MAX_DISCOUNT = 0.5;       // 50% max
-  const MAX_DISCOUNT_DOGS = 11;   // Discount caps at 11 dogs
+  const DISCOUNT_STEP = 0.05; // 5% per extra dog
+  const MAX_DISCOUNT = 0.5; // 50% max
+  const MAX_DISCOUNT_DOGS = 11; // Discount caps at 11 dogs
 
   function setupTieredPricing({ selectId, totalId, perDogId, BASE_PRICE }) {
     const dogCountSelect = document.getElementById(selectId);
@@ -38,7 +38,9 @@
 
     function updatePriceDisplay() {
       const count = parseInt(dogCountSelect.value, 10) || 1;
-      const displayPricePerDog = getPricePerDog(Math.min(count, MAX_DISCOUNT_DOGS)); // label
+      const displayPricePerDog = getPricePerDog(
+        Math.min(count, MAX_DISCOUNT_DOGS),
+      ); // label
 
       const totalPrice = getTotalPrice(count);
       totalPriceEl.textContent = `€${totalPrice.toFixed(2)}`;
@@ -48,28 +50,25 @@
       }
     }
 
-    dogCountSelect.addEventListener('change', updatePriceDisplay);
+    dogCountSelect.addEventListener("change", updatePriceDisplay);
     updatePriceDisplay();
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     // Private form (unchanged: base €9.90)
     setupTieredPricing({
-      selectId: 'dog-count',
-      totalId: 'total-price',
-      perDogId: 'price-per-dog',
-      BASE_PRICE: 9.90,
+      selectId: "dog-count",
+      totalId: "total-price",
+      perDogId: "price-per-dog",
+      BASE_PRICE: 9.9,
     });
 
     // Breeder form (same logic, higher base: €19.90)
     setupTieredPricing({
-      selectId: 'dog-count-breeder',
-      totalId: 'total-price-breeder',
-      perDogId: 'price-per-dog-breeder',
-      BASE_PRICE: 19.90,
+      selectId: "dog-count-breeder",
+      totalId: "total-price-breeder",
+      perDogId: "price-per-dog-breeder",
+      BASE_PRICE: 19.9,
     });
   });
 })();
-
-
-

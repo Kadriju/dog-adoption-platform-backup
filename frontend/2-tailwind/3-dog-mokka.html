@@ -1,174 +1,239 @@
-<!DOCTYPE html> 
+<!doctype html>
 <html lang="en">
-
   <head>
-    <title>Find your perfect dog | Dog Mekka</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Find your perfect dog | Dogeli</title>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind build -->
+    <link rel="stylesheet" href="/1-dist/output.css" />
 
-    <link rel="stylesheet" href="1-dist/output.css">
+    <!-- Favicon -->
+    <link rel="icon" href="/4-images/favicon.ico" sizes="any" />
 
- 
-
-    <!-- SEO Metadata -->
-  
-    <meta name="description" content="Search, browse and find dogs looking for a home in Europe. Find your new best friend & soulmate and give a dog a loving home & family today through Dogs of Europe." />
-    <meta name="keywords" content="dogs, dog adoption, adopt a dog, adoption, dog shelters, shelter dogs Europe, dogs for adoption, homeless dogs, rescue dogs, European dog shelters, best friend, soulmate, love of your life, personal trainer, companion, find a perfect partner, pure breed, puppies, puppy, dogs for sale, buy a dog" />
-    <meta name="author" content="Dogs of Europe Team" />
-
-    <link rel="icon" href="4-images/favicon.ico" type="image/x-icon" />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-
-    <!-- Font Awesome (for fa-search icon) -->
-
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Structured Data for SEO -->
+    <!-- Icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Dogs of Europe",
-      "url": "https://www.dogsofeurope.com",
-      "logo": "https://www.dogsofeurope.com/images/logo.png",
-      "description": "Browse and adopt dogs from shelters across Europe.",
-      "sameAs": [
-        "https://www.dogsofeurope.com",
-        "https://www.dogsofeurope.org",
-        "https://www.dogsofeurope.eu",
-        "https://www.facebook.com/dogsofeurope",
-        "https://www.instagram.com/dogsofeurope_official/"
-    ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "info@dogsofeurope.com",
-        "contactType": "Customer Support"
+    <!-- SEO -->
+    <link rel="canonical" href="https://www.dogeli.com/" />
+    <meta
+      name="description"
+      content="Find your perfect dog. Adopt or buy responsibly. Europe’s hub for dog lovers."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Dogeli" />
+    <meta
+      property="og:title"
+      content="Find your perfect dog. Adopt or buy responsibly. Europe’s hub for dog lovers."
+    />
+    <meta
+      property="og:description"
+      content="Find your perfect dog. Adopt or buy responsibly. Europe’s hub for dog lovers."
+    />
+    <meta property="og:url" content="https://www.dogeli.com/" />
+    <meta property="og:image" content="https://www.dogeli.com/4-images/logosocialmedia.png" />
+    <meta property="og:image:alt" content="Dogeli — Find your perfect dog" />
+    <!-- Optional but helpful -->
+    <meta property="og:image:width" content="1125" />
+    <meta property="og:image:height" content="1125" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Find your perfect dog. Adopt or buy responsibly. Europe’s hub for dog lovers."
+    />
+    <meta
+      name="twitter:description"
+      content="Find your perfect dog. Adopt or buy responsibly. Europe’s hub for dog lovers."
+    />
+    <meta name="twitter:image" content="https://www.dogeli.com/4-images/logosocialmedia.png" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Dogeli",
+        "url": "https://www.dogeli.com",
+        "logo": "https://www.dogeli.com/4-images/logoheader.png",
+        "sameAs": [
+          "https://www.facebook.com/dogeli",
+          "https://www.instagram.com/dogeli/"
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "Customer Support",
+            "email": "info@dogeli.com"
+          }
+        ]
       }
-    }
-    </script>  
+    </script>
   </head>
- 
-  <body class="font-sans bg-sage-green antialiased">
-  <div data-include="3-html-partials/header.html"></div>
+</html>
 
-  <main class="max-w-[45rem] mx-auto my-[0.8rem] p-[0.5rem] bg-warm-white border-[0.1875rem] border-powder-blue rounded-[1rem]
-                shadow-[0_0_0_0.1875rem_#38584F,0_0.375rem_0.75rem_rgba(0,0,0,0.12),0_0.75rem_1.5rem_rgba(0,0,0,0.08),inset_0_0.0625rem_0.0625rem_rgba(255,255,255,0.7),inset_0_-0.125rem_0.25rem_rgba(0,0,0,0.08),inset_0.125rem_0_0.1875rem_rgba(0,0,0,0.03),inset_-0.125rem_0_0.1875rem_rgba(0,0,0,0.03)]">
+  <body class="bg-sage-green font-sans antialiased">
+    <div data-include="3-html-partials/header.html"></div>
 
-    <!-- Overview Section -->
-  <section class="grid grid-cols-[1fr_2fr] md:items-stretch items-start bg-[var(--color-soft-beige)] p-[0.5rem] rounded-[1rem] gap-[1rem]">
-
-    <!-- Dog Details -->
-    <div
-      class="h-full w-full flex flex-col pt-[0.5rem] pr-[1rem] pl-[1.5rem]
-            border-[0.09375rem] border-mutedLavender rounded-[0.5rem] text-darkGrape
-            shadow-[0_0_0_0.09375rem_#5D3A6A,0_0.25rem_0.375rem_rgba(0,0,0,0.08),0_0.375rem_0.75rem_rgba(0,0,0,0.06),inset_0_0.0625rem_0.0625rem_rgba(255,255,255,0.5),inset_0_-0.125rem_0.1875rem_rgba(0,0,0,0.05),inset_0.125rem_0_0.125rem_rgba(0,0,0,0.03),inset_-0.125rem_0_0.125rem_rgba(0,0,0,0.03)]
-            transition-transform duration-300 ease-in-out"
+    <main
+      class="bg-warm-white border-powder-blue mx-auto my-[0.8rem] max-w-[45rem] rounded-[1rem] border-[0.1875rem] p-[0.5rem] shadow-[0_0_0_0.1875rem_#38584F,0_0.375rem_0.75rem_rgba(0,0,0,0.12),0_0.75rem_1.5rem_rgba(0,0,0,0.08),inset_0_0.0625rem_0.0625rem_rgba(255,255,255,0.7),inset_0_-0.125rem_0.25rem_rgba(0,0,0,0.08),inset_0.125rem_0_0.1875rem_rgba(0,0,0,0.03),inset_-0.125rem_0_0.1875rem_rgba(0,0,0,0.03)]"
     >
-      <h1 class="font-[500] text-[1.8em] uppercase tracking-[0.3rem] text-mutedLavender
-                [-webkit-text-stroke:0.075rem_#46265A] font-['Kalam',cursive] mb-[0.6rem]">
-        Mokka
-      </h1>
+      <!-- Overview Section -->
+      <section
+        class="grid grid-cols-[1fr_2fr] items-start gap-[1rem] rounded-[1rem] bg-[var(--color-soft-beige)] p-[0.5rem] md:items-stretch"
+      >
+        <!-- Dog Details -->
+        <div
+          class="border-mutedLavender text-darkGrape flex h-full w-full flex-col rounded-[0.5rem] border-[0.09375rem] pt-[0.5rem] pr-[1rem] pl-[1.5rem] shadow-[0_0_0_0.09375rem_#5D3A6A,0_0.25rem_0.375rem_rgba(0,0,0,0.08),0_0.375rem_0.75rem_rgba(0,0,0,0.06),inset_0_0.0625rem_0.0625rem_rgba(255,255,255,0.5),inset_0_-0.125rem_0.1875rem_rgba(0,0,0,0.05),inset_0.125rem_0_0.125rem_rgba(0,0,0,0.03),inset_-0.125rem_0_0.125rem_rgba(0,0,0,0.03)] transition-transform duration-300 ease-in-out"
+        >
+          <h1
+            class="text-mutedLavender mb-[0.6rem] font-['Kalam',cursive] text-[1.8em] font-[500] tracking-[0.3rem] uppercase [-webkit-text-stroke:0.075rem_#46265A]"
+          >
+            Mokka
+          </h1>
 
-      <ul class="text-[1rem] list-none leading-[2.3] space-y-[0.03rem] [&>li:last-child]:mb-0">
-        <li><strong>Sex:</strong> <span class="ml-[0.1rem] text-[1rem] font-[450] text-black">Female</span></li>
-        <li><strong>Age:</strong> <span class="ml-[0.1rem] text-[1rem] font-[450] text-black">3 years</span></li>
-        <li><strong>Size:</strong> <span class="ml-[0.1rem] text-[1rem] font-[450] text-black">Small</span></li>
-        <li><strong>Country:</strong> <span class="ml-[0.1rem] text-[1rem] font-[450] text-black">Estonia</span></li>
-        <li><strong>Location:</strong> <span class="ml-[0.1rem] text-[1rem] font-[450] text-black">Tallinn</span></li>
-        <li><strong>Breed:</strong> <span class="ml-[0.1rem] text-[1rem] font-[450] text-black">Chihuahua</span></li>
-        <li><strong>ID Number:</strong> <span class="ml-[0.1rem] text-[1rem] font-[450] text-black">EE12345</span></li>
-      </ul>
-    </div>
+          <ul
+            class="list-none space-y-[0.03rem] text-[1rem] leading-[2.3] [&>li:last-child]:mb-0"
+          >
+            <li>
+              <strong>Sex:</strong>
+              <span class="ml-[0.1rem] text-[1rem] font-[450] text-black"
+                >Female</span
+              >
+            </li>
+            <li>
+              <strong>Age:</strong>
+              <span class="ml-[0.1rem] text-[1rem] font-[450] text-black"
+                >3 years</span
+              >
+            </li>
+            <li>
+              <strong>Size:</strong>
+              <span class="ml-[0.1rem] text-[1rem] font-[450] text-black"
+                >Small</span
+              >
+            </li>
+            <li>
+              <strong>Country:</strong>
+              <span class="ml-[0.1rem] text-[1rem] font-[450] text-black"
+                >Estonia</span
+              >
+            </li>
+            <li>
+              <strong>Location:</strong>
+              <span class="ml-[0.1rem] text-[1rem] font-[450] text-black"
+                >Tallinn</span
+              >
+            </li>
+            <li>
+              <strong>Breed:</strong>
+              <span class="ml-[0.1rem] text-[1rem] font-[450] text-black"
+                >Chihuahua</span
+              >
+            </li>
+            <li>
+              <strong>ID Number:</strong>
+              <span class="ml-[0.1rem] text-[1rem] font-[450] text-black"
+                >EE12345</span
+              >
+            </li>
+          </ul>
+        </div>
 
-      <!-- Photo Gallery -->
-      <div class="flex flex-wrap gap-[0.25rem] items-start">
-        <img src="4-images/mokka.jpg" alt="Mokka photo 1"
-             class="w-[calc(50%-0.25rem)] rounded-[0.5rem] border-[0.1875rem] border-softDarkPurple
-                    shadow-[0_0.25rem_0.375rem_rgba(0,0,0,0.1),0_0.375rem_0.75rem_rgba(0,0,0,0.06)]
-                    hover:scale-[1.05] hover:shadow-[0_0.5rem_1rem_rgba(0,0,0,0.2),0_0.75rem_1.5rem_rgba(0,0,0,0.12)]
-                    transition-transform duration-300 ease-in-out cursor-pointer" />
-        <img src="4-images/mokka.jpg" alt="Mokka photo 2"
-             class="w-[calc(50%-0.25rem)] rounded-[0.5rem] border-[0.1875rem] border-softDarkPurple
-                    shadow-[0_0.25rem_0.375rem_rgba(0,0,0,0.1),0_0.375rem_0.75rem_rgba(0,0,0,0.06)]
-                    hover:scale-[1.05] hover:shadow-[0_0.5rem_1rem_rgba(0,0,0,0.2),0_0.75rem_1.5rem_rgba(0,0,0,0.12)]
-                    transition-transform duration-300 ease-in-out cursor-pointer" />
-        <img src="4-images/mokka.jpg" alt="Mokka photo 3"
-             class="w-[calc(50%-0.25rem)] rounded-[0.5rem] border-[0.1875rem] border-softDarkPurple
-                    shadow-[0_0.25rem_0.375rem_rgba(0,0,0,0.1),0_0.375rem_0.75rem_rgba(0,0,0,0.06)]
-                    hover:scale-[1.05] hover:shadow-[0_0.5rem_1rem_rgba(0,0,0,0.2),0_0.75rem_1.5rem_rgba(0,0,0,0.12)]
-                    transition-transform duration-300 ease-in-out cursor-pointer" />
-        <img src="4-images/mokka.jpg" alt="Mokka photo 4"
-             class="w-[calc(50%-0.25rem)] rounded-[0.5rem] border-[0.1875rem] border-softDarkPurple
-                    shadow-[0_0.25rem_0.375rem_rgba(0,0,0,0.1),0_0.375rem_0.75rem_rgba(0,0,0,0.06)]
-                    hover:scale-[1.05] hover:shadow-[0_0.5rem_1rem_rgba(0,0,0,0.2),0_0.75rem_1.5rem_rgba(0,0,0,0.12)]
-                    transition-transform duration-300 ease-in-out cursor-pointer" />
+        <!-- Photo Gallery -->
+        <div class="flex flex-wrap items-start gap-[0.25rem]">
+          <img
+            src="4-images/mokka.jpg"
+            alt="Mokka photo 1"
+            class="border-softDarkPurple w-[calc(50%-0.25rem)] cursor-pointer rounded-[0.5rem] border-[0.1875rem] shadow-[0_0.25rem_0.375rem_rgba(0,0,0,0.1),0_0.375rem_0.75rem_rgba(0,0,0,0.06)] transition-transform duration-300 ease-in-out hover:scale-[1.05] hover:shadow-[0_0.5rem_1rem_rgba(0,0,0,0.2),0_0.75rem_1.5rem_rgba(0,0,0,0.12)]"
+          />
+          <img
+            src="4-images/mokka.jpg"
+            alt="Mokka photo 2"
+            class="border-softDarkPurple w-[calc(50%-0.25rem)] cursor-pointer rounded-[0.5rem] border-[0.1875rem] shadow-[0_0.25rem_0.375rem_rgba(0,0,0,0.1),0_0.375rem_0.75rem_rgba(0,0,0,0.06)] transition-transform duration-300 ease-in-out hover:scale-[1.05] hover:shadow-[0_0.5rem_1rem_rgba(0,0,0,0.2),0_0.75rem_1.5rem_rgba(0,0,0,0.12)]"
+          />
+          <img
+            src="4-images/mokka.jpg"
+            alt="Mokka photo 3"
+            class="border-softDarkPurple w-[calc(50%-0.25rem)] cursor-pointer rounded-[0.5rem] border-[0.1875rem] shadow-[0_0.25rem_0.375rem_rgba(0,0,0,0.1),0_0.375rem_0.75rem_rgba(0,0,0,0.06)] transition-transform duration-300 ease-in-out hover:scale-[1.05] hover:shadow-[0_0.5rem_1rem_rgba(0,0,0,0.2),0_0.75rem_1.5rem_rgba(0,0,0,0.12)]"
+          />
+          <img
+            src="4-images/mokka.jpg"
+            alt="Mokka photo 4"
+            class="border-softDarkPurple w-[calc(50%-0.25rem)] cursor-pointer rounded-[0.5rem] border-[0.1875rem] shadow-[0_0.25rem_0.375rem_rgba(0,0,0,0.1),0_0.375rem_0.75rem_rgba(0,0,0,0.06)] transition-transform duration-300 ease-in-out hover:scale-[1.05] hover:shadow-[0_0.5rem_1rem_rgba(0,0,0,0.2),0_0.75rem_1.5rem_rgba(0,0,0,0.12)]"
+          />
+        </div>
+      </section>
+
+      <!-- Description -->
+      <section class="pt-[0.5rem] leading-[1.2] text-black">
+        <h2 class="text-darkGrape pb-[0.3rem] text-[1.1em] font-semibold">
+          About Me 🐶
+        </h2>
+        <p class="pt-[0.2rem] leading-[1.4] font-normal">
+          Mokka is a playful and sweet dog who loves people and other animals.
+          She's house-trained, sterilized, vaccinated and looking for a loving
+          forever home. She gets nervous around smaller children so the best
+          option would be a home without children or children over the age of 10
+          years who are calm around dogs.
+        </p>
+      </section>
+
+      <!-- Contact -->
+      <section class="text-darkGrape pb-[0.4rem] leading-[1.6]">
+        <h2 class="text-darkGrape text-[1.1em] font-semibold">Contact ✨</h2>
+        <p>
+          <strong class="font-semibold">Email:</strong>
+          <span class="text-[1rem] font-normal text-black"
+            >shelter@example.com</span
+          >
+        </p>
+        <p>
+          <strong class="font-semibold">Phone:</strong>
+          <span class="text-[1rem] font-normal text-black">+372 5555 1234</span>
+        </p>
+      </section>
+
+      <!-- Buttons (exact 3D & glow) -->
+      <div
+        class="mt-[0.3rem] mb-[0.3rem] flex flex-wrap items-center gap-[1rem]"
+      >
+        <a
+          href="/offer"
+          class="text-mediumSalmon bg-softPeach border-mediumSalmon relative inline-flex items-center justify-center gap-[0.3rem] overflow-hidden rounded-[7rem] border-[0.1875rem] px-[0.5rem] py-[0.3rem] text-[1.1rem] leading-[1.2] font-extrabold tracking-[0.08rem] uppercase no-underline shadow-[inset_0.1875rem_0.1875rem_0.375rem_rgba(255,255,255,0.85),inset_-0.1875rem_-0.1875rem_0.5rem_rgba(0,0,0,0.08),0_0.25rem_0.5rem_rgba(0,0,0,0.3),0_0.625rem_1.25rem_rgba(233,155,155,0.4),0_0_1rem_rgba(255,200,200,0.2)] transition-transform duration-200 ease-in-out before:absolute before:inset-[-0.25rem] before:-z-10 before:rounded-[7rem] before:border-[0.125rem] before:[border-color:rgba(255,255,255,0.4)] before:shadow-[0_0_0.75rem_rgba(255,255,255,0.4),inset_0_0_0.75rem_rgba(233,155,155,0.25)] before:content-[''] hover:-translate-y-[0.125rem] hover:scale-[1.08] hover:shadow-[inset_0.1875rem_0.1875rem_0.375rem_rgba(255,255,255,0.85),inset_-0.1875rem_-0.1875rem_0.5rem_rgba(0,0,0,0.1),0_0.5rem_1rem_rgba(0,0,0,0.35),0_0.75rem_1.5rem_rgba(233,155,155,0.5)]"
+        >
+          <span class="text-mediumSalmon animate-glowGold">Offer Home❤️</span>
+        </a>
+
+        <a
+          href="/donate"
+          class="text-mediumSalmon bg-softPeach border-mediumSalmon relative inline-flex items-center justify-center gap-[0.3rem] overflow-hidden rounded-[7rem] border-[0.1875rem] px-[0.5rem] py-[0.3rem] text-[1.1rem] leading-[1.2] font-extrabold tracking-[0.08rem] uppercase no-underline shadow-[inset_0.1875rem_0.1875rem_0.375rem_rgba(255,255,255,0.85),inset_-0.1875rem_-0.1875rem_0.5rem_rgba(0,0,0,0.08),0_0.25rem_0.5rem_rgba(0,0,0,0.3),0_0.625rem_1.25rem_rgba(233,155,155,0.4),0_0_1rem_rgba(255,200,200,0.2)] transition-transform duration-200 ease-in-out before:absolute before:inset-[-0.25rem] before:-z-10 before:rounded-[7rem] before:border-[0.125rem] before:[border-color:rgba(255,255,255,0.4)] before:shadow-[0_0_0.75rem_rgba(255,255,255,0.4),inset_0_0_0.75rem_rgba(233,155,155,0.25)] before:content-[''] hover:-translate-y-[0.125rem] hover:scale-[1.08] hover:shadow-[inset_0.1875rem_0.1875rem_0.375rem_rgba(255,255,255,0.85),inset_-0.1875rem_-0.1875rem_0.5rem_rgba(0,0,0,0.1),0_0.5rem_1rem_rgba(0,0,0,0.35),0_0.75rem_1.5rem_rgba(233,155,155,0.5)]"
+        >
+          <span class="text-mediumSalmon animate-glowGold">Donate❤️</span>
+        </a>
       </div>
-    </section>
+    </main>
 
-    <!-- Description -->
-    <section class="text-black leading-[1.2] pt-[0.5rem]">
-      <h2 class="font-semibold text-[1.1em] text-darkGrape pb-[0.3rem]">About Me 🐶</h2>
-      <p class="font-normal pt-[0.2rem] leading-[1.4]">
-        Mokka is a playful and sweet dog who loves people and other animals. She's house-trained,
-        sterilized, vaccinated and looking for a loving forever home. She gets nervous around 
-        smaller children so the best option would be a home without children or children over the
-        age of 10 years who are calm around dogs.
-      </p>
-    </section>
-
-    <!-- Contact -->
-    <section class="text-darkGrape leading-[1.6] pb-[0.4rem]">
-      <h2 class="font-semibold text-[1.1em] text-darkGrape">Contact ✨</h2>
-      <p><strong class="font-semibold">Email:</strong> <span class="text-black text-[1rem] font-normal">shelter@example.com</span></p>
-      <p><strong class="font-semibold">Phone:</strong> <span class="text-black text-[1rem] font-normal">+372 5555 1234</span></p>
-    </section>
-
-    <!-- Buttons (exact 3D & glow) -->
-    <div class="flex flex-wrap gap-[1rem] items-center mt-[0.3rem] mb-[0.3rem]">
-      <a href="/offer"
-         class="relative overflow-hidden inline-flex items-center justify-center gap-[0.3rem]
-                no-underline font-extrabold text-[1.1rem] uppercase leading-[1.2] tracking-[0.08rem]
-                text-mediumSalmon bg-softPeach px-[0.5rem] py-[0.3rem]
-                border-[0.1875rem] border-mediumSalmon rounded-[7rem]
-                shadow-[inset_0.1875rem_0.1875rem_0.375rem_rgba(255,255,255,0.85),inset_-0.1875rem_-0.1875rem_0.5rem_rgba(0,0,0,0.08),0_0.25rem_0.5rem_rgba(0,0,0,0.3),0_0.625rem_1.25rem_rgba(233,155,155,0.4),0_0_1rem_rgba(255,200,200,0.2)]
-                transition-transform duration-200 ease-in-out hover:scale-[1.08] hover:-translate-y-[0.125rem]
-                hover:shadow-[inset_0.1875rem_0.1875rem_0.375rem_rgba(255,255,255,0.85),inset_-0.1875rem_-0.1875rem_0.5rem_rgba(0,0,0,0.1),0_0.5rem_1rem_rgba(0,0,0,0.35),0_0.75rem_1.5rem_rgba(233,155,155,0.5)]
-                before:content-[''] before:absolute before:inset-[-0.25rem] before:rounded-[7rem]
-                before:border-[0.125rem] before:[border-color:rgba(255,255,255,0.4)]
-                before:shadow-[0_0_0.75rem_rgba(255,255,255,0.4),inset_0_0_0.75rem_rgba(233,155,155,0.25)]
-                before:-z-10">
-        <span class="text-mediumSalmon animate-glowGold">Offer Home❤️</span>
-      </a>
-
-      <a href="/donate"
-         class="relative overflow-hidden inline-flex items-center justify-center gap-[0.3rem]
-                no-underline font-extrabold text-[1.1rem] uppercase leading-[1.2] tracking-[0.08rem]
-                text-mediumSalmon bg-softPeach px-[0.5rem] py-[0.3rem]
-                border-[0.1875rem] border-mediumSalmon rounded-[7rem]
-                shadow-[inset_0.1875rem_0.1875rem_0.375rem_rgba(255,255,255,0.85),inset_-0.1875rem_-0.1875rem_0.5rem_rgba(0,0,0,0.08),0_0.25rem_0.5rem_rgba(0,0,0,0.3),0_0.625rem_1.25rem_rgba(233,155,155,0.4),0_0_1rem_rgba(255,200,200,0.2)]
-                transition-transform duration-200 ease-in-out hover:scale-[1.08] hover:-translate-y-[0.125rem]
-                hover:shadow-[inset_0.1875rem_0.1875rem_0.375rem_rgba(255,255,255,0.85),inset_-0.1875rem_-0.1875rem_0.5rem_rgba(0,0,0,0.1),0_0.5rem_1rem_rgba(0,0,0,0.35),0_0.75rem_1.5rem_rgba(233,155,155,0.5)]
-                before:content-[''] before:absolute before:inset-[-0.25rem] before:rounded-[7rem]
-                before:border-[0.125rem] before:[border-color:rgba(255,255,255,0.4)]
-                before:shadow-[0_0_0.75rem_rgba(255,255,255,0.4),inset_0_0_0.75rem_rgba(233,155,155,0.25)]
-                before:-z-10">
-        <span class="text-mediumSalmon animate-glowGold">Donate❤️</span>
-      </a>
-    </div>
-  </main>
-
-  <div data-include="3-html-partials/footer.html"></div>
-  <script src="5-js/include.js"></script>
-</body>
-
-
+    <div data-include="3-html-partials/footer.html"></div>
+    <script src="5-js/include.js"></script>
+  </body>
 </html>

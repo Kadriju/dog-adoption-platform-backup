@@ -1,124 +1,180 @@
-<!DOCTYPE html> 
+<!doctype html>
 <html lang="en">
-
   <head>
-    <title>Find your perfect dog | Dog Mekka</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Find your perfect dog | Dogeli</title>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-    <link rel="stylesheet" href="1-dist/output.css">
-  
+    <!-- Tailwind build -->
+    <link rel="stylesheet" href="/1-dist/output.css" />
 
+    <!-- Favicon -->
+    <link rel="icon" href="/4-images/favicon.ico" sizes="any" />
 
-    <!-- SEO Metadata -->
-  
-    <meta name="description" content="Search, browse and find dogs looking for a home in Europe. Find your new best friend & soulmate and give a dog a loving home & family today through Dogs of Europe." />
-    <meta name="keywords" content="dogs, dog adoption, adopt a dog, adoption, dog shelters, shelter dogs Europe, dogs for adoption, homeless dogs, rescue dogs, European dog shelters, best friend, soulmate, love of your life, personal trainer, companion, find a perfect partner, pure breed, puppies, puppy, dogs for sale, buy a dog" />
-    <meta name="author" content="Dogs of Europe Team" />
-
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-
-    <!-- Font Awesome (for fa-search icon) -->
-
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Structured Data for SEO -->
+    <!-- Icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Dogs of Europe",
-      "url": "https://www.dogsofeurope.com",
-      "logo": "https://www.dogsofeurope.com/images/logo.png",
-      "description": "Browse and adopt dogs from shelters across Europe.",
-      "sameAs": [
-        "https://www.dogsofeurope.com",
-        "https://www.dogsofeurope.org",
-        "https://www.dogsofeurope.eu",
-        "https://www.facebook.com/dogsofeurope",
-        "https://www.instagram.com/dogsofeurope_official/"
-    ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "info@dogsofeurope.com",
-        "contactType": "Customer Support"
+    <!-- SEO -->
+    <link rel="canonical" href="https://www.dogeli.com/" />
+    <meta
+      name="description"
+      content="Find your perfect dog. Adopt or buy responsibly. Europe’s hub for dog lovers."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Dogeli" />
+    <meta
+      property="og:title"
+      content="Find your perfect dog. Adopt or buy responsibly. Europe’s hub for dog lovers."
+    />
+    <meta
+      property="og:description"
+      content="Find your perfect dog. Adopt or buy responsibly. Europe’s hub for dog lovers."
+    />
+    <meta property="og:url" content="https://www.dogeli.com/" />
+    <meta property="og:image" content="https://www.dogeli.com/4-images/logosocialmedia.png" />
+    <meta property="og:image:alt" content="Dogeli — Find your perfect dog" />
+    <!-- Optional but helpful -->
+    <meta property="og:image:width" content="1125" />
+    <meta property="og:image:height" content="1125" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Find your perfect dog. Adopt or buy responsibly. Europe’s hub for dog lovers."
+    />
+    <meta
+      name="twitter:description"
+      content="Find your perfect dog. Adopt or buy responsibly. Europe’s hub for dog lovers."
+    />
+    <meta name="twitter:image" content="https://www.dogeli.com/4-images/logosocialmedia.png" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Dogeli",
+        "url": "https://www.dogeli.com",
+        "logo": "https://www.dogeli.com/4-images/logoheader.png",
+        "sameAs": [
+          "https://www.facebook.com/dogeli",
+          "https://www.instagram.com/dogeli/"
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "Customer Support",
+            "email": "info@dogeli.com"
+          }
+        ]
       }
-    }
-    </script>  
+    </script>
   </head>
+</html>
 
-  
-  <body class="font-sans bg-sageGreen mt-[0.2rem] antialiased">
+  <body class="bg-sageGreen mt-[0.2rem] font-sans antialiased">
+    <div data-include="3-html-partials/header.html"></div>
 
-  <div data-include="3-html-partials/header.html"></div>
-
- 
     <!-- LOGIN + UPLOAD FORMS -->
-    <main class="py-12 flex justify-center gap-5">
+    <main class="flex justify-center gap-5 py-12">
       <!-- page container -->
-      <section class="mx-auto max-w-[55rem] px-4 mt-[0.6rem] mb-[0.2rem]">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch justify-items-center">
-          
-
+      <section class="mx-auto mt-[0.6rem] mb-[0.2rem] max-w-[55rem] px-4">
+        <div
+          class="grid grid-cols-1 items-stretch justify-items-center gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        >
           <!-- Shelter Login -->
           <div class="w-full max-w-[20rem]">
             <div
-              class="bg-warmWhite p-3 border-[0.17rem] border-deepGreenTeal outline outline-[0.125rem] outline-sky-200 rounded-2xl 
-              shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.12),0_0.375rem_0.75rem_rgba(0,0,0,0.18),inset_0_0.0625rem_0_rgba(255,255,255,0.4)]
-              flex flex-col h-full min-h-[16rem]"
+              class="bg-warmWhite border-deepGreenTeal flex h-full min-h-[16rem] flex-col rounded-2xl border-[0.17rem] p-3 shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.12),0_0.375rem_0.75rem_rgba(0,0,0,0.18),inset_0_0.0625rem_0_rgba(255,255,255,0.4)] outline outline-[0.125rem] outline-sky-200"
             >
-             <h2 class="text-center mb-5 text-[1.4rem] font-semibold text-softDarkPurple">
-                  Shelter Sign In 🏠
-                  <span class="block mt-1 ml-[-2rem] text-[1.1rem] font-normal text-gray-600 tracking-tight">
-                   Manage Listings
+              <h2
+                class="text-softDarkPurple mb-5 text-center text-[1.4rem] font-semibold"
+              >
+                Shelter Sign In 🏠
+                <span
+                  class="mt-1 ml-[-2rem] block text-[1.1rem] font-normal tracking-tight text-gray-600"
+                >
+                  Manage Listings
                 </span>
               </h2>
 
-              <div class="flex flex-col gap-2 text-black font-semibold text-[1rem] flex-grow">
+              <div
+                class="flex flex-grow flex-col gap-2 text-[1rem] font-semibold text-black"
+              >
                 <form class="w-full" id="login-form">
-                  <label for="email" class="block mb-1 font-medium">Email</label>
-                  <input type="email" id="email" name="email" placeholder="Enter your email"
-                        class="w-full p-2 border border-zinc-300 rounded-lg text-base font-normal" />
+                  <label for="email" class="mb-1 block font-medium"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    class="w-full rounded-lg border border-zinc-300 p-2 text-base font-normal"
+                  />
 
-                  <label for="password" class="block mb-1 mt-3 font-medium">Password</label>
-                  <input type="password" id="password" name="password" placeholder="Enter your password"
-                        class="w-full p-2 border border-zinc-300 rounded-lg text-base font-normal" />
+                  <label for="password" class="mt-3 mb-1 block font-medium"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    class="w-full rounded-lg border border-zinc-300 p-2 text-base font-normal"
+                  />
                 </form>
               </div>
 
               <button
-                class="mt-auto w-full p-2 bg-[#2b7a78] text-white rounded-lg text-base font-bold tracking-wider 
-                transition-colors hover:bg-[#205e5b] shadow-[0_0.09375rem_0_#205e5b,0_0.04375rem_0.125rem_rgba(0,0,0,0.15)]"
-                type="submit" form="login-form">
+                class="mt-auto w-full rounded-lg bg-[#2b7a78] p-2 text-base font-bold tracking-wider text-white shadow-[0_0.09375rem_0_#205e5b,0_0.04375rem_0.125rem_rgba(0,0,0,0.15)] transition-colors hover:bg-[#205e5b]"
+                type="submit"
+                form="login-form"
+              >
                 Sign in
               </button>
             </div>
           </div>
-      
 
           <!-- Upload Form for Private Users -->
           <div class="w-full max-w-[20rem]">
-            <div class="bg-warmWhite p-3 border-[0.17rem] border-deepGreenTeal outline outline-[0.125rem] outline-sky-200 rounded-2xl 
-                        shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.12),0_0.375rem_0.75rem_rgba(0,0,0,0.18),inset_0_0.0625rem_0_rgba(255,255,255,0.4)]
-                        flex flex-col h-full min-h-[16rem]">
-              <h2 class="text-center mb-5 text-[1.4rem] font-semibold text-softDarkPurple">
+            <div
+              class="bg-warmWhite border-deepGreenTeal flex h-full min-h-[16rem] flex-col rounded-2xl border-[0.17rem] p-3 shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.12),0_0.375rem_0.75rem_rgba(0,0,0,0.18),inset_0_0.0625rem_0_rgba(255,255,255,0.4)] outline outline-[0.125rem] outline-sky-200"
+            >
+              <h2
+                class="text-softDarkPurple mb-5 text-center text-[1.4rem] font-semibold"
+              >
                 Upload Dogs for Adoption 🐶🐾
               </h2>
 
-              <div class="flex flex-col gap-2 text-black font-semibold text-[1rem] flex-grow">
+              <div
+                class="flex flex-grow flex-col gap-2 text-[1rem] font-semibold text-black"
+              >
                 <form class="w-full" id="upload-form">
-                  <select id="dog-count" name="dog-count"
-                          class="w-full p-2 border border-zinc-300 rounded-lg text-base font-medium bg-white focus:ring-1 focus:ring-[#2b7a78] focus:border-[#2b7a78] transition-all">
+                  <select
+                    id="dog-count"
+                    name="dog-count"
+                    class="w-full rounded-lg border border-zinc-300 bg-white p-2 text-base font-medium transition-all focus:border-[#2b7a78] focus:ring-1 focus:ring-[#2b7a78]"
+                  >
                     <option value="1">1 dog</option>
                     <option value="2">2 dogs</option>
                     <option value="3">3 dogs</option>
@@ -133,21 +189,32 @@
                     <option value="12">12 dogs</option>
                   </select>
 
-                  <p class="mt-[0.25rem] font-medium text-[0.9rem] text-[#2b7a78] leading-tight">
-                    Total price: <span id="total-price" class="font-semibold">€9.90</span><br />
+                  <p
+                    class="mt-[0.25rem] text-[0.9rem] leading-tight font-medium text-[#2b7a78]"
+                  >
+                    Total price:
+                    <span id="total-price" class="font-semibold">€9.90</span
+                    ><br />
                     <small id="price-per-dog">(€9.90 per dog)</small>
                   </p>
 
-
-                  <label class="flex items-start gap-2 leading-snug mt-6">
-                    <input type="checkbox" id="privateCheck" name="privateCheck" required
-                          class="mt-[0.15rem] w-4 h-4 accent-[#2b7a78]" />
+                  <label class="mt-6 flex items-start gap-2 leading-snug">
+                    <input
+                      type="checkbox"
+                      id="privateCheck"
+                      name="privateCheck"
+                      required
+                      class="mt-[0.15rem] h-4 w-4 accent-[#2b7a78]"
+                    />
                     <span class="leading-tight">
-                      <span class="font-semibold text-[0.8rem] text-gray-900">
-                        I agree to the 
-                        <a href="/terms" class="text-blue-600 hover:text-blue-800 underline">
+                      <span class="text-[0.8rem] font-semibold text-gray-900">
+                        I agree to the
+                        <a
+                          href="/terms"
+                          class="text-blue-600 underline hover:text-blue-800"
+                        >
                           Terms of Listing
-                        </a> 
+                        </a>
                         and refund policy
                       </span>
                     </span>
@@ -155,31 +222,39 @@
                 </form>
               </div>
 
-              <button id="privateUploadButton"
-                      class="mt-auto w-full p-2 bg-gray-400 text-white rounded-lg text-base font-bold tracking-wider cursor-not-allowed 
-                            transition-colors shadow-[0_0.09375rem_0_#205e5b,0_0.04375rem_0.125rem_rgba(0,0,0,0.15)]"
-                      type="submit" form="upload-form" disabled>
-                🎉 Add Dog Details 
+              <button
+                id="privateUploadButton"
+                class="mt-auto w-full cursor-not-allowed rounded-lg bg-gray-400 p-2 text-base font-bold tracking-wider text-white shadow-[0_0.09375rem_0_#205e5b,0_0.04375rem_0.125rem_rgba(0,0,0,0.15)] transition-colors"
+                type="submit"
+                form="upload-form"
+                disabled
+              >
+                🎉 Add Dog Details
               </button>
             </div>
           </div>
 
-          
-
           <!-- Breeder Upload -->
           <div class="w-full max-w-[20rem]">
-            <div class="bg-warmWhite p-3 border-[0.17rem] border-deepGreenTeal outline outline-[0.125rem] outline-sky-200 rounded-2xl 
-                        shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.12),0_0.375rem_0.75rem_rgba(0,0,0,0.18),inset_0_0.0625rem_0_rgba(255,255,255,0.4)]
-                        flex flex-col h-full min-h-[16rem]">
-              <h2 class="text-center mb-4 text-[1.4rem] font-semibold text-softDarkPurple">
+            <div
+              class="bg-warmWhite border-deepGreenTeal flex h-full min-h-[16rem] flex-col rounded-2xl border-[0.17rem] p-3 shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.12),0_0.375rem_0.75rem_rgba(0,0,0,0.18),inset_0_0.0625rem_0_rgba(255,255,255,0.4)] outline outline-[0.125rem] outline-sky-200"
+            >
+              <h2
+                class="text-softDarkPurple mb-4 text-center text-[1.4rem] font-semibold"
+              >
                 Upload Dogs for Sale 🐶🐾
               </h2>
 
               <!-- match adoption: gap-3 and a single form wrapping everything -->
-              <div class="flex flex-col gap-2 text-black font-semibold text-[1rem] flex-grow">
+              <div
+                class="flex flex-grow flex-col gap-2 text-[1rem] font-semibold text-black"
+              >
                 <form class="w-full" id="breeder-upload-form">
-                  <select id="dog-count-breeder" name="dog-count-breeder"
-                          class="w-full p-2 border border-zinc-300 rounded-lg text-base font-medium bg-white focus:ring-1 focus:ring-[#2b7a78] focus:border-[#2b7a78] transition-all">
+                  <select
+                    id="dog-count-breeder"
+                    name="dog-count-breeder"
+                    class="w-full rounded-lg border border-zinc-300 bg-white p-2 text-base font-medium transition-all focus:border-[#2b7a78] focus:ring-1 focus:ring-[#2b7a78]"
+                  >
                     <option value="1">1 dog</option>
                     <option value="2">2 dogs</option>
                     <option value="3">3 dogs</option>
@@ -195,21 +270,34 @@
                   </select>
 
                   <!-- same tiny top margin as adoption -->
-                  <p class="mt-[0.25rem] font-medium text-[0.9rem] text-[#2b7a78] leading-tight">
-                    Total price: <span id="total-price-breeder" class="font-semibold">€19.90</span><br />
+                  <p
+                    class="mt-[0.25rem] text-[0.9rem] leading-tight font-medium text-[#2b7a78]"
+                  >
+                    Total price:
+                    <span id="total-price-breeder" class="font-semibold"
+                      >€19.90</span
+                    ><br />
                     <small id="price-per-dog-breeder">(€19.90 per dog)</small>
                   </p>
 
-
-                  <label class="flex items-start gap-2 leading-snug mt-6">
-                    <input type="checkbox" id="breederCheck" name="breederCheck" required
-                          class="mt-[0.15rem] w-4 h-4 accent-[#2b7a78]" />
+                  <label class="mt-6 flex items-start gap-2 leading-snug">
+                    <input
+                      type="checkbox"
+                      id="breederCheck"
+                      name="breederCheck"
+                      required
+                      class="mt-[0.15rem] h-4 w-4 accent-[#2b7a78]"
+                    />
                     <span class="leading-tight">
-                      <span class="font-semibold text-[0.8rem] text-gray-900">
-                        I confirm that I am a registered breeder and agree to the 
-                        <a href="/terms" class="text-blue-600 hover:text-blue-800 underline">
+                      <span class="text-[0.8rem] font-semibold text-gray-900">
+                        I confirm that I am a registered breeder and agree to
+                        the
+                        <a
+                          href="/terms"
+                          class="text-blue-600 underline hover:text-blue-800"
+                        >
                           Terms of Listing
-                        </a> 
+                        </a>
                         and refund policy
                       </span>
                     </span>
@@ -217,32 +305,33 @@
                 </form>
               </div>
 
-              <button id="breederUploadButton"
-                      class="mt-auto w-full p-2 bg-gray-400 text-white rounded-lg text-base font-bold tracking-wider cursor-not-allowed 
-                            shadow-[0_0.09375rem_0_#205e5b,0_0.04375rem_0.125rem_rgba(0,0,0,0.15)] transition-colors"
-                      type="submit" form="breeder-upload-form" disabled>
+              <button
+                id="breederUploadButton"
+                class="mt-auto w-full cursor-not-allowed rounded-lg bg-gray-400 p-2 text-base font-bold tracking-wider text-white shadow-[0_0.09375rem_0_#205e5b,0_0.04375rem_0.125rem_rgba(0,0,0,0.15)] transition-colors"
+                type="submit"
+                form="breeder-upload-form"
+                disabled
+              >
                 🎉 Add Dog Details
               </button>
             </div>
           </div>
-
         </div>
       </section>
     </main>
 
+    <div data-include="3-html-partials/footer.html"></div>
 
-  <div data-include="3-html-partials/footer.html"></div>
+    <script src="5-js/include.js"></script>
+    <script src="js/tiered-pricing.js" defer></script>
 
-  <script src="5-js/include.js"></script>
-  <script src="js/tiered-pricing.js" defer></script>
-
-  <!-- Tiny script to enable button only when checkbox is checked -->
-      <script>
-      document.addEventListener('DOMContentLoaded', () => {
+    <!-- Tiny script to enable button only when checkbox is checked -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
         // Define both forms’ checkbox/button pairs
         const forms = [
-          { checkboxId: 'breederCheck', buttonId: 'breederUploadButton' },
-          { checkboxId: 'privateCheck', buttonId: 'privateUploadButton' },
+          { checkboxId: "breederCheck", buttonId: "breederUploadButton" },
+          { checkboxId: "privateCheck", buttonId: "privateUploadButton" },
         ];
 
         forms.forEach(({ checkboxId, buttonId }) => {
@@ -254,19 +343,16 @@
               const enabled = checkbox.checked;
               button.disabled = !enabled;
               button.className = enabled
-                ? 'mt-6 w-full p-2 bg-[#2b7a78] hover:bg-[#205e5b] text-white rounded-lg text-base font-bold tracking-wider relative top-0 shadow-[0_0.09375rem_0_#205e5b,0_0.04375rem_0.125rem_rgba(0,0,0,0.15)] transition-colors'
-                : 'mt-6 w-full p-2 bg-gray-400 text-white rounded-lg text-base font-bold tracking-wider cursor-not-allowed relative top-0 shadow-[0_0.09375rem_0_#205e5b,0_0.04375rem_0.125rem_rgba(0,0,0,0.15)] transition-colors';
+                ? "mt-6 w-full p-2 bg-[#2b7a78] hover:bg-[#205e5b] text-white rounded-lg text-base font-bold tracking-wider relative top-0 shadow-[0_0.09375rem_0_#205e5b,0_0.04375rem_0.125rem_rgba(0,0,0,0.15)] transition-colors"
+                : "mt-6 w-full p-2 bg-gray-400 text-white rounded-lg text-base font-bold tracking-wider cursor-not-allowed relative top-0 shadow-[0_0.09375rem_0_#205e5b,0_0.04375rem_0.125rem_rgba(0,0,0,0.15)] transition-colors";
             };
 
             // Initialize state and listen for changes
             setState();
-            checkbox.addEventListener('change', setState);
+            checkbox.addEventListener("change", setState);
           }
         });
       });
     </script>
-
- </body>
-   
+  </body>
 </html>
-   
