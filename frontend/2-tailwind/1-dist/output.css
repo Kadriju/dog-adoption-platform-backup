@@ -3,8 +3,7 @@
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
-    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-sky-200: oklch(90.1% 0.058 230.902);
@@ -32,10 +31,8 @@
     --tracking-tight: -0.025em;
     --tracking-wide: 0.025em;
     --tracking-wider: 0.05em;
-    --tracking-widest: 0.1em;
     --leading-tight: 1.25;
     --leading-snug: 1.375;
-    --radius-md: 0.375rem;
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
@@ -44,23 +41,26 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --color-warm-white: #FAF3E0;
+    --color-warm-white: #faf3e0;
     --color-light-gray: #cccccc;
-    --color-golden-beige: #E3C27E;
-    --color-warm-golden-yellow: #E4AF28;
-    --color-soft-peach: #FDE9E0;
-    --color-muted-coral: #E6A4B4;
-    --color-medium-salmon: #E56767;
+    --color-golden-beige: #e3c27e;
+    --color-warm-golden-yellow: #e4af28;
+    --color-logo-yellow: #eeba2b;
+    --color-soft-peach: #fde9e0;
+    --color-muted-coral: #e6a4b4;
+    --color-medium-salmon: #e56767;
     --color-rosy-brown: #b76e79;
-    --color-soft-dark-purple: #5D3A6A;
-    --color-light-chestnut: #B38B6D;
-    --color-medium-brown: #6B5843;
-    --color-dark-brown: #5C4326;
-    --color-sage-green: #A8BBA2;
-    --color-muted-teal: #6B9080;
-    --color-deep-green-teal: #38584F;
+    --color-muted-lavender: #a784af;
+    --color-soft-dark-purple: #5d3a6a;
+    --color-dark-grape: #46265a;
+    --color-light-chestnut: #b38b6d;
+    --color-medium-brown: #6b5843;
+    --color-dark-brown: #5c4326;
+    --color-sage-green: #a8bba2;
+    --color-muted-teal: #6b9080;
+    --color-deep-green-teal: #38584f;
     --color-deep-green: #3b6f58;
-    --color-powder-blue: #BFD7EA;
+    --color-powder-blue: #bfd7ea;
     --color-royal-blue: #3a7fc1;
   }
 }
@@ -231,6 +231,9 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .top-1 {
+    top: calc(var(--spacing) * 1);
+  }
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
@@ -314,9 +317,6 @@
   }
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
-  }
-  .mt-\[-0\.1rem\] {
-    margin-top: -0.1rem;
   }
   .mt-\[-0\.4rem\] {
     margin-top: -0.4rem;
@@ -435,6 +435,9 @@
   .inline-flex {
     display: inline-flex;
   }
+  .table {
+    display: table;
+  }
   .aspect-\[3\.1\/2\.1\] {
     aspect-ratio: 3.1/2.1;
   }
@@ -489,9 +492,6 @@
   .w-\[calc\(50\%-0\.25rem\)\] {
     width: calc(50% - 0.25rem);
   }
-  .w-auto {
-    width: auto;
-  }
   .w-full {
     width: 100%;
   }
@@ -534,6 +534,13 @@
   .flex-grow {
     flex-grow: 1;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .-translate-y-1 {
+    --tw-translate-y: calc(var(--spacing) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .-translate-y-1\/2 {
     --tw-translate-y: calc(calc(1/2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -562,6 +569,9 @@
   }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .list-none {
     list-style-type: none;
@@ -625,9 +635,6 @@
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
-  }
-  .gap-\[0\.1rem\] {
-    gap: 0.1rem;
   }
   .gap-\[0\.3rem\] {
     gap: 0.3rem;
@@ -767,6 +774,9 @@
   .border-medium-salmon {
     border-color: var(--color-medium-salmon);
   }
+  .border-muted-lavender {
+    border-color: var(--color-muted-lavender);
+  }
   .border-powder-blue {
     border-color: var(--color-powder-blue);
   }
@@ -782,9 +792,6 @@
   .bg-\[\#2b7a78\] {
     background-color: #2b7a78;
   }
-  .bg-\[var\(--color-soft-beige\)\] {
-    background-color: var(--color-soft-beige);
-  }
   .bg-golden-beige {
     background-color: var(--color-golden-beige);
   }
@@ -793,6 +800,9 @@
   }
   .bg-gray-400 {
     background-color: var(--color-gray-400);
+  }
+  .bg-logo-yellow {
+    background-color: var(--color-logo-yellow);
   }
   .bg-muted-teal {
     background-color: var(--color-muted-teal);
@@ -896,9 +906,6 @@
   .pr-4 {
     padding-right: calc(var(--spacing) * 4);
   }
-  .pr-\[0\.5rem\] {
-    padding-right: 0.5rem;
-  }
   .pr-\[1rem\] {
     padding-right: 1rem;
   }
@@ -971,6 +978,9 @@
   }
   .text-\[1\.8em\] {
     font-size: 1.8em;
+  }
+  .text-\[1\.15rem\] {
+    font-size: 1.15rem;
   }
   .text-\[1rem\] {
     font-size: 1rem;
@@ -1079,10 +1089,6 @@
     --tw-tracking: var(--tracking-wider);
     letter-spacing: var(--tracking-wider);
   }
-  .tracking-widest {
-    --tw-tracking: var(--tracking-widest);
-    letter-spacing: var(--tracking-widest);
-  }
   .text-\[\#2b7a78\] {
     color: #2b7a78;
   }
@@ -1094,6 +1100,9 @@
   }
   .text-dark-brown {
     color: var(--color-dark-brown);
+  }
+  .text-dark-grape {
+    color: var(--color-dark-grape);
   }
   .text-deep-green {
     color: var(--color-deep-green);
@@ -1115,6 +1124,9 @@
   }
   .text-muted-coral {
     color: var(--color-muted-coral);
+  }
+  .text-muted-lavender {
+    color: var(--color-muted-lavender);
   }
   .text-rosy-brown {
     color: var(--color-rosy-brown);
@@ -1219,9 +1231,6 @@
   .shadow-xl {
     --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-donate {
-    box-shadow: inset 0.1875rem 0.1875rem 0.375rem rgba(255,255,255,0.85), inset -0.1875rem -0.1875rem 0.5rem rgba(0,0,0,0.08), 0 0.25rem 0.5rem rgba(0,0,0,0.3), 0 0.625rem 1.25rem rgba(233,155,155,0.4), 0 0 1rem rgba(255,200,200,0.2);
   }
   .outline {
     outline-style: var(--tw-outline-style);
@@ -1334,6 +1343,12 @@
     &::before {
       content: var(--tw-content);
       border-radius: 7rem;
+    }
+  }
+  .before\:rounded-full {
+    &::before {
+      content: var(--tw-content);
+      border-radius: calc(infinity * 1px);
     }
   }
   .before\:border-\[0\.125rem\] {
@@ -1576,41 +1591,37 @@
     }
   }
 }
-body {
-  font-family: "Poppins", ui-sans-serif, system-ui, sans-serif;
-  color: var(--color-textDark);
-}
 @keyframes glow {
-  0%,100% {
-    text-shadow: 0 0 0.1875rem #3D2A19,0 0 0.375rem #3D2A19,0.0625rem 0.0625rem 0.125rem #3D2A19,-0.0625rem -0.0625rem 0.125rem #3D2A19;
+  0%, 100% {
+    text-shadow: 0 0 0.1875rem #3d2a19, 0 0 0.375rem #3d2a19, 0.0625rem 0.0625rem 0.125rem #3d2a19, -0.0625rem -0.0625rem 0.125rem #3d2a19;
   }
   50% {
-    text-shadow: 0 0 0.375rem #3D2A19,0 0 0.75rem #3D2A19,0.0625rem 0.0625rem 0.25rem #3D2A19,-0.0625rem -0.0625rem 0.25rem #3D2A19;
+    text-shadow: 0 0 0.375rem #3d2a19, 0 0 0.75rem #3d2a19, 0.0625rem 0.0625rem 0.25rem #3d2a19, -0.0625rem -0.0625rem 0.25rem #3d2a19;
   }
 }
 @keyframes glowPurple {
   0% {
-    text-shadow: 0 0 0.375rem #C5A8E8,0 0 0.625rem #D6B8F3,0 0 0.875rem #E9D6FA;
+    text-shadow: 0 0 0.375rem #c5a8e8, 0 0 0.625rem #d6b8f3, 0 0 0.875rem #e9d6fa;
   }
   50% {
-    text-shadow: 0 0 0.625rem #D6B8F3,0 0 1.125rem #E9D6FA,0 0 1.5rem #fff;
+    text-shadow: 0 0 0.625rem #d6b8f3, 0 0 1.125rem #e9d6fa, 0 0 1.5rem #fff;
   }
   100% {
-    text-shadow: 0 0 0.375rem #C5A8E8,0 0 0.625rem #D6B8F3,0 0 0.875rem #E9D6FA;
+    text-shadow: 0 0 0.375rem #c5a8e8, 0 0 0.625rem #d6b8f3, 0 0 0.875rem #e9d6fa;
   }
 }
 @keyframes glowGold {
-  0%,100% {
-    text-shadow: 0 0 0.2rem rgba(233,155,155,.3),0 0 0.4rem rgba(233,155,155,.3);
+  0%, 100% {
+    text-shadow: 0 0 0.2rem rgba(233, 155, 155, 0.3), 0 0 0.4rem rgba(233, 155, 155, 0.3);
   }
   50% {
-    text-shadow: 0 0 0.5rem rgba(233,155,155,.5),0 0 1rem rgba(233,155,155,.5);
+    text-shadow: 0 0 0.5rem rgba(233, 155, 155, 0.5), 0 0 1rem rgba(233, 155, 155, 0.5);
   }
 }
 @keyframes sparkleTwinkle {
   0% {
     opacity: 0;
-    transform: scale(.4) rotate(0deg);
+    transform: scale(0.4) rotate(0deg);
   }
   30% {
     opacity: 1;
@@ -1622,7 +1633,7 @@ body {
   }
   100% {
     opacity: 0;
-    transform: scale(.4) rotate(360deg);
+    transform: scale(0.4) rotate(360deg);
   }
 }
 @property --tw-translate-x {

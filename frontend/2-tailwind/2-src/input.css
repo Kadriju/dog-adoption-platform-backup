@@ -5,16 +5,20 @@
 @source "../3-html-partials/**/*.html"; /* head.html, header.html, footer.html */
 @source "../5-js/**/*.{js,ts,jsx,tsx}"; /* include.js, tiered-pricing.js (if they contain class names) */
 
-/* --- Custom theme tokens so classes like bg-sageGreen work --- */
+/* --- Custom theme tokens so classes like bg-sage-green work --- */
 @theme {
-  /* Colors used in your HTML */
+
+
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
   --color-warm-white: #faf3e0;
   --color-light-gray: #cccccc;
-
+  --color-soft-beige: #f5efe6;
   --color-golden-beige: #e3c27e;
   --color-pastel-yellow: #ffe082;
   --color-soft-mustard: #d8b25c;
   --color-warm-golden-yellow: #e4af28;
+  --color-logo-yellow: #eeba2b;
 
   --color-soft-peach: #fde9e0;
   --color-muted-rose: #c98585;
@@ -43,11 +47,6 @@
   --color-logo-frame: #7e3e20;
 }
 
-/* Base font/colors (optional) */
-body {
-  font-family: "Poppins", ui-sans-serif, system-ui, sans-serif;
-  color: var(--color-textDark);
-}
 
 /* --- Animations you referenced (animate-glow, animate-sparkle) --- */
 @keyframes glow {
@@ -120,6 +119,8 @@ body {
 }
 
 /* Map class names to those keyframes (so your existing HTML works) */
+
+
 @utility animate-glow {
   animation: glow 2s ease-in-out infinite;
 }
