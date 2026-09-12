@@ -1,7 +1,7 @@
 
 
 # adoption-platform
-The platform aims to create Europe’s first centralized database and web page for all homeles & shelter dogs across Europe. The goal is to improve adoption rates, reduce shelter overcrowding, and  provide an accessible, multilingual adoption platform for potential adopters and animal shelters. 
+This project aims to create a centralized European platform - database, web page and dog welfare hub for homeless & shelter dogs across Europe. The goal is to improve adoption rates, reduce shelter overcrowding, and  provide an accessible, multilingual adoption platform for potential adopters and animal shelters and other actors who are helping dogs in need of a home. 
 [Europes_first_web_page_and_database_for_all_shelter_dogs_in_Europe.pdf](https://github.com/user-attachments/files/19050605/Europes_first_web_page_and_database_for_all_shelter_dogs_.26_cats_in_Europe.pdf)
 
 This could radically increase adoption rates and animal welfare in Europe for shelter dogs and avoid long-term suffering in the shelters or being euthanized. Most people only look at the shelter webpages in their own country when they are looking to adopt a dog and if they don't find a perfect match then they buy a dog instead of adopting.
@@ -49,7 +49,7 @@ Self-Service for Shelters: ○ Build a dashboard with role-based access for shel
 Minimal Tech Support: ○ Ensure the platform is well-documented with a robust FAQ section for shelter staff. ○ Automate responses for common technical queries using chatbots. This approach combines automation, robust error handling, and scalability to ensure the system operates with minimal manual intervention.
 Webpage names: The following domain names are available for registering: www.petsofeurope.org or .eu www.dogsofeurope.org or.eu www.catsofeurope.org or .eu
 
-This project aims to create a platform that connects people looking to adopt dogs with shelters and rescue organizations.
+This project aims to create a platform that connects people looking to adopt dogs with shelters and rescue organizations / initiatives.
 
 ## Features
 
